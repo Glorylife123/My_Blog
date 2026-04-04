@@ -1,0 +1,37 @@
+- class_name: 框架
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-tw/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网站框架
+    - name: anzhiyu主题
+      link: https://docs.anheyu.com/
+      avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
+      descr: 生活明朗，万物可爱
+      siteshot: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/hexo.anheyu.com.jpg
+
+
+
+- class_name: 小伙伴
+  class_desc: 那些人，那些事
+  flink_style: anzhiyu
+  hundredSuffix: ""
+  link_list:
+    - name: 安知鱼
+      link: https://hexo.anheyu.com/
+      avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
+      descr: 生活明朗，万物可爱
+      recommend: true
+    - name: m4o9
+      link: https://m4o9.github.io/
+      avatar: https://github.com/m4o9.png
+      descr: m4o9的博客
+      recommend: true
+    - name: 雨探青鸟
+      link: https://lmzyoyo.top/
+      avatar: https://imagere.oss-cn-beijing.aliyuncs.com/HaloFiles/%E8%8E%89%E5%85%B9%E4%B8%8E%E9%9D%92%E9%B8%9F.jpg
+      descr: 遥知蓬山雨途险，却看青鸟意决探。
+      recommend: true
+    

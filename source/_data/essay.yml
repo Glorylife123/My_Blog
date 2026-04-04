@@ -1,0 +1,28 @@
+- title: "闲言碎语"
+  subTitle: "这里记录着理工男的日常碎片与激情时刻"
+  tips: "Talk is cheap, Show me the shell!"
+  buttonLink: "/"
+  buttonText: "首页"
+  limit: 30
+  top_background: "https://bu.dusays.com/2023/04/09/64329399cea5a.webp"
+  essay_list:
+    - content: "抓包、放包、各种注，Burp Suite 跑起来的那一刻是最踏实的。这CTF靶机真是一块硬骨头，但我就喜欢这种把线索顺藤摸瓜、一点点死磕出Flag的成就感💯！"
+      date: 2026-04-04 18:00:00
+      from: "Kali Linux"
+      address: "实验室"
+    - content: "昨天晚上熬大夜看欧冠淘汰赛，这绝杀看着太痛快了！管他什么长远规划，人生就是要有这种激情时刻。看完直接和兄弟们连麦打两盘竞技状态也拉满，爽！"
+      date: 2025-06-01 21:30:00
+      from: "Ipad Air 5"
+      address: "宿舍"
+    - content: "又是边听着周董的歌边看漏洞周报的一天。看长篇大论的文档真不如自己动手写个POC跑一遍试试。不管会不会，别光哔哔，拿到Shell就是干干干！"
+      date: 2025-04-02 03:15:00
+      from: "网易云音乐"
+      address: "咖啡厅"
+    - content: "计划不如变化快，代码里的Bug和网络对面的黑客一样，永远猜不准他们下一步干嘛。不过没关系，见招拆招就是男人的浪漫。周末约了兄弟开黑连坐，赢了网吧包夜，输了回去睡觉。"
+      date: 2025-03-31 14:00:00
+      from: "Steam 客户端"
+      address: "电竞网咖"
+    - content: "作为学网安的，总有亲戚朋友以为我是专门修电脑、盗QQ号的... 懒得解释了。今晚主队有强强对话重头戏，手机已经调成静音状态，天大的漏洞等老子看完球再修！"
+      date: 2025-03-28 10:20:00
+      from: "MacBook Air"
+      address: "大排档烧烤摊"

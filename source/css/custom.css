@@ -1,0 +1,53 @@
+/* 浅色模式下全局导航栏及文章标题背景改为绿色 */
+[data-theme='light'] #nav,
+[data-theme='light'] #nav:not(.min) .menus_items,
+[data-theme='light'] #nav .menus_items,
+[data-theme='light'] #nav.show {
+    background-color: #4CAF50 !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+}
+
+/* 导航栏下拉菜单背景改为绿色 */
+[data-theme='light'] #nav .menus_item_child {
+    background-color: #4CAF50 !important;
+}
+
+[data-theme='light'] #nav .menus_item_child:before {
+    background-color: #4CAF50 !important;
+}
+
+/* 确保导航栏内部文字看得清（设为白色） */
+[data-theme='light'] #nav a,
+[data-theme='light'] #nav span,
+[data-theme='light'] #nav i {
+    color: #ffffff !important;
+}
+
+/* 文章标题部分背景改为绿色 */
+[data-theme='light'] #page-header,
+[data-theme='light'] #page-header.post-bg,
+[data-theme='light'] #page-header.not-home-page,
+[data-theme='light'] #page-header.not-top-img {
+    background-color: #4CAF50 !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+}
+
+/* 强制隐藏默认的文章顶部头图，以确保绿色背景能显露出来 */
+[data-theme='light'] #post-top-cover,
+[data-theme='light'] #post-top-cover img {
+    display: none !important;
+}
+
+/* 确保文章标题部分的文字设为白色 */
+[data-theme='light'] #page-header * {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+[data-theme='light'] #post-info .post-title,
+[data-theme='light'] #post-info #post-meta,
+[data-theme='light'] #post-info .meta-secondline a {
+    color: #ffffff !important;
+}

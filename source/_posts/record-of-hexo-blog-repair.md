@@ -8,6 +8,7 @@ tags:
   - AnZhiYu
 categories:
   - 技术教程
+cover: https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80
 ---
 
 ## 缘起：本地项目的突然损坏

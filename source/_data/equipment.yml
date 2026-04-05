@@ -1,0 +1,59 @@
+- class_name: 我的装备
+  top_background: https://s41.ax1x.com/2026/02/12/pZbHl8S.jpg
+  description: 我的装备
+  tip: 记录我使用的各类数码设备与周边好物
+  good_things:
+    - title: 生产力
+      description: 提升工作效率的核心设备
+      equipment_list:
+        - name: Lenovo Legion R9000P 2021
+          specification: R7-5800H / RTX 3060 / 16G / 512G / 2.5K 165Hz
+          description: 高性能游戏本，16英寸2.5K 165Hz高刷屏，支持DDG双模显示，散热强劲，适合大型游戏与高负载创作任务。
+          link: https://www.lenovo.com.cn/ # 官方产品页已下线，此为联想官网首页，实际请替换为准确历史页
+          image: https://s41.ax1x.com/2026/04/05/petxwaq.jpg
+        - name: MacBook Air 13 英寸
+          specification: M5 / 16GB / 512GB / 午夜色
+          description: 主力生产力工具，M5芯片加持，AI任务处理速度大幅提升，轻薄便携，续航出色，适合日常办公与轻度创意工作。
+          link: https://www.apple.com.cn/macbook-air/
+          image: https://s41.ax1x.com/2026/04/05/petvbEq.jpg
+        - name: Samsung Galaxy Tab S8
+          specification: 8GB+256GB / Wi-Fi / 冷霜银
+          description: 阅读文档、笔记与轻办公利器，11英寸120Hz高刷屏，配套S Pen手写体验流畅，影音娱乐同样出色。
+          link: https://www.samsung.com.cn/tablets/all-tablets/
+          image: https://s41.ax1x.com/2026/04/05/petvXCT.jpg
+        - name: OPPO Find X7 Ultra
+          specification: 16GB+512GB / 海阔天空
+          description: 主力手机，双潜望四主摄系统，1英寸大底广角，影像能力顶级，搭载第三代骁龙8平台，日常使用与拍摄均游刃有余。
+          link: https://www.oppo.com/cn/smartphones/series-find-x/find-x7-ultra/
+          image: https://s41.ax1x.com/2026/04/05/petx0I0.png
+    - title: 外设
+      description: 提升桌面体验的周边配件
+      equipment_list:
+        - name: SANC G4Q
+          specification: 24.5英寸 / 2K / Fast IPS / 240Hz
+          description: 小屏高刷电竞显示器，2K分辨率配合240Hz刷新率，1ms GTG响应，自带耳机挂架与小夜灯，兼顾游戏与办公。
+          link: http://www.ccclcd.com/en/liquid-crystal-display/536332
+          image: https://s41.ax1x.com/2026/04/05/petvj8U.png
+        - name: Razer Viper V3 Pro
+          specification: 无线 / 白色 / 54g
+          description: 超轻量化无线电竞鼠标，Focus Pro 35K光学传感器，8K Hz轮询率，三代光学微动，专业选手之选。
+          link: https://cn.razerzone.com/gaming-mice/razer-viper-v3-pro
+          image: https://s41.ax1x.com/2026/04/05/petxrGT.png
+        - name: Kzzi i75
+          specification: 矮轴 / 三模无线 / 皓月白
+          description: 75%配列铝合金矮轴机械键盘，最薄处仅8mm，支持蓝牙/2.4G/有线三模连接，带音量旋钮，轻薄便携。
+          link: https://www.kzzistore.com/products/kzzi-i75v2-low-profile-keyboard
+          image: https://s41.ax1x.com/2026/04/05/petvTDs.png
+    - title: 音频
+      description: 沉浸式聆听体验
+      equipment_list:
+        - name: AirPods 4
+          specification: 支持主动降噪 / USB-C
+          description: 焕新设计，佩戴贴合舒适，H2芯片加持，支持主动降噪、自适应音频和通透模式，续航最长30小时，iOS生态完美融合。
+          link: https://www.apple.com.cn/airpods-4/
+          image: https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXP93?wid=600&hei=400&fmt=jpeg&qlt=90
+        - name: Sony WH-1000XM3
+          specification: 黑色 / 头戴式
+          description: 经典旗舰降噪耳机，HD降噪处理器QN1加持，40mm驱动单元，支持LDAC高品质传输，通勤与专注工作好伴侣。
+          link: https://www.sonystyle.com.cn/products/headphone/index.html
+          image: https://s41.ax1x.com/2026/04/05/petvv2F.png

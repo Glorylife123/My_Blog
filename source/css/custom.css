@@ -1,53 +1,185 @@
-/* 浅色模式下全局导航栏及文章标题背景改为绿色 */
-[data-theme='light'] #nav,
-[data-theme='light'] #nav:not(.min) .menus_items,
-[data-theme='light'] #nav .menus_items,
-[data-theme='light'] #nav.show {
+/* 仅在文章页（post-bg 表示文章顶部背景存在时）导航栏及 page-header 为绿色 */
+#page-header.post-bg #nav,
+#page-header.post-bg #nav:not(.min) .menus_items,
+#page-header.post-bg #nav .menus_items {
+    background-color: transparent !important;
+}
+
+[data-theme='light'] #page-header.post-bg #nav,
+[data-theme='light'] #page-header.post-bg #nav:not(.min) .menus_items,
+[data-theme='light'] #page-header.post-bg #nav .menus_items,
+[data-theme='light'] #page-header.post-bg #nav.show {
     background-color: #4CAF50 !important;
     background-image: none !important;
     backdrop-filter: none !important;
 }
 
-/* 导航栏下拉菜单背景改为绿色 */
-[data-theme='light'] #nav .menus_item_child {
+/* 文章页导航栏下拉菜单也为绿色 */
+[data-theme='light'] #page-header.post-bg #nav .menus_item_child {
     background-color: #4CAF50 !important;
 }
 
-[data-theme='light'] #nav .menus_item_child:before {
+[data-theme='light'] #page-header.post-bg #nav .menus_item_child:before {
     background-color: #4CAF50 !important;
 }
 
-/* 确保导航栏内部文字看得清（设为白色） */
-[data-theme='light'] #nav a,
-[data-theme='light'] #nav span,
-[data-theme='light'] #nav i {
+/* 文章页导航栏文字为白色 */
+[data-theme='light'] #page-header.post-bg #nav a,
+[data-theme='light'] #page-header.post-bg #nav span,
+[data-theme='light'] #page-header.post-bg #nav i {
     color: #ffffff !important;
 }
 
-/* 文章标题部分背景改为绿色 */
-[data-theme='light'] #page-header,
-[data-theme='light'] #page-header.post-bg,
-[data-theme='light'] #page-header.not-home-page,
-[data-theme='light'] #page-header.not-top-img {
+/* 文章页 page-header 本身为绿色背景 */
+[data-theme='light'] #page-header.post-bg {
     background-color: #4CAF50 !important;
     background-image: none !important;
-    backdrop-filter: none !important;
 }
 
-/* 强制隐藏默认的文章顶部头图，以确保绿色背景能显露出来 */
+/* 隐藏文章封面图，以确保绿色背景能显露 */
 [data-theme='light'] #post-top-cover,
 [data-theme='light'] #post-top-cover img {
     display: none !important;
 }
 
-/* 确保文章标题部分的文字设为白色 */
-[data-theme='light'] #page-header * {
+/* 文章标题文字为白色 */
+[data-theme='light'] #page-header.post-bg #post-info,
+[data-theme='light'] #page-header.post-bg #post-info * {
     color: #ffffff !important;
     text-shadow: none !important;
 }
 
+/* 确保文章标题部分的文字设为白色 */
 [data-theme='light'] #post-info .post-title,
 [data-theme='light'] #post-info #post-meta,
 [data-theme='light'] #post-info .meta-secondline a {
     color: #ffffff !important;
+}
+
+/* ====================================================
+   标签页美化 Tags Page Design
+   ==================================================== */
+
+/* 标签页整体容器 */
+body[data-type="tags"] #page {
+    background: transparent;
+}
+
+body[data-type="tags"] #tag {
+    padding: 10px 20px 30px;
+}
+
+/* 标签列表容器 */
+body[data-type="tags"] #tag-page-tags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 10px;
+}
+
+/* 标签页 — 每个标签卡片 */
+body[data-type="tags"] #tag-page-tags a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px 6px 10px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: none !important;
+    transition: transform 0.22s cubic-bezier(.34,1.56,.64,1),
+                box-shadow 0.22s ease,
+                filter 0.22s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.02em;
+}
+
+/* 彩色渐变色系（按 nth-child 循环） */
+body[data-type="tags"] #tag-page-tags a:nth-child(6n+1) {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(240,93,251,0.30);
+}
+body[data-type="tags"] #tag-page-tags a:nth-child(6n+2) {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(79,172,254,0.30);
+}
+body[data-type="tags"] #tag-page-tags a:nth-child(6n+3) {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(67,233,123,0.30);
+}
+body[data-type="tags"] #tag-page-tags a:nth-child(6n+4) {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(250,112,154,0.28);
+}
+body[data-type="tags"] #tag-page-tags a:nth-child(6n+5) {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(161,140,209,0.28);
+}
+body[data-type="tags"] #tag-page-tags a:nth-child(6n+6) {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    color: #6b3a27 !important;
+    box-shadow: 0 4px 14px rgba(252,182,159,0.30);
+}
+
+/* 悬浮效果：上浮 + 放大 + 加深阴影 */
+body[data-type="tags"] #tag-page-tags a:hover {
+    transform: translateY(-4px) scale(1.06);
+    filter: brightness(1.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18) !important;
+    background: unset; /* 让 nth-child 的渐变保留 */
+    color: inherit !important;
+    border: none !important;
+}
+
+/* 已选中标签不受 nth-child 覆盖，保持主题色 */
+body[data-type="tags"] #tag-page-tags a.selected {
+    background: var(--anzhiyu-theme) !important;
+    box-shadow: var(--anzhiyu-shadow-theme) !important;
+    color: #fff !important;
+    transform: scale(1.06);
+}
+
+/* 文章数量角标 */
+body[data-type="tags"] #tag-page-tags .tagsPageCount {
+    background: rgba(255,255,255,0.28);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 1px 7px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    min-width: 20px;
+    line-height: 1.6;
+    margin-left: 2px;
+}
+
+/* 6n+6 标签的角标文字稍深 */
+body[data-type="tags"] #tag-page-tags a:nth-child(6n+6) .tagsPageCount {
+    color: #6b3a27;
+    background: rgba(107,58,39,0.12);
+}
+
+/* 标签页下方文章列表标题 */
+body[data-type="tags"] .article-sort-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 30px 0 12px;
+    padding-left: 10px;
+    border-left: 4px solid var(--anzhiyu-theme);
+    color: var(--anzhiyu-fontcolor);
+}
+
+/* 暗色模式适配 */
+[data-theme="dark"] body[data-type="tags"] #tag-page-tags a {
+    opacity: 0.88;
+}
+[data-theme="dark"] body[data-type="tags"] #tag-page-tags a:hover {
+    opacity: 1;
 }

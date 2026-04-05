@@ -1,0 +1,32 @@
+/* 相册集图片瀑布流美化，统一高度，等宽排列，去除多余信息 */
+.fj-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin: 0 -10px;
+}
+
+.fj-gallery .album-content-img {
+    display: block;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.10);
+    background: #f7f7f7;
+    margin: 0;
+}
+
+.fj-gallery .album-content-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 去除拍摄地点和来源信息 */
+.album-info-address,
+.album-info-from {
+    display: none !important;
+}

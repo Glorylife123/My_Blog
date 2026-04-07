@@ -18,7 +18,10 @@
                   .equipment-item-content-item-cover
                     img.equipment-item-content-item-image(data-lazy-src=url_for(iten.image) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt=iten.name)
                   .equipment-item-content-item-info
-                    .equipment-item-content-item-name(onclick=`rm.rightmenuCopyText("${iten.name}");anzhiyu.snackbarShow("${_p('Snackbar.copy_equipment_name') + " 【" + iten.name + "】"}");` title=iten.name)= iten.name
+                    if iten.link
+                      a.equipment-item-content-item-name(href=iten.link, target='_blank', rel='external nofollow', title=iten.name)= iten.name
+                    else
+                      .equipment-item-content-item-name(title=iten.name)= iten.name
                     .equipment-item-content-item-specification= iten.specification
                     .equipment-item-content-item-description= iten.description
                     .equipment-item-content-item-toolbar

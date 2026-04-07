@@ -1,6 +1,7 @@
 ---
 title: MacBook Air 购买记录：从双十一观望到最后入手 M5
 date: 2026-03-05 18:30:00
+updated: 2026-03-05 18:30:00
 tags:
   - MacBook
   - 等等党

@@ -3,12 +3,21 @@ body[data-type="essay"] #page {
   box-shadow: none !important;
   padding: 0 !important;
   background: transparent !important;
+  max-width: 1380px;
+  margin: 0 auto;
 }
 body[data-type="essay"] #page .page-title {
   display: none;
 }
 body[data-type="essay"] #web_bg {
   background: var(--anzhiyu-background);
+}
+#essay_page,
+#bber,
+#bber-tips {
+  width: min(1180px, calc(100% - 32px));
+  margin-left: auto;
+  margin-right: auto;
 }
 #bber .bber-container-img {
   display: flex;
@@ -83,24 +92,26 @@ body[data-type="essay"] #web_bg {
 #bber div.bber-content {
   display: flex;
   flex-flow: wrap;
-  border-radius: 12px;
+  border-radius: 18px;
   width: 100%;
   height: 100%;
 }
 #bber .timeline ul li.bber-item {
   position: relative;
-  width: 32%;
-  border: var(--style-border-always);
-  border-radius: 12px;
-  padding: 1rem 1rem 0.5rem;
-  transition: all 0.3s ease 0s;
+  width: 100%;
+  border: 1px solid rgba(66, 90, 239, 0.12);
+  border-radius: 24px;
+  padding: 1.1rem 1.1rem 0.75rem;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  background: var(--anzhiyu-card-bg);
-  box-shadow: var(--anzhiyu-shadow-border);
-  margin-right: 2%;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.94)),
+    var(--anzhiyu-card-bg);
+  box-shadow: 0 16px 40px rgba(34, 55, 110, 0.08);
+  overflow: hidden;
 }
 #bber .timeline #waterfall.show {
   opacity: 1;
@@ -110,45 +121,50 @@ body[data-type="essay"] #web_bg {
   transition: all 0.3s ease 0s;
 }
 #bber ul.list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+  padding: 0;
 }
 #bber {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   width: 100%;
 }
 #bber > section > ul > li.bber-item {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 #bber-tips {
   font-size: 14px;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 #bber .timeline ul li.bber-item hr {
   display: flex;
   position: relative;
-  margin: 8px 0px;
-  border: 1px dashed var(--anzhiyu-theme-op);
+  margin: 12px 0 6px;
+  border: 0;
+  border-top: 1px dashed rgba(66, 90, 239, 0.18);
   width: 100%;
 }
 
 #bber .bber-info {
   display: flex;
   align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 #bber > section > ul > li > div .bber-info-time,
 #bber > section > ul > li > div .bber-info-from {
   color: var(--anzhiyu-fontcolor);
-  font-size: 0.7rem;
-  background-color: var(--anzhiyu-gray-op);
-  padding: 0px 8px;
-  border-radius: 20px;
+  font-size: 0.75rem;
+  background: rgba(66, 90, 239, 0.08);
+  padding: 4px 10px;
+  border-radius: 999px;
   cursor: default;
   display: flex;
   align-items: center;
@@ -172,21 +188,34 @@ body[data-type="essay"] #web_bg {
 #bber .bber-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-top: 10px;
 }
 
 .bber-reply {
   cursor: pointer !important;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(66, 90, 239, 0.08);
+  color: var(--anzhiyu-fontcolor);
+  transition: all 0.25s ease;
 }
 
 .bber-reply:hover {
-  color: var(--anzhiyu-main);
+  color: var(--anzhiyu-white);
+  background: var(--anzhiyu-main);
   max-height: 35px;
 }
 
 #bber .timeline ul li.bber-item:hover {
-  border: var(--style-border-hover);
+  border-color: rgba(66, 90, 239, 0.28);
+  transform: translateY(-4px);
+  box-shadow: 0 22px 50px rgba(34, 55, 110, 0.14);
 }
 
 #bber .bber-content-link {
@@ -272,10 +301,61 @@ body[data-type="essay"] #web_bg {
 
 /* 顶部样式 */
 .author-content.author-content-item.essayPage {
-  height: 19rem;
+  min-height: 19rem;
   color: var(--anzhiyu-white);
   overflow: hidden;
-  margin-top: 0px;
+  margin-top: 0;
+  border-radius: 30px;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow: 0 24px 60px rgba(34, 55, 110, 0.16);
+  background-position: center center !important;
+}
+.author-content.author-content-item.essayPage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 22%),
+    linear-gradient(135deg, rgba(18, 36, 78, 0.82), rgba(51, 86, 170, 0.56));
+  z-index: 0;
+}
+.author-content.author-content-item.essayPage .card-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+.author-content.author-content-item.essayPage .author-content-item-tips {
+  font-size: 0.95rem;
+  opacity: 0.82;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.08em;
+}
+.author-content.author-content-item.essayPage .author-content-item-title {
+  display: block;
+  max-width: 720px;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.22;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+.author-content.author-content-item.essayPage .content-bottom .tips {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.16);
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+}
+body[data-type="essay"] #page .author-content-item .card-content .banner-button-group {
+  margin-top: 1.25rem;
 }
 body[data-type="essay"] #page .author-content-item .card-content .banner-button-group .banner-button:hover {
   color: var(--anzhiyu-white);
@@ -284,15 +364,26 @@ body[data-type="essay"] #page .author-content-item .card-content .banner-button-
 
 /* 响应式 */
 @media screen and (max-width: 1200px) {
-  #bber .timeline ul li.bber-item {
-    width: 49%;
-    margin-right: 1%;
+  #bber ul.list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media screen and (max-width: 768px) {
-  #bber .timeline ul li.bber-item {
-    width: 100%;
-    margin-right: 0px;
+  #essay_page,
+  #bber,
+  #bber-tips {
+    width: min(100%, calc(100% - 20px));
+  }
+  .author-content.author-content-item.essayPage {
+    min-height: 16rem;
+    border-radius: 24px;
+  }
+  .author-content.author-content-item.essayPage .card-content {
+    padding: 1.4rem 1.15rem 1.2rem;
+  }
+  #bber ul.list {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 }
 [data-theme="dark"] #bber .bber-music .aplayer,
@@ -300,6 +391,16 @@ body[data-type="essay"] #page .author-content-item .card-content .banner-button-
 [data-theme="dark"] #bber .aplayer .aplayer-lrc:after {
   background: var(--anzhiyu-card-bg);
   color: var(--anzhiyu-fontcolor);
+}
+[data-theme="dark"] #bber .timeline ul li.bber-item {
+  background: linear-gradient(180deg, rgba(22, 27, 43, 0.92), rgba(18, 22, 36, 0.98));
+  border-color: rgba(96, 165, 250, 0.12);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24);
+}
+[data-theme="dark"] #bber > section > ul > li > div .bber-info-time,
+[data-theme="dark"] #bber > section > ul > li > div .bber-info-from,
+[data-theme="dark"] .bber-reply {
+  background: rgba(96, 165, 250, 0.12);
 }
 #bber .aplayer .aplayer-lrc p {
   color: var(--anzhiyu-fontcolor);

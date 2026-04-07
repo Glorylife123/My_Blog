@@ -1,37 +1,79 @@
 .category-lists
-  .category-title
-    font-size: 2.57em
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+  gap: 16px
+  padding: 6px 0 0
 
-    +maxWidth768()
-      font-size: 2em
+  a
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 10px
+    padding: 14px 16px
+    border-radius: 20px
+    text-decoration: none
+    color: var(--font-color)
+    border: 1px solid rgba(66, 90, 239, 0.12)
+    background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.98))
+    box-shadow: 0 14px 36px rgba(29, 52, 102, 0.08)
+    transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease
 
-  .category-list
-    margin-bottom: 0
+    &:hover
+      color: var(--anzhiyu-main)
+      transform: translateY(-4px)
+      box-shadow: 0 22px 46px rgba(29, 52, 102, 0.14)
+      border-color: rgba(66, 90, 239, 0.24)
 
-    a
-      color: var(--font-color)
+  .tags-punctuation
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    background: rgba(66, 90, 239, 0.1)
+    color: var(--anzhiyu-main)
+    font-weight: 700
+    flex-shrink: 0
+    margin-right: 8px
 
-      &:hover
-        color: $text-hover
+  .tagsPageCount
+    margin-left: auto
+    min-width: 28px
+    height: 28px
+    padding: 0 8px
+    border-radius: 999px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    background: rgba(66, 90, 239, 0.1)
+    color: var(--anzhiyu-main)
+    font-size: .82rem
+    font-weight: 700
 
-    .category-list-count
-      margin-left: 8px
-      color: $theme-meta-color
+body[data-type="categories"] #page
+  border: 0
+  box-shadow: none !important
+  padding: 0 !important
+  background: transparent !important
 
-      &:before
-        content: '('
+body[data-type="categories"] #tag
+  width: calc(100% - 32px)
+  max-width: 1180px
+  margin: 0 auto
+  padding: 0
 
-      &:after
-        content: ')'
+[data-theme="dark"] .category-lists a
+  background: linear-gradient(180deg, rgba(20, 25, 39, 0.94), rgba(15, 19, 31, 0.98))
+  border-color: rgba(96, 165, 250, 0.14)
 
-  ul
-    padding: 0 0 0 20px
-    @extend .list-beauty
+[data-theme="dark"] .category-lists .tags-punctuation,
+[data-theme="dark"] .category-lists .tagsPageCount
+  background: rgba(96, 165, 250, 0.14)
 
-    ul
-      padding-left: 4px
-
-    li
-      position: relative
-      margin: 6px 0
-      padding: .12em .4em .12em 1.4em
+@media screen and (max-width: 768px)
+  body[data-type="categories"] #tag
+    width: calc(100% - 20px)
+    max-width: 100%
+  .category-lists
+    grid-template-columns: 1fr

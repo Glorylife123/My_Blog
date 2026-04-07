@@ -1,4 +1,11 @@
-/* 仅在文章页（post-bg 表示文章顶部背景存在时）导航栏及 page-header 为绿色 */
+/* 文章页顶部配色：由 JS 按文章路径生成，不再所有文章都固定绿色 */
+:root {
+    --post-hero-start: #3b82f6;
+    --post-hero-end: #60a5fa;
+    --post-hero-solid: #2563eb;
+    --post-hero-deep: #1e40af;
+}
+
 #page-header.post-bg #nav,
 #page-header.post-bg #nav:not(.min) .menus_items,
 #page-header.post-bg #nav .menus_items {
@@ -9,18 +16,17 @@
 [data-theme='light'] #page-header.post-bg #nav:not(.min) .menus_items,
 [data-theme='light'] #page-header.post-bg #nav .menus_items,
 [data-theme='light'] #page-header.post-bg #nav.show {
-    background-color: #4CAF50 !important;
+    background: linear-gradient(135deg, var(--post-hero-solid), var(--post-hero-end)) !important;
     background-image: none !important;
     backdrop-filter: none !important;
 }
 
-/* 文章页导航栏下拉菜单也为绿色 */
 [data-theme='light'] #page-header.post-bg #nav .menus_item_child {
-    background-color: #4CAF50 !important;
+    background: var(--post-hero-solid) !important;
 }
 
 [data-theme='light'] #page-header.post-bg #nav .menus_item_child:before {
-    background-color: #4CAF50 !important;
+    background: transparent !important;
 }
 
 /* 文章页导航栏文字为白色 */
@@ -30,10 +36,17 @@
     color: #ffffff !important;
 }
 
-/* 文章页 page-header 本身为绿色背景 */
+/* 文章页 page-header 本身改成每篇稳定但不同的渐变色 */
 [data-theme='light'] #page-header.post-bg {
-    background-color: #4CAF50 !important;
-    background-image: none !important;
+    background:
+        radial-gradient(circle at 18% 22%, rgba(255,255,255,0.18), transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(255,255,255,0.12), transparent 20%),
+        linear-gradient(135deg, var(--post-hero-start) 0%, var(--post-hero-end) 100%) !important;
+    background-color: var(--post-hero-solid) !important;
+    background-image:
+        radial-gradient(circle at 18% 22%, rgba(255,255,255,0.18), transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(255,255,255,0.12), transparent 20%),
+        linear-gradient(135deg, var(--post-hero-start) 0%, var(--post-hero-end) 100%) !important;
 }
 
 /* 隐藏文章封面图，以确保绿色背景能显露 */
@@ -54,6 +67,25 @@
 [data-theme='light'] #post-info #post-meta,
 [data-theme='light'] #post-info .meta-secondline a {
     color: #ffffff !important;
+}
+
+/* 修复文章阅读时固定导航中间椭圆框上沿被裁切 */
+#page-header.nav-fixed #nav .mask-name-container,
+#page-header.nav-fixed #nav #name-container {
+    overflow: visible !important;
+}
+
+#page-header.nav-fixed #nav .mask-name-container {
+    height: 48px !important;
+}
+
+#page-header.nav-fixed #nav #name-container {
+    top: 8px !important;
+    height: 44px !important;
+}
+
+#page-header.nav-fixed #nav #page-name {
+    top: 0 !important;
 }
 
 /* ====================================================
@@ -182,4 +214,274 @@ body[data-type="tags"] .article-sort-title {
 }
 [data-theme="dark"] body[data-type="tags"] #tag-page-tags a:hover {
     opacity: 1;
+}
+
+/* 左下角音乐播放器：未初始化时显示音符占位，避免左上角白块 */
+#nav-music:not(.ready) {
+    width: 41px;
+    height: 41px;
+    min-width: 41px;
+    min-height: 41px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #425aef, #6f86ff);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 10px 24px rgba(66, 90, 239, 0.28) !important;
+    overflow: hidden;
+}
+
+#nav-music:not(.ready) meting-js,
+#nav-music:not(.ready) #nav-music-hoverTips,
+#nav-music:not(.ready) #console-music-bg {
+    display: none !important;
+}
+
+#nav-music .nav-music-placeholder {
+    display: none;
+}
+
+#nav-music:not(.ready) .nav-music-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+    animation: nav-music-float 1.8s ease-in-out infinite;
+}
+
+#nav-music.ready .nav-music-placeholder {
+    display: none !important;
+}
+
+@keyframes nav-music-float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-2px) scale(1.06);
+    }
+}
+
+/* 首页顶部音乐视觉，替换 peoplecanvas 的白块精灵 */
+.music-hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+    border-radius: 0;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.22), transparent 28%),
+        radial-gradient(circle at 80% 30%, rgba(255,255,255,0.18), transparent 24%),
+        linear-gradient(135deg, #2d5bff 0%, #48b6ff 45%, #85e0ff 100%);
+}
+
+.music-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+    pointer-events: none;
+}
+
+.music-hero__stage {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 52% 48%;
+    padding: 0;
+}
+
+.music-hero__notes {
+    position: relative;
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0.8rem 1rem 0;
+    grid-row: 1;
+}
+
+.music-hero__lane {
+    position: relative;
+    height: 100%;
+}
+
+.music-hero__lane--1 { grid-column: 1 / span 1; }
+.music-hero__lane--2 { grid-column: 3 / span 1; }
+.music-hero__lane--3 { grid-column: 5 / span 1; }
+.music-hero__lane--4 { grid-column: 7 / span 1; }
+
+.music-hero__lane::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0.4rem;
+    width: 2px;
+    height: calc(100% - 1.2rem);
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.22), rgba(255,255,255,0.04));
+}
+
+.music-hero__note {
+    position: absolute;
+    left: 50%;
+    top: 0.2rem;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.92);
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-shadow: 0 10px 25px rgba(11, 48, 116, 0.28);
+    animation: hero-note-drop 1.5s cubic-bezier(.42,0,.2,1) infinite;
+}
+
+.music-hero__note--1 { animation-delay: 0s; }
+.music-hero__note--2 { animation-delay: 0.375s; }
+.music-hero__note--3 { animation-delay: 0.75s; }
+.music-hero__note--4 { animation-delay: 1.125s; }
+
+.music-hero__piano {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-row: 2;
+    align-self: stretch;
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    padding: 0 1rem 1rem;
+    border-radius: 0;
+    background: rgba(9, 30, 77, 0.16);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 24px 40px rgba(7, 33, 88, 0.22);
+    --piano-gap: 6px;
+    --piano-padding-x: 1rem;
+}
+
+.music-hero__key {
+    flex: 1;
+    height: 100%;
+    min-height: 136px;
+    border-radius: 0 0 16px 16px;
+    background: linear-gradient(180deg, #ffffff 0%, #edf4ff 100%);
+    box-shadow: inset 0 -8px 12px rgba(114, 149, 219, 0.14);
+    transform-origin: top center;
+}
+
+.music-hero__key--1,
+.music-hero__key--3,
+.music-hero__key--5,
+.music-hero__key--7 {
+    animation: hero-key-press 1.5s cubic-bezier(.42,0,.2,1) infinite;
+}
+
+.music-hero__key--1 { animation-delay: 0s; }
+.music-hero__key--3 { animation-delay: 0.375s; }
+.music-hero__key--5 { animation-delay: 0.75s; }
+.music-hero__key--7 { animation-delay: 1.125s; }
+
+.music-hero__black {
+    position: absolute;
+    top: 0;
+    width: 5.4%;
+    height: 68%;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(180deg, #24314f 0%, #0e1729 100%);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22);
+    z-index: 3;
+}
+
+.music-hero__black--1 { left: calc(var(--piano-padding-x) + (100% - 2 * var(--piano-padding-x) - 6 * var(--piano-gap)) / 7 * 1 - var(--piano-gap) * 0.5 - 2.7%); }
+.music-hero__black--2 { left: calc(var(--piano-padding-x) + (100% - 2 * var(--piano-padding-x) - 6 * var(--piano-gap)) / 7 * 2 + var(--piano-gap) * 0.5 - 2.7%); }
+.music-hero__black--3 { left: calc(var(--piano-padding-x) + (100% - 2 * var(--piano-padding-x) - 6 * var(--piano-gap)) / 7 * 3 + var(--piano-gap) * 1.5 - 2.7%); }
+.music-hero__black--4 { left: calc(var(--piano-padding-x) + (100% - 2 * var(--piano-padding-x) - 6 * var(--piano-gap)) / 7 * 4 + var(--piano-gap) * 2.5 - 2.7%); }
+.music-hero__black--5 { left: calc(var(--piano-padding-x) + (100% - 2 * var(--piano-padding-x) - 6 * var(--piano-gap)) / 7 * 5 + var(--piano-gap) * 3.5 - 2.7%); }
+.music-hero__black--6 { left: calc(var(--piano-padding-x) + (100% - 2 * var(--piano-padding-x) - 6 * var(--piano-gap)) / 7 * 6 + var(--piano-gap) * 4.5 - 2.7%); }
+
+@keyframes hero-note-drop {
+    0% {
+        transform: translateX(-50%) translateY(0) scale(0.9);
+        opacity: 0;
+    }
+    12% {
+        opacity: 1;
+    }
+    68% {
+        transform: translateX(-50%) translateY(108px) scale(1);
+        opacity: 1;
+    }
+    76% {
+        transform: translateX(-50%) translateY(124px) scale(0.92);
+        opacity: 0.96;
+    }
+    100% {
+        transform: translateX(-50%) translateY(0) scale(0.85);
+        opacity: 0;
+    }
+}
+
+@keyframes hero-key-press {
+    0%, 58%, 100% {
+        transform: translateY(0);
+        box-shadow: inset 0 -8px 12px rgba(114, 149, 219, 0.14);
+    }
+    68% {
+        transform: translateY(10px);
+        box-shadow: inset 0 -2px 8px rgba(114, 149, 219, 0.12);
+    }
+    78% {
+        transform: translateY(4px);
+        box-shadow: inset 0 -4px 10px rgba(114, 149, 219, 0.13);
+    }
+}
+
+#random-banner .music-hero + #random-hover,
+#random-banner #random-hover {
+    z-index: 5;
+}
+
+#random-banner:hover #random-hover {
+    background: rgba(36, 71, 176, 0.96) !important;
+    padding-left: 0 !important;
+    align-items: center;
+    text-align: center;
+}
+
+#random-banner:hover #random-hover .bannerText {
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .music-hero {
+        min-height: 220px;
+    }
+
+    .music-hero__stage {
+        grid-template-rows: 52% 48%;
+    }
+
+    .music-hero__notes {
+        padding: 0.8rem 0.5rem 0;
+    }
+
+    .music-hero__piano {
+        padding: 0 0.5rem 0.5rem;
+        gap: 4px;
+        --piano-gap: 4px;
+        --piano-padding-x: 0.5rem;
+    }
+
+    .music-hero__black {
+        width: 5.1%;
+    }
+
+    .music-hero__note {
+        font-size: 2.4rem;
+    }
 }

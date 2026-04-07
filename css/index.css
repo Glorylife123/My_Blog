@@ -28449,15 +28449,19 @@ div#runtime {
 [data-theme='light'] .post #nav:not(.min) .menus_items,
 [data-theme='light'] .post #nav .menus_items,
 [data-theme='light'] .post #nav.show {
-  background-color: #4caf50 !important;
+  background: -webkit-linear-gradient(315deg, var(--post-hero-solid), var(--post-hero-end)) !important;
+  background: -moz-linear-gradient(315deg, var(--post-hero-solid), var(--post-hero-end)) !important;
+  background: -o-linear-gradient(315deg, var(--post-hero-solid), var(--post-hero-end)) !important;
+  background: -ms-linear-gradient(315deg, var(--post-hero-solid), var(--post-hero-end)) !important;
+  background: linear-gradient(135deg, var(--post-hero-solid), var(--post-hero-end)) !important;
   background-image: none !important;
   backdrop-filter: none !important;
 }
 [data-theme='light'] .post #nav .menus_item_child {
-  background-color: #4caf50 !important;
+  background: var(--post-hero-solid) !important;
 }
 [data-theme='light'] .post #nav .menus_item_child:before {
-  background-color: #4caf50 !important;
+  background: transparent !important;
 }
 [data-theme='light'] .post #nav a,
 [data-theme='light'] .post #nav span,
@@ -28468,8 +28472,12 @@ div#runtime {
 [data-theme='light'] .post #page-header.post-bg,
 [data-theme='light'] .post #page-header.not-home-page,
 [data-theme='light'] .post #page-header.not-top-img {
-  background-color: #4caf50 !important;
-  background-image: none !important;
+  background: -webkit-radial-gradient(circle at 18% 22%, rgba(255,255,255,0.18), transparent 24%), -webkit-radial-gradient(circle at 82% 18%, rgba(255,255,255,0.12), transparent 20%), -webkit-linear-gradient(315deg, var(--post-hero-start), var(--post-hero-end)) !important;
+  background: -moz-radial-gradient(circle at 18% 22%, rgba(255,255,255,0.18), transparent 24%), -moz-radial-gradient(circle at 82% 18%, rgba(255,255,255,0.12), transparent 20%), -moz-linear-gradient(315deg, var(--post-hero-start), var(--post-hero-end)) !important;
+  background: -o-radial-gradient(circle at 18% 22%, rgba(255,255,255,0.18), transparent 24%), -o-radial-gradient(circle at 82% 18%, rgba(255,255,255,0.12), transparent 20%), -o-linear-gradient(315deg, var(--post-hero-start), var(--post-hero-end)) !important;
+  background: -ms-radial-gradient(circle at 18% 22%, rgba(255,255,255,0.18), transparent 24%), -ms-radial-gradient(circle at 82% 18%, rgba(255,255,255,0.12), transparent 20%), -ms-linear-gradient(315deg, var(--post-hero-start), var(--post-hero-end)) !important;
+  background: radial-gradient(circle at 18% 22%, rgba(255,255,255,0.18), transparent 24%), radial-gradient(circle at 82% 18%, rgba(255,255,255,0.12), transparent 20%), linear-gradient(135deg, var(--post-hero-start), var(--post-hero-end)) !important;
+  background-color: var(--post-hero-solid) !important;
   backdrop-filter: none !important;
 }
 [data-theme='light'] .post #post-top-cover,

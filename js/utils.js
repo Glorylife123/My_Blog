@@ -1299,19 +1299,87 @@ const anzhiyu = {
   },
   // 分类条
   categoriesBarActive: function () {
+    const url = new URL(window.location.href);
+    const selectedCategory = url.searchParams.get("category");
     const urlinfo = decodeURIComponent(window.location.pathname);
+    const homePath = decodeURIComponent(GLOBAL_CONFIG.root || "/");
     const $categoryBar = document.getElementById("category-bar");
     if (!$categoryBar) return;
 
-    if (urlinfo === "/") {
+    $categoryBar.querySelectorAll(".catalog-list-item").forEach(item => {
+      item.classList.remove("select");
+      item.classList.remove("selected");
+    });
+
+    if (selectedCategory) {
+      const $selectedItem = $categoryBar.querySelector(`#${CSS.escape(selectedCategory)}`);
+      if ($selectedItem) {
+        $selectedItem.classList.add("select");
+        $selectedItem.classList.add("selected");
+      }
+      return;
+    }
+
+    if (urlinfo === homePath) {
       $categoryBar.querySelector("#首页").classList.add("select");
+      $categoryBar.querySelector("#首页").classList.add("selected");
     } else {
       const pattern = /\/categories\/.*?\//;
       const patbool = pattern.test(urlinfo);
       if (!patbool) return;
 
       const nowCategorie = urlinfo.split("/")[2];
-      $categoryBar.querySelector(`#${nowCategorie}`).classList.add("select");
+      const $selectedItem = $categoryBar.querySelector(`#${CSS.escape(nowCategorie)}`);
+      if ($selectedItem) {
+        $selectedItem.classList.add("select");
+        $selectedItem.classList.add("selected");
+      }
+    }
+  },
+  filterHomePostsByCategory: function () {
+    const homePath = decodeURIComponent(GLOBAL_CONFIG.root || "/");
+    if (decodeURIComponent(window.location.pathname) !== homePath) return;
+
+    const url = new URL(window.location.href);
+    const selectedCategory = url.searchParams.get("category");
+    const posts = document.querySelectorAll("#recent-posts > .recent-post-item:not(.ads-wrap)");
+    if (!posts.length) return;
+
+    let visibleCount = 0;
+    posts.forEach(post => {
+      if (!selectedCategory) {
+        post.style.display = "";
+        visibleCount += 1;
+        return;
+      }
+
+      const categories = (post.dataset.categories || "")
+        .split(",")
+        .map(item => item.trim())
+        .filter(Boolean);
+      const matched = categories.includes(selectedCategory);
+      post.style.display = matched ? "" : "none";
+      if (matched) visibleCount += 1;
+    });
+
+    const pagination = document.querySelector("#pagination");
+    if (pagination) {
+      pagination.style.display = selectedCategory ? "none" : "";
+    }
+
+    let emptyState = document.getElementById("category-filter-empty");
+    if (!selectedCategory || visibleCount > 0) {
+      if (emptyState) emptyState.remove();
+      return;
+    }
+
+    if (!emptyState) {
+      emptyState = document.createElement("div");
+      emptyState.id = "category-filter-empty";
+      emptyState.className = "recent-post-item";
+      emptyState.innerHTML = '<div class="recent-post-info no-cover"><div class="content">当前分类下还没有可显示的文章。</div></div>';
+      const recentPosts = document.getElementById("recent-posts");
+      if (recentPosts) recentPosts.appendChild(emptyState);
     }
   },
   topCategoriesBarScroll: function () {

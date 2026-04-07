@@ -1409,6 +1409,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  const applyPostHeroPalette = () => {
+    const root = document.documentElement;
+    const header = document.getElementById("page-header");
+    if (!(GLOBAL_CONFIG_SITE.isPost && header && header.classList.contains("post-bg"))) {
+      root.style.removeProperty("--post-hero-start");
+      root.style.removeProperty("--post-hero-end");
+      root.style.removeProperty("--post-hero-solid");
+      root.style.removeProperty("--post-hero-deep");
+      return;
+    }
+
+    const seed = window.location.pathname || document.title || "post";
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+      hash = (hash << 5) - hash + seed.charCodeAt(i);
+      hash |= 0;
+    }
+
+    const hue = Math.abs(hash) % 360;
+    const accentHue = (hue + 28) % 360;
+    const solidHue = (hue + 10) % 360;
+
+    root.style.setProperty("--post-hero-start", `hsl(${hue} 62% 46%)`);
+    root.style.setProperty("--post-hero-end", `hsl(${accentHue} 76% 64%)`);
+    root.style.setProperty("--post-hero-solid", `hsl(${solidHue} 58% 42%)`);
+    root.style.setProperty("--post-hero-deep", `hsl(${solidHue} 58% 32%)`);
+  };
+
   //RGB颜色转化为16进制颜色
   const colorHex = str => {
     const hexRegex = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
@@ -1494,6 +1522,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const timer = setInterval(() => {
       if (navMusicEl && navMusicEl.querySelector("#nav-music meting-js").aplayer) {
         clearInterval(timer);
+        navMusicEl.classList.add("ready");
         let msgPlay = '<i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span>';
         let msgPause = '<i class="anzhiyufont anzhiyu-icon-pause"></i><span>暂停音乐</span>';
         navMusicEl.querySelector("#nav-music meting-js").aplayer.on("pause", function () {
@@ -1817,6 +1846,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     mouseleaveHomeCard();
     coverColor();
+    applyPostHeroPalette();
     listenToPageInputPress();
     openMobileMenu();
 
@@ -1836,6 +1866,7 @@ document.addEventListener("DOMContentLoaded", function () {
     anzhiyu.catalogActive();
     anzhiyu.tagsPageActive();
     anzhiyu.categoriesBarActive();
+    anzhiyu.filterHomePostsByCategory();
     anzhiyu.topCategoriesBarScroll();
     anzhiyu.switchRightClickMenuHotReview();
     anzhiyu.getCustomPlayList();

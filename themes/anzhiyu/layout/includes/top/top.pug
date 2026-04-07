@@ -6,7 +6,31 @@ if home_top_config.enable
       #bannerGroup
         #random-banner
           if theme.peoplecanvas.enable
-            canvas#peoplecanvas
+            .music-hero
+              .music-hero__stage(aria-hidden="true")
+                .music-hero__notes
+                  .music-hero__lane.music-hero__lane--1
+                    span.music-hero__note.music-hero__note--1 ♪
+                  .music-hero__lane.music-hero__lane--2
+                    span.music-hero__note.music-hero__note--2 ♫
+                  .music-hero__lane.music-hero__lane--3
+                    span.music-hero__note.music-hero__note--3 ♩
+                  .music-hero__lane.music-hero__lane--4
+                    span.music-hero__note.music-hero__note--4 ♬
+                .music-hero__piano
+                  span.music-hero__key.music-hero__key--1
+                  span.music-hero__key.music-hero__key--2
+                  span.music-hero__key.music-hero__key--3
+                  span.music-hero__key.music-hero__key--4
+                  span.music-hero__key.music-hero__key--5
+                  span.music-hero__key.music-hero__key--6
+                  span.music-hero__key.music-hero__key--7
+                  span.music-hero__black.music-hero__black--1
+                  span.music-hero__black.music-hero__black--2
+                  span.music-hero__black.music-hero__black--3
+                  span.music-hero__black.music-hero__black--4
+                  span.music-hero__black.music-hero__black--5
+                  span.music-hero__black.music-hero__black--6
           else 
             .banners-title
               .banners-title-big=title
@@ -20,8 +44,9 @@ if home_top_config.enable
               i.anzhiyufont.anzhiyu-icon-arrow-right
         .categoryGroup
           each item in home_top_config.category
+            - const categoryHref = item.path === '/' ? url_for('/') : `${url_for('/')}?category=${encodeURIComponent(item.name)}`
             .categoryItem(style=`box-shadow:${item.shadow}`)
-              a.categoryButton(href=url_for(item.path) class=`${item.class}`)
+              a.categoryButton(href=categoryHref class=`${item.class}`)
                 span.categoryButtonText=item.name
                 if (item.icon.startsWith("fa"))
                   i(class=`${item.icon}`)

@@ -3,8 +3,10 @@
       #catalog-bar
         #catalog-list
           .catalog-list-item(id='首页')
-            a(href="/") 首页
-          !=catalog_list("categories")
+            a(href=url_for('/')) 首页
+          each item in site.categories.data
+            .catalog-list-item(id=item.name)
+              a(href=`${url_for('/')}?category=${encodeURIComponent(item.name)}`)= item.name
         .category-bar-next#category-bar-next(onclick="anzhiyu.scrollCategoryBarToRight()")
           i.anzhiyufont.anzhiyu-icon-angle-double-right
-        a.catalog-more(href="/categories/")!= '更多'
+        a.catalog-more(href=url_for(config.category_dir + '/'))!= '更多'

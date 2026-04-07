@@ -1,20 +1,19 @@
-/* 浅色模式下全局导航栏及文章标题背景改为绿色 */
+/* 浅色模式下文章页顶部使用动态配色变量 */
 [data-theme='light'] .post #nav,
 [data-theme='light'] .post #nav:not(.min) .menus_items,
 [data-theme='light'] .post #nav .menus_items,
 [data-theme='light'] .post #nav.show {
-    background-color: #4CAF50 !important;
+    background: linear-gradient(135deg, var(--post-hero-solid), var(--post-hero-end)) !important;
     background-image: none !important;
     backdrop-filter: none !important;
 }
 
-/* 导航栏下拉菜单背景改为绿色 */
 [data-theme='light'] .post #nav .menus_item_child {
-    background-color: #4CAF50 !important;
+    background: var(--post-hero-solid) !important;
 }
 
 [data-theme='light'] .post #nav .menus_item_child:before {
-    background-color: #4CAF50 !important;
+    background: transparent !important;
 }
 
 /* 确保导航栏内部文字看得清（设为白色） */
@@ -24,13 +23,16 @@
     color: #ffffff !important;
 }
 
-/* 文章标题部分背景改为绿色 */
+/* 文章标题部分背景改成每篇不同的渐变 */
 [data-theme='light'] .post #page-header,
 [data-theme='light'] .post #page-header.post-bg,
 [data-theme='light'] .post #page-header.not-home-page,
 [data-theme='light'] .post #page-header.not-top-img {
-    background-color: #4CAF50 !important;
-    background-image: none !important;
+    background:
+        radial-gradient(circle at 18% 22%, rgba(255,255,255,0.18), transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(255,255,255,0.12), transparent 20%),
+        linear-gradient(135deg, var(--post-hero-start), var(--post-hero-end)) !important;
+    background-color: var(--post-hero-solid) !important;
     backdrop-filter: none !important;
 }
 

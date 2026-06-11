@@ -485,3 +485,35 @@ body[data-type="tags"] .article-sort-title {
         font-size: 2.4rem;
     }
 }
+
+#page-header #nav #nav-right {
+    display: flex;
+    align-items: center;
+}
+
+#page-header #nav #nav-right #search-button {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+#page-header #nav #nav-right #search-button .search {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+#local-search {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+#local-search .search-dialog,
+#local-search #search-mask {
+    pointer-events: auto;
+}

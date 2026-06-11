@@ -1257,7 +1257,7 @@ dynamicEffect:
 inject:
   head:
     # 自定义css
-    - <link rel="stylesheet" href="/My_Blog/css/custom.css">
+    - <link rel="stylesheet" href="/My_Blog/css/custom.css?v=2026061202">
 
   bottom:
     # 自定义js

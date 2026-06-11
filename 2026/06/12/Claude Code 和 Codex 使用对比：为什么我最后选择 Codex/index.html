@@ -1,0 +1,673 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex | Echo's Blog</title><meta name="keywords" content="Codex,AI工具,开发效率,Claude Code,AI编程工具使用记录"><meta name="author" content="Echo"><meta name="copyright" content="Echo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex"><meta name="application-name" content="AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex"><meta property="og:url" content="https://glorylife123.github.io/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/index.html"><meta property="og:site_name" content="Echo's Blog"><meta property="og:description" content="系列说明这是“AI 编程工具使用记录”系列的第二篇。 上一篇主要写 Codex 的使用方式：从直接登录 OpenAI 账号，到后来通过 ccswitch 调 API。这一篇继续往后写，把 Claude Code 和 Codex 放在一起对比，最后说明为什么我还是选择 Codex 作为主力。 这个系列"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&amp;q=80"><meta property="article:author" content="Echo"><meta property="article:tag" content="[&quot;Hexo&quot;,&quot;AI 编程工具&quot;,&quot;Codex&quot;,&quot;Claude Code&quot;,&quot;技术博客&quot;,&quot;考研复试&quot;,&quot;数码产品&quot;]"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&amp;q=80"><meta name="description" content="系列说明这是“AI 编程工具使用记录”系列的第二篇。 上一篇主要写 Codex 的使用方式：从直接登录 OpenAI 账号，到后来通过 ccswitch 调 API。这一篇继续往后写，把 Claude Code 和 Codex 放在一起对比，最后说明为什么我还是选择 Codex 作为主力。 这个系列"><link rel="shortcut icon" href="/My_Blog/favicon.ico"><link rel="canonical" href="https://glorylife123.github.io/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/My_Blog/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: 'https://twikootomments.vercel.app/',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/My_Blog/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: {"path":"/My_Blog/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Echo","link":"链接: ","source":"来源: Echo's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Echo\'s Blog',
+  title: 'AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex',
+  postAI: '',
+  pageFillDescription: '系列说明, 这篇写什么, 我对这类工具的期待, Claude Code 给我的第一印象, Claude Code 用起来的问题, 1. 工作流不够贴合我的习惯, 2. 配置管理不是我最喜欢的方式, 3. 接口生态反而是 Claude Code 更灵活, 4. 我更在意可维护性, Codex 给我的第一印象, 我更喜欢 Codex 的地方, 1. 过程更透明, 2. 更适合仓库级任务, 3. 和终端工作流更贴合, 4. 配合 API 使用更灵活, 两者简单对比, 为什么最终选择 Codex, 我的结论系列说明这是编程工具使用记录系列的第二篇上一篇主要写的使用方式从直接登录账号到后来通过调这一篇继续往后写把和放在一起对比最后说明为什么我还是选择作为主力这个系列不是官方教程更像是我自己的工具迁移记录这篇写什么这篇记录一下我对和的使用感受这两个工具的定位都很接近都是面向开发者的编程助手都不是单纯聊天而是可以结合项目文件终端命令和代码修改来工作我一开始并没有特别明确地站队只是都试了一下用下来之后我最后更倾向于把放进自己的日常开发流程里这篇不做参数表式的硬评测也不写成谁吊打谁更多是从我自己的使用习惯出发写清楚为什么最后选择我对这类工具的期待在对比之前先说一下我对编程工具的期待我不太需要它只做一个高级搜索引擎也不希望它只是给我贴一段代码我更希望它能做到看懂当前项目结构知道哪些文件该改哪些文件不该动修改之前先说明思路修改之后能跑构建或测试验证出问题时能继续定位而不是让我重新描述一遍也就是说我想要的不是一个单次问答工具而是一个能参与项目维护的终端助手从这个角度看和都比普通网页对话更适合写代码给我的第一印象的第一印象是比较顺手它很适合做这种事情快速理解一个文件根据自然语言改一段代码帮忙解释报错生成一段比较完整的实现思路系列模型在长文本理解和表达上一直给我感觉比较稳所以在阅读代码总结逻辑解释项目结构时体验是不错的如果只是让它看一段代码然后问这里为什么报错这个函数做了什么帮我改成另一种写法它完成得很自然用起来的问题但真正放到我的开发流程里之后我会遇到几个不太舒服的点工作流不够贴合我的习惯我更习惯先让工具检查项目再给出计划然后小范围修改最后跑命令验证当然也能做这些事但在我的体验里它更像是一个很强的代码对话助手而不是我最终想固定下来的项目维护工具它适合快速帮我解决一个点但我不太想把整个仓库清理配置调整文章生成构建验证这些连续流程都交给它配置管理不是我最喜欢的方式我现在更倾向于把模型调用这件事配置化比如模型服务地址都能自己管理如果一个工具更依赖自己的账号体系和默认配置我会觉得可控性弱一点不是不能用而是不太符合我现在对开发工具的管理方式我更希望它像这类工具一样配置明确行为透明换环境时也比较容易迁移接口生态反而是更灵活这里要单独说一下接口生态如果只看模型接入范围其实更灵活它不只局限在一种接口形态里很多第三方模型服务都可以折腾接入比如小米这类模型这边我目前的使用感受是走时主要还是围绕的接口来用这样做的好处是路径更标准和自家的模型配合更顺但问题也很明显如果想随手切到小米这类模型空间就没有那么大所以如果一个人的核心需求是尽可能多地接不同模型那在这一点上确实更有优势但对我来说模型接入范围不是唯一标准我更看重的是它放进真实项目之后能不能稳定地读项目改文件跑验证收尾这也是为什么即使的接口生态更开放我最后还是更偏向我更在意可维护性很多时候我不是让写一个而是在维护一个真实项目真实项目里最怕的不是写不出来而是改多了改偏了顺手修了不该修的东西没有验证就告诉我完成了所以我会更看重工具在修改边界计划执行和验证反馈上的稳定感给我的第一印象给我的第一印象更像一个终端里的协作者它的使用方式天然围绕项目展开先看文件结构再读关键配置然后给出修改计划接着改文件最后跑构建或测试这套流程和我平时自己维护项目的节奏很接近比如这个博客项目里我让检查有没有冗余的地方它不是一上来就乱删而是先看主题配置和文章目录再判断哪些东西可以清理这种感觉比单纯回答我怎么做更像是在一起处理一个项目我更喜欢的地方过程更透明在做事时我能看到它准备做什么正在看什么文件为什么要改某个地方这点对我很重要因为我不希望工具像黑盒一样直接告诉我我改好了我更希望它每一步都有理由尤其是在涉及删除文件改依赖跑命令的时候透明不只是为了放心也是为了后面出问题时能回溯更适合仓库级任务很适合处理这种跨文件任务清理冗余依赖修改配置并同步文档新增文章并运行构建根据报错定位项目问题检查哪些文件是生成产物哪些文件应该进版本控制这些任务不是单点代码补全而是需要理解整个项目状态在这类场景里我更愿意用和终端工作流更贴合我平时维护博客基本就是终端工作流正好可以接在这个流程里它不只是告诉我你应该运行构建而是可以实际运行然后根据输出继续判断下一步比如构建失败它可以继续看报错审计有漏洞它可以判断是依赖问题还是插件残留文章有问题它也能直接定位这种连续性是我最后选择它的重要原因配合使用更灵活上一篇我写过我最后更倾向于通过调来使用这样做之后模型接口密钥这些配置都更明确对我来说这比单纯登录某个账号更符合开发习惯我可以把它当成开发环境的一部分而不是一个临时打开的工具这点也是我选择的原因之一它更容易被纳入我自己的工具链两者简单对比如果按我的使用感受来总结大概是这样对比点第一印象对话和解释能力强更像终端协作者适合任务单点代码理解解释改写仓库级修改配置清理验证流程工作方式更偏代码助手更偏项目维护助手接口生态更灵活可接小米等模型目前更偏接口我在意的优势阅读和表达顺滑过程透明执行闭环更强最终定位偶尔辅助日常主力当然这个表不是客观排名只是我自己的使用取舍如果一个人主要需求是解释代码生成函数写局部逻辑可能已经很好用了但如果像我这样经常围绕一个真实项目做连续修改我会更偏向为什么最终选择最后选择其实不是因为不好而是更符合我的工作方式我最看重的是这几点能围绕本地项目持续工作修改前后有清晰过程能把命令执行和结果验证串起来更适合处理配置依赖文档文章这类综合任务配合使用时更容易纳入自己的工具链对我来说一个编程工具要成为主力不能只会写代码它还要能理解项目控制修改范围验证结果并且在出错时继续排查在这些方面给我的感觉更稳我的结论和都值得试如果只是轻量使用的体验并不差尤其是解释代码和整理思路时很顺手但如果要在真实项目里长期使用我最后还是会选原因很简单它更像一个能参与完整开发流程的助手而不是只在旁边回答问题的助手所以我现在的选择是作为备用工具适合偶尔对比思路作为主力工具负责日常项目维护和内容生产对我来说这个分工比较自然也更符合现在的使用习惯',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-06-12 11:20:00',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/My_Blog/css/custom.css"><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/My_Blog/atom.xml" title="Echo's Blog" type="application/atom+xml">
+<link rel="alternate" href="/My_Blog/rss2.xml" title="Echo's Blog" type="application/rss+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/My_Blog/" accesskey="h"><div class="title">Echo's Blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/ai-tools/"><i class="anzhiyufont anzhiyu-icon-book-open faa-tada" style="font-size: 0.9em;"></i><span> AI 工具专题</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/equipment/"><i class="anzhiyufont anzhiyu-icon-cube faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/My_Blog/tags/AI%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">AI工具<sup>2</sup></a><a href="/My_Blog/tags/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" style="font-size: 1.05rem;">AI编程工具使用记录<sup>2</sup></a><a href="/My_Blog/tags/AnZhiYu/" style="font-size: 1.05rem;">AnZhiYu<sup>1</sup></a><a href="/My_Blog/tags/Claude-Code/" style="font-size: 1.05rem;">Claude Code<sup>1</sup></a><a href="/My_Blog/tags/Codex/" style="font-size: 1.05rem;">Codex<sup>2</sup></a><a href="/My_Blog/tags/Cpp/" style="font-size: 1.05rem;">Cpp<sup>2</sup></a><a href="/My_Blog/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>2</sup></a><a href="/My_Blog/tags/MacBook/" style="font-size: 1.05rem;">MacBook<sup>1</sup></a><a href="/My_Blog/tags/OpenAI/" style="font-size: 1.05rem;">OpenAI<sup>1</sup></a><a href="/My_Blog/tags/%E4%B8%9C%E5%8D%97%E5%A4%A7%E5%AD%A6/" style="font-size: 1.05rem;">东南大学<sup>3</sup></a><a href="/My_Blog/tags/%E5%88%9D%E8%AF%95%E7%BB%8F%E9%AA%8C/" style="font-size: 1.05rem;">初试经验<sup>1</sup></a><a href="/My_Blog/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.05rem;">博客<sup>2</sup></a><a href="/My_Blog/tags/%E5%A4%87%E8%80%83%E7%BB%8F%E5%8E%86/" style="font-size: 1.05rem;">备考经历<sup>1</sup></a><a href="/My_Blog/tags/%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" style="font-size: 1.05rem;">开发效率<sup>2</sup></a><a href="/My_Blog/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">教程<sup>4</sup></a><a href="/My_Blog/tags/%E6%95%B0%E7%A0%81%E4%BA%A7%E5%93%81/" style="font-size: 1.05rem;">数码产品<sup>1</sup></a><a href="/My_Blog/tags/%E7%AD%89%E7%AD%89%E5%85%9A/" style="font-size: 1.05rem;">等等党<sup>1</sup></a><a href="/My_Blog/tags/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" style="font-size: 1.05rem;">类与对象<sup>1</sup></a><a href="/My_Blog/tags/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/" style="font-size: 1.05rem;">考研复试<sup>3</sup></a><a href="/My_Blog/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 1.05rem;">记录<sup>1</sup></a><a href="/My_Blog/tags/%E8%B4%AD%E7%89%A9%E5%BF%83%E5%BE%97/" style="font-size: 1.05rem;">购物心得<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/My_Blog/archives/2026/06/"><span class="card-archive-list-date">六月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/My_Blog/archives/2026/04/"><span class="card-archive-list-date">四月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/My_Blog/archives/2026/03/"><span class="card-archive-list-date">三月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/My_Blog/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/My_Blog/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/My_Blog/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" itemprop="url">技术教程</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/My_Blog/tags/Codex/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Codex</span></a><a class="article-meta__tags" href="/My_Blog/tags/AI%E5%B7%A5%E5%85%B7/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AI工具</span></a><a class="article-meta__tags" href="/My_Blog/tags/%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开发效率</span></a><a class="article-meta__tags" href="/My_Blog/tags/Claude-Code/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Claude Code</span></a><a class="article-meta__tags" href="/My_Blog/tags/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AI编程工具使用记录</span></a></span></div></div><h1 class="post-title" itemprop="name headline">AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-06-12T03:20:00.000Z" title="发表于 2026-06-12 11:20:00">2026-06-12</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-06-12T03:20:00.000Z" title="更新于 2026-06-12 11:20:00">2026-06-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">2578</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>8分钟</span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&amp;q=80"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://glorylife123.github.io/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/"><header><a class="post-meta-categories" href="/My_Blog/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" itemprop="url">技术教程</a><a href="/My_Blog/tags/Codex/" tabindex="-1" itemprop="url">Codex</a><a href="/My_Blog/tags/AI%E5%B7%A5%E5%85%B7/" tabindex="-1" itemprop="url">AI工具</a><a href="/My_Blog/tags/%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" tabindex="-1" itemprop="url">开发效率</a><a href="/My_Blog/tags/Claude-Code/" tabindex="-1" itemprop="url">Claude Code</a><a href="/My_Blog/tags/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" tabindex="-1" itemprop="url">AI编程工具使用记录</a><h1 id="CrawlerTitle" itemprop="name headline">AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Echo</span><time itemprop="dateCreated datePublished" datetime="2026-06-12T03:20:00.000Z" title="发表于 2026-06-12 11:20:00">2026-06-12</time><time itemprop="dateCreated datePublished" datetime="2026-06-12T03:20:00.000Z" title="更新于 2026-06-12 11:20:00">2026-06-12</time></header><h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><p>这是“AI 编程工具使用记录”系列的第二篇。</p>
+<p>上一篇主要写 Codex 的使用方式：从直接登录 OpenAI 账号，到后来通过 <code>ccswitch</code> 调 API。<br>这一篇继续往后写，把 Claude Code 和 Codex 放在一起对比，最后说明为什么我还是选择 Codex 作为主力。</p>
+<p>这个系列不是官方教程，更像是我自己的工具迁移记录。</p>
+<hr>
+<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇记录一下我对 Claude Code 和 Codex 的使用感受。</p>
+<p>这两个工具的定位都很接近：都是面向开发者的 AI 编程助手，都不是单纯聊天，而是可以结合项目文件、终端命令和代码修改来工作。</p>
+<p>我一开始并没有特别明确地站队，只是都试了一下。用下来之后，我最后更倾向于把 Codex 放进自己的日常开发流程里。</p>
+<p>这篇不做参数表式的硬评测，也不写成“谁吊打谁”。更多是从我自己的使用习惯出发，写清楚为什么最后选择 Codex。</p>
+<hr>
+<h2 id="我对这类工具的期待"><a href="#我对这类工具的期待" class="headerlink" title="我对这类工具的期待"></a>我对这类工具的期待</h2><p>在对比之前，先说一下我对 AI 编程工具的期待。</p>
+<p>我不太需要它只做一个“高级搜索引擎”，也不希望它只是给我贴一段代码。我更希望它能做到：</p>
+<ul>
+<li>看懂当前项目结构</li>
+<li>知道哪些文件该改，哪些文件不该动</li>
+<li>修改之前先说明思路</li>
+<li>修改之后能跑构建或测试验证</li>
+<li>出问题时能继续定位，而不是让我重新描述一遍</li>
+</ul>
+<p>也就是说，我想要的不是一个单次问答工具，而是一个能参与项目维护的终端助手。</p>
+<p>从这个角度看，Claude Code 和 Codex 都比普通网页对话更适合写代码。</p>
+<hr>
+<h2 id="Claude-Code-给我的第一印象"><a href="#Claude-Code-给我的第一印象" class="headerlink" title="Claude Code 给我的第一印象"></a>Claude Code 给我的第一印象</h2><p>Claude Code 的第一印象是比较顺手。</p>
+<p>它很适合做这种事情：</p>
+<ul>
+<li>快速理解一个文件</li>
+<li>根据自然语言改一段代码</li>
+<li>帮忙解释报错</li>
+<li>生成一段比较完整的实现思路</li>
+</ul>
+<p>Claude 系列模型在长文本理解和表达上一直给我感觉比较稳，所以 Claude Code 在阅读代码、总结逻辑、解释项目结构时，体验是不错的。</p>
+<p>如果只是让它看一段代码，然后问“这里为什么报错”“这个函数做了什么”“帮我改成另一种写法”，它完成得很自然。</p>
+<hr>
+<h2 id="Claude-Code-用起来的问题"><a href="#Claude-Code-用起来的问题" class="headerlink" title="Claude Code 用起来的问题"></a>Claude Code 用起来的问题</h2><p>但真正放到我的开发流程里之后，我会遇到几个不太舒服的点。</p>
+<h3 id="1-工作流不够贴合我的习惯"><a href="#1-工作流不够贴合我的习惯" class="headerlink" title="1. 工作流不够贴合我的习惯"></a>1. 工作流不够贴合我的习惯</h3><p>我更习惯先让工具检查项目，再给出计划，然后小范围修改，最后跑命令验证。</p>
+<p>Claude Code 当然也能做这些事，但在我的体验里，它更像是一个很强的代码对话助手，而不是我最终想固定下来的“项目维护工具”。</p>
+<p>它适合快速帮我解决一个点，但我不太想把整个仓库清理、配置调整、文章生成、构建验证这些连续流程都交给它。</p>
+<h3 id="2-配置管理不是我最喜欢的方式"><a href="#2-配置管理不是我最喜欢的方式" class="headerlink" title="2. 配置管理不是我最喜欢的方式"></a>2. 配置管理不是我最喜欢的方式</h3><p>我现在更倾向于把模型调用这件事配置化，比如 API、模型、服务地址都能自己管理。</p>
+<p>如果一个工具更依赖自己的账号体系和默认配置，我会觉得可控性弱一点。不是不能用，而是不太符合我现在对开发工具的管理方式。</p>
+<p>我更希望它像 Git、Node、Hexo 这类工具一样：配置明确，行为透明，换环境时也比较容易迁移。</p>
+<h3 id="3-接口生态反而是-Claude-Code-更灵活"><a href="#3-接口生态反而是-Claude-Code-更灵活" class="headerlink" title="3. 接口生态反而是 Claude Code 更灵活"></a>3. 接口生态反而是 Claude Code 更灵活</h3><p>这里要单独说一下接口生态。</p>
+<p>如果只看模型接入范围，Claude Code 其实更灵活。它不只局限在一种接口形态里，很多第三方模型服务都可以折腾接入，比如 DeepSeek、小米 MiMo 这类模型。</p>
+<p>Codex 这边我目前的使用感受是，走 API 时主要还是围绕 OpenAI 的 Responses 接口来用。这样做的好处是路径更标准，和 OpenAI 自家的模型配合更顺；但问题也很明显：如果想随手切到 DeepSeek、小米 MiMo 这类模型，空间就没有 Claude Code 那么大。</p>
+<p>所以如果一个人的核心需求是“尽可能多地接不同模型”，那 Claude Code 在这一点上确实更有优势。</p>
+<p>但对我来说，模型接入范围不是唯一标准。<br>我更看重的是它放进真实项目之后，能不能稳定地读项目、改文件、跑验证、收尾。</p>
+<p>这也是为什么即使 Claude Code 的接口生态更开放，我最后还是更偏向 Codex。</p>
+<h3 id="4-我更在意“可维护性”"><a href="#4-我更在意“可维护性”" class="headerlink" title="4. 我更在意“可维护性”"></a>4. 我更在意“可维护性”</h3><p>很多时候我不是让 AI 写一个 demo，而是在维护一个真实项目。</p>
+<p>真实项目里最怕的不是“写不出来”，而是：</p>
+<ul>
+<li>改多了</li>
+<li>改偏了</li>
+<li>顺手修了不该修的东西</li>
+<li>没有验证就告诉我完成了</li>
+</ul>
+<p>所以我会更看重工具在修改边界、计划执行和验证反馈上的稳定感。</p>
+<hr>
+<h2 id="Codex-给我的第一印象"><a href="#Codex-给我的第一印象" class="headerlink" title="Codex 给我的第一印象"></a>Codex 给我的第一印象</h2><p>Codex 给我的第一印象更像一个“终端里的协作者”。</p>
+<p>它的使用方式天然围绕项目展开：</p>
+<ul>
+<li>先看文件结构</li>
+<li>再读关键配置</li>
+<li>然后给出修改计划</li>
+<li>接着改文件</li>
+<li>最后跑构建或测试</li>
+</ul>
+<p>这套流程和我平时自己维护项目的节奏很接近。</p>
+<p>比如这个博客项目里，我让 Codex 检查有没有冗余的地方，它不是一上来就乱删，而是先看 <code>package.json</code>、<code>.gitignore</code>、<code>_config.yml</code>、主题配置和文章目录，再判断哪些东西可以清理。</p>
+<p>这种感觉比单纯“回答我怎么做”更像是在一起处理一个项目。</p>
+<hr>
+<h2 id="我更喜欢-Codex-的地方"><a href="#我更喜欢-Codex-的地方" class="headerlink" title="我更喜欢 Codex 的地方"></a>我更喜欢 Codex 的地方</h2><h3 id="1-过程更透明"><a href="#1-过程更透明" class="headerlink" title="1. 过程更透明"></a>1. 过程更透明</h3><p>Codex 在做事时，我能看到它准备做什么、正在看什么文件、为什么要改某个地方。</p>
+<p>这点对我很重要。</p>
+<p>因为我不希望 AI 工具像黑盒一样直接告诉我“我改好了”。我更希望它每一步都有理由，尤其是在涉及删除文件、改依赖、跑命令的时候。</p>
+<p>透明不只是为了放心，也是为了后面出问题时能回溯。</p>
+<hr>
+<h3 id="2-更适合仓库级任务"><a href="#2-更适合仓库级任务" class="headerlink" title="2. 更适合仓库级任务"></a>2. 更适合仓库级任务</h3><p>Codex 很适合处理这种跨文件任务：</p>
+<ul>
+<li>清理冗余依赖</li>
+<li>修改配置并同步文档</li>
+<li>新增文章并运行构建</li>
+<li>根据报错定位项目问题</li>
+<li>检查哪些文件是生成产物，哪些文件应该进版本控制</li>
+</ul>
+<p>这些任务不是单点代码补全，而是需要理解整个项目状态。</p>
+<p>在这类场景里，我更愿意用 Codex。</p>
+<hr>
+<h3 id="3-和终端工作流更贴合"><a href="#3-和终端工作流更贴合" class="headerlink" title="3. 和终端工作流更贴合"></a>3. 和终端工作流更贴合</h3><p>我平时维护博客基本就是终端工作流：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br><span class="line">git status</span><br><span class="line">npm audit --omit=dev</span><br></pre></td></tr></table></figure>
+
+<p>Codex 正好可以接在这个流程里。</p>
+<p>它不只是告诉我“你应该运行构建”，而是可以实际运行，然后根据输出继续判断下一步。</p>
+<p>比如构建失败，它可以继续看报错；审计有漏洞，它可以判断是依赖问题还是插件残留；文章 front matter 有问题，它也能直接定位。</p>
+<p>这种连续性是我最后选择它的重要原因。</p>
+<hr>
+<h3 id="4-配合-API-使用更灵活"><a href="#4-配合-API-使用更灵活" class="headerlink" title="4. 配合 API 使用更灵活"></a>4. 配合 API 使用更灵活</h3><p>上一篇我写过，我最后更倾向于通过 <code>ccswitch</code> 调 API 来使用 Codex。</p>
+<p>这样做之后，模型、接口、密钥这些配置都更明确。对我来说，这比单纯登录某个账号更符合开发习惯。</p>
+<p>我可以把它当成开发环境的一部分，而不是一个临时打开的工具。</p>
+<p>这点也是我选择 Codex 的原因之一：它更容易被纳入我自己的工具链。</p>
+<hr>
+<h2 id="两者简单对比"><a href="#两者简单对比" class="headerlink" title="两者简单对比"></a>两者简单对比</h2><p>如果按我的使用感受来总结，大概是这样：</p>
+<table>
+<thead>
+<tr>
+<th>对比点</th>
+<th>Claude Code</th>
+<th>Codex</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第一印象</td>
+<td>对话和解释能力强</td>
+<td>更像终端协作者</td>
+</tr>
+<tr>
+<td>适合任务</td>
+<td>单点代码理解、解释、改写</td>
+<td>仓库级修改、配置清理、验证流程</td>
+</tr>
+<tr>
+<td>工作方式</td>
+<td>更偏代码助手</td>
+<td>更偏项目维护助手</td>
+</tr>
+<tr>
+<td>接口生态</td>
+<td>更灵活，可接 DeepSeek、小米 MiMo 等模型</td>
+<td>目前更偏 OpenAI Responses 接口</td>
+</tr>
+<tr>
+<td>我在意的优势</td>
+<td>阅读和表达顺滑</td>
+<td>过程透明、执行闭环更强</td>
+</tr>
+<tr>
+<td>最终定位</td>
+<td>偶尔辅助</td>
+<td>日常主力</td>
+</tr>
+</tbody></table>
+<p>当然，这个表不是客观排名，只是我自己的使用取舍。</p>
+<p>如果一个人主要需求是解释代码、生成函数、写局部逻辑，Claude Code 可能已经很好用了。<br>但如果像我这样，经常围绕一个真实项目做连续修改，我会更偏向 Codex。</p>
+<hr>
+<h2 id="为什么最终选择-Codex"><a href="#为什么最终选择-Codex" class="headerlink" title="为什么最终选择 Codex"></a>为什么最终选择 Codex</h2><p>最后选择 Codex，其实不是因为 Claude Code 不好，而是 Codex 更符合我的工作方式。</p>
+<p>我最看重的是这几点：</p>
+<ul>
+<li>能围绕本地项目持续工作</li>
+<li>修改前后有清晰过程</li>
+<li>能把命令执行和结果验证串起来</li>
+<li>更适合处理配置、依赖、文档、文章这类综合任务</li>
+<li>配合 API 使用时更容易纳入自己的工具链</li>
+</ul>
+<p>对我来说，一个 AI 编程工具要成为主力，不能只会“写代码”。</p>
+<p>它还要能理解项目、控制修改范围、验证结果，并且在出错时继续排查。</p>
+<p>Codex 在这些方面给我的感觉更稳。</p>
+<hr>
+<h2 id="我的结论"><a href="#我的结论" class="headerlink" title="我的结论"></a>我的结论</h2><p>Claude Code 和 Codex 都值得试。</p>
+<p>如果只是轻量使用，Claude Code 的体验并不差，尤其是解释代码和整理思路时很顺手。</p>
+<p>但如果要在真实项目里长期使用，我最后还是会选 Codex。</p>
+<p>原因很简单：<br>它更像一个能参与完整开发流程的助手，而不是只在旁边回答问题的助手。</p>
+<p>所以我现在的选择是：</p>
+<ul>
+<li>Claude Code：作为备用工具，适合偶尔对比思路</li>
+<li>Codex：作为主力工具，负责日常项目维护和内容生产</li>
+</ul>
+<p>对我来说，这个分工比较自然，也更符合现在的使用习惯。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/My_Blog/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s41.ax1x.com/2026/04/07/peUD8PO.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s41.ax1x.com/2026/04/07/peUD8PO.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">Echo</div><div class="post-copyright__author_desc">技术学习、AI 工具与生活记录</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://glorylife123.github.io/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://glorylife123.github.io/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/')">AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://glorylife123.github.io/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex&amp;url=https://glorylife123.github.io/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/&amp;pic=https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&amp;q=80" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://Glorylife123.github.io/My_Blog" target="_blank">Echo's Blog</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/My_Blog/tags/Codex/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Codex<span class="tagsPageCount">2</span></a><a class="post-meta__box__tags" href="/My_Blog/tags/AI%E5%B7%A5%E5%85%B7/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AI工具<span class="tagsPageCount">2</span></a><a class="post-meta__box__tags" href="/My_Blog/tags/%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>开发效率<span class="tagsPageCount">2</span></a><a class="post-meta__box__tags" href="/My_Blog/tags/Claude-Code/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Claude Code<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/My_Blog/tags/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AI编程工具使用记录<span class="tagsPageCount">2</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&amp;q=80" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/My_Blog/2026/06/12/Codex%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%EF%BC%9A%E4%BB%8E%E7%99%BB%E5%BD%95%20OpenAI%20%E5%88%B0%E7%94%A8%20ccswitch%20%E8%B0%83%20API/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&amp;q=80" onerror="onerror=null;src='/My_Blog/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">AI 编程工具使用记录（一）：Codex 从登录 OpenAI 到用 ccswitch 调 API</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/My_Blog/2026/06/12/Codex%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%EF%BC%9A%E4%BB%8E%E7%99%BB%E5%BD%95%20OpenAI%20%E5%88%B0%E7%94%A8%20ccswitch%20%E8%B0%83%20API/" title="AI 编程工具使用记录（一）：Codex 从登录 OpenAI 到用 ccswitch 调 API"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-06-12</div><div class="title">AI 编程工具使用记录（一）：Codex 从登录 OpenAI 到用 ccswitch 调 API</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/My_Blog/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s41.ax1x.com/2026/04/07/peUD8PO.png" onerror="this.onerror=null;this.src='/My_Blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description">这里主要记录技术学习、AI 工具使用、博客搭建和一些真实的折腾过程。</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/My_Blog/"><h1 class="author-info__name">Echo</h1><div class="author-info__desc">技术学习、AI 工具与生活记录</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/Glorylife123" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/350728573" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">新增 AI 工具专题，已收录 Codex 与 Claude Code 系列文章。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E5%88%97%E8%AF%B4%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">系列说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E7%AF%87%E5%86%99%E4%BB%80%E4%B9%88"><span class="toc-number">2.</span> <span class="toc-text">这篇写什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E5%AF%B9%E8%BF%99%E7%B1%BB%E5%B7%A5%E5%85%B7%E7%9A%84%E6%9C%9F%E5%BE%85"><span class="toc-number">3.</span> <span class="toc-text">我对这类工具的期待</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Claude-Code-%E7%BB%99%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E5%8D%B0%E8%B1%A1"><span class="toc-number">4.</span> <span class="toc-text">Claude Code 给我的第一印象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Claude-Code-%E7%94%A8%E8%B5%B7%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">Claude Code 用起来的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%8D%E5%A4%9F%E8%B4%B4%E5%90%88%E6%88%91%E7%9A%84%E4%B9%A0%E6%83%AF"><span class="toc-number">5.1.</span> <span class="toc-text">1. 工作流不够贴合我的习惯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E4%B8%8D%E6%98%AF%E6%88%91%E6%9C%80%E5%96%9C%E6%AC%A2%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">5.2.</span> <span class="toc-text">2. 配置管理不是我最喜欢的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%8E%A5%E5%8F%A3%E7%94%9F%E6%80%81%E5%8F%8D%E8%80%8C%E6%98%AF-Claude-Code-%E6%9B%B4%E7%81%B5%E6%B4%BB"><span class="toc-number">5.3.</span> <span class="toc-text">3. 接口生态反而是 Claude Code 更灵活</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%88%91%E6%9B%B4%E5%9C%A8%E6%84%8F%E2%80%9C%E5%8F%AF%E7%BB%B4%E6%8A%A4%E6%80%A7%E2%80%9D"><span class="toc-number">5.4.</span> <span class="toc-text">4. 我更在意“可维护性”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Codex-%E7%BB%99%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E5%8D%B0%E8%B1%A1"><span class="toc-number">6.</span> <span class="toc-text">Codex 给我的第一印象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%9B%B4%E5%96%9C%E6%AC%A2-Codex-%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="toc-number">7.</span> <span class="toc-text">我更喜欢 Codex 的地方</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%87%E7%A8%8B%E6%9B%B4%E9%80%8F%E6%98%8E"><span class="toc-number">7.1.</span> <span class="toc-text">1. 过程更透明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9B%B4%E9%80%82%E5%90%88%E4%BB%93%E5%BA%93%E7%BA%A7%E4%BB%BB%E5%8A%A1"><span class="toc-number">7.2.</span> <span class="toc-text">2. 更适合仓库级任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%92%8C%E7%BB%88%E7%AB%AF%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%9B%B4%E8%B4%B4%E5%90%88"><span class="toc-number">7.3.</span> <span class="toc-text">3. 和终端工作流更贴合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%85%8D%E5%90%88-API-%E4%BD%BF%E7%94%A8%E6%9B%B4%E7%81%B5%E6%B4%BB"><span class="toc-number">7.4.</span> <span class="toc-text">4. 配合 API 使用更灵活</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A4%E8%80%85%E7%AE%80%E5%8D%95%E5%AF%B9%E6%AF%94"><span class="toc-number">8.</span> <span class="toc-text">两者简单对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9-Codex"><span class="toc-number">9.</span> <span class="toc-text">为什么最终选择 Codex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E7%BB%93%E8%AE%BA"><span class="toc-number">10.</span> <span class="toc-text">我的结论</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/" title="AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&amp;q=80" onerror="this.onerror=null;this.src='/My_Blog/img/404.jpg'" alt="AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex"/></a><div class="content"><a class="title" href="/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/" title="AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex">AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex</a><time datetime="2026-06-12T03:20:00.000Z" title="发表于 2026-06-12 11:20:00">2026-06-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/My_Blog/2026/06/12/Codex%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%EF%BC%9A%E4%BB%8E%E7%99%BB%E5%BD%95%20OpenAI%20%E5%88%B0%E7%94%A8%20ccswitch%20%E8%B0%83%20API/" title="AI 编程工具使用记录（一）：Codex 从登录 OpenAI 到用 ccswitch 调 API"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&amp;q=80" onerror="this.onerror=null;this.src='/My_Blog/img/404.jpg'" alt="AI 编程工具使用记录（一）：Codex 从登录 OpenAI 到用 ccswitch 调 API"/></a><div class="content"><a class="title" href="/My_Blog/2026/06/12/Codex%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%EF%BC%9A%E4%BB%8E%E7%99%BB%E5%BD%95%20OpenAI%20%E5%88%B0%E7%94%A8%20ccswitch%20%E8%B0%83%20API/" title="AI 编程工具使用记录（一）：Codex 从登录 OpenAI 到用 ccswitch 调 API">AI 编程工具使用记录（一）：Codex 从登录 OpenAI 到用 ccswitch 调 API</a><time datetime="2026-06-12T02:30:00.000Z" title="发表于 2026-06-12 10:30:00">2026-06-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/My_Blog/2026/04/05/record-of-hexo-blog-repair/" title="Hexo 博客损坏后的恢复记录：问题排查和修复过程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&amp;q=80" onerror="this.onerror=null;this.src='/My_Blog/img/404.jpg'" alt="Hexo 博客损坏后的恢复记录：问题排查和修复过程"/></a><div class="content"><a class="title" href="/My_Blog/2026/04/05/record-of-hexo-blog-repair/" title="Hexo 博客损坏后的恢复记录：问题排查和修复过程">Hexo 博客损坏后的恢复记录：问题排查和修复过程</a><time datetime="2026-04-04T17:00:00.000Z" title="发表于 2026-04-05 01:00:00">2026-04-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/My_Blog/2026/04/04/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%AE%B0%E5%BD%95/" title="博客搭建记录：Hexo + AnZhiYu + GitHub Pages"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&amp;q=80" onerror="this.onerror=null;this.src='/My_Blog/img/404.jpg'" alt="博客搭建记录：Hexo + AnZhiYu + GitHub Pages"/></a><div class="content"><a class="title" href="/My_Blog/2026/04/04/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%AE%B0%E5%BD%95/" title="博客搭建记录：Hexo + AnZhiYu + GitHub Pages">博客搭建记录：Hexo + AnZhiYu + GitHub Pages</a><time datetime="2026-04-04T13:30:00.000Z" title="发表于 2026-04-04 21:30:00">2026-04-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/My_Blog/2026/03/05/MacBook%20Air%20M5/" title="MacBook Air 购买记录：从双十一观望到最后入手 M5"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=800&amp;q=80" onerror="this.onerror=null;this.src='/My_Blog/img/404.jpg'" alt="MacBook Air 购买记录：从双十一观望到最后入手 M5"/></a><div class="content"><a class="title" href="/My_Blog/2026/03/05/MacBook%20Air%20M5/" title="MacBook Air 购买记录：从双十一观望到最后入手 M5">MacBook Air 购买记录：从双十一观望到最后入手 M5</a><time datetime="2026-03-05T10:30:00.000Z" title="发表于 2026-03-05 18:30:00">2026-03-05</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2026 By <a class="footer-bar-link" href="/My_Blog/" title="Echo" target="_blank">Echo</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/My_Blog/archives/" title="archive"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/My_Blog/tags/" title="tag"><div class="headline">标签</div><div class="length-num">21</div></a><a href="/My_Blog/categories/" title="category"><div class="headline">分类</div><div class="length-num">3</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://hexo.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/ai-tools/"><i class="anzhiyufont anzhiyu-icon-book-open faa-tada" style="font-size: 0.9em;"></i><span> AI 工具专题</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/My_Blog/equipment/"><i class="anzhiyufont anzhiyu-icon-cube faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/My_Blog/tags/AI%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">AI工具<sup>2</sup></a><a href="/My_Blog/tags/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" style="font-size: 0.88rem;">AI编程工具使用记录<sup>2</sup></a><a href="/My_Blog/tags/AnZhiYu/" style="font-size: 0.88rem;">AnZhiYu<sup>1</sup></a><a href="/My_Blog/tags/Claude-Code/" style="font-size: 0.88rem;">Claude Code<sup>1</sup></a><a href="/My_Blog/tags/Codex/" style="font-size: 0.88rem;">Codex<sup>2</sup></a><a href="/My_Blog/tags/Cpp/" style="font-size: 0.88rem;">Cpp<sup>2</sup></a><a href="/My_Blog/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>2</sup></a><a href="/My_Blog/tags/MacBook/" style="font-size: 0.88rem;">MacBook<sup>1</sup></a><a href="/My_Blog/tags/OpenAI/" style="font-size: 0.88rem;">OpenAI<sup>1</sup></a><a href="/My_Blog/tags/%E4%B8%9C%E5%8D%97%E5%A4%A7%E5%AD%A6/" style="font-size: 0.88rem;">东南大学<sup>3</sup></a><a href="/My_Blog/tags/%E5%88%9D%E8%AF%95%E7%BB%8F%E9%AA%8C/" style="font-size: 0.88rem;">初试经验<sup>1</sup></a><a href="/My_Blog/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 0.88rem;">博客<sup>2</sup></a><a href="/My_Blog/tags/%E5%A4%87%E8%80%83%E7%BB%8F%E5%8E%86/" style="font-size: 0.88rem;">备考经历<sup>1</sup></a><a href="/My_Blog/tags/%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" style="font-size: 0.88rem;">开发效率<sup>2</sup></a><a href="/My_Blog/tags/%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">教程<sup>4</sup></a><a href="/My_Blog/tags/%E6%95%B0%E7%A0%81%E4%BA%A7%E5%93%81/" style="font-size: 0.88rem;">数码产品<sup>1</sup></a><a href="/My_Blog/tags/%E7%AD%89%E7%AD%89%E5%85%9A/" style="font-size: 0.88rem;">等等党<sup>1</sup></a><a href="/My_Blog/tags/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" style="font-size: 0.88rem;">类与对象<sup>1</sup></a><a href="/My_Blog/tags/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/" style="font-size: 0.88rem;">考研复试<sup>3</sup></a><a href="/My_Blog/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 0.88rem;">记录<sup>1</sup></a><a href="/My_Blog/tags/%E8%B4%AD%E7%89%A9%E5%BF%83%E5%BE%97/" style="font-size: 0.88rem;">购物心得<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><div class="nav-music-placeholder" aria-hidden="true"><i class="anzhiyufont anzhiyu-icon-music"></i></div><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/My_Blog/js/utils.js"></script><script src="/My_Blog/js/main.js"></script><script src="/My_Blog/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>var meting_api = "https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r";
+</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.7.1",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Echo 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/My_Blog/anzhiyu/random.js"></script><script src="/My_Blog/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikootomments.vercel.app/',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.44/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikootomments.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikootomments.vercel.app/',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.44/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/My_Blog/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

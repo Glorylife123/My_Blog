@@ -1,0 +1,1716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>MacBook Air 购买记录：从双十一观望到最后入手 M5</title>
+    <url>/My_Blog/2026/03/05/MacBook%20Air%20M5/</url>
+    <content><![CDATA[<h2 id="购买背景"><a href="#购买背景" class="headerlink" title="购买背景"></a>购买背景</h2><p>这篇记录我这次买 MacBook Air 的决策过程，主要写为什么一开始没买、后来为什么改成继续等，以及最后为什么下单 M5。</p>
+<p>我的老电脑在双十一前后已经明显不够用了，主要问题是：</p>
+<ul>
+<li>风扇噪音大</li>
+<li>电池衰减严重</li>
+<li>多开开发工具时卡顿明显</li>
+</ul>
+<p>所以换电脑本身不是“想买”，而是“该换了”。</p>
+<hr>
+<h2 id="当时主要在两个配置之间犹豫"><a href="#当时主要在两个配置之间犹豫" class="headerlink" title="当时主要在两个配置之间犹豫"></a>当时主要在两个配置之间犹豫</h2><p>我当时比较关注的是这两种方案：</p>
+<ul>
+<li>M3 + 24GB + 512GB</li>
+<li>M4 + 16GB + 512GB</li>
+</ul>
+<p>这两个配置价格接近，但思路完全不一样。</p>
+<h3 id="方案一：M3-24GB"><a href="#方案一：M3-24GB" class="headerlink" title="方案一：M3 + 24GB"></a>方案一：M3 + 24GB</h3><p>优点：</p>
+<ul>
+<li>内存更大</li>
+<li>多开项目、容器、浏览器标签页更安心</li>
+</ul>
+<p>问题：</p>
+<ul>
+<li>芯片是上一代</li>
+<li>当时已经接近新品更新周期</li>
+</ul>
+<h3 id="方案二：M4-16GB"><a href="#方案二：M4-16GB" class="headerlink" title="方案二：M4 + 16GB"></a>方案二：M4 + 16GB</h3><p>优点：</p>
+<ul>
+<li>芯片更新</li>
+<li>整体平台更晚一代</li>
+</ul>
+<p>问题：</p>
+<ul>
+<li>16GB 内存让我不太放心</li>
+<li>我自己的使用场景偏开发，不是纯轻办公</li>
+</ul>
+<hr>
+<h2 id="为什么最后双十一没有买"><a href="#为什么最后双十一没有买" class="headerlink" title="为什么最后双十一没有买"></a>为什么最后双十一没有买</h2><p>最后没下单，不是因为完全不需要，而是因为当时没有一个版本让我觉得“买了就不用再想”。</p>
+<p>我当时的判断是：</p>
+<ul>
+<li>如果买 M3 24GB，会担心平台太旧</li>
+<li>如果买 M4 16GB，会担心内存不够</li>
+</ul>
+<p>这类情况其实就很明确了：<br>如果一个产品你买之前要反复说服自己，那大概率说明它还不是最合适的时机。</p>
+<p>所以我当时选择继续等。</p>
+<hr>
+<h2 id="等待期间我主要看什么"><a href="#等待期间我主要看什么" class="headerlink" title="等待期间我主要看什么"></a>等待期间我主要看什么</h2><p>后面不是盲等，而是明确盯三件事：</p>
+<ul>
+<li>苹果 Air 产品线更新节奏</li>
+<li>新一代芯片发布时间</li>
+<li>同配置价格变化</li>
+</ul>
+<p>我的心理预期也比较清楚：</p>
+<ul>
+<li>要么旧款高配明显降价</li>
+<li>要么新款出来后性价比更高</li>
+</ul>
+<p>只要出现其中一种，就可以下手。</p>
+<hr>
+<h2 id="最后为什么买了-M5-Air"><a href="#最后为什么买了-M5-Air" class="headerlink" title="最后为什么买了 M5 Air"></a>最后为什么买了 M5 Air</h2><p>今年 3 月看到 M5 Air 发布后，我很快就下单了。</p>
+<p>原因很简单：</p>
+<ul>
+<li>新款到了</li>
+<li>基础配置更合理</li>
+<li>同级别价格比前一代更合适</li>
+</ul>
+<p>对我来说，这次不需要再在“旧一代高内存”和“新一代低内存”之间硬选，决策成本一下就低了很多。</p>
+<hr>
+<h2 id="实际使用感受"><a href="#实际使用感受" class="headerlink" title="实际使用感受"></a>实际使用感受</h2><p>到手之后，我比较关心的是开发场景下的表现，而不是单纯的跑分。</p>
+<p>我实际常开的东西大概包括：</p>
+<ul>
+<li>VS Code 多窗口</li>
+<li>Docker 容器</li>
+<li>浏览器十几个标签</li>
+<li>常用通讯工具</li>
+</ul>
+<p>目前用下来，最直接的感受是：</p>
+<ul>
+<li>日常开发是够用的</li>
+<li>切换应用比较顺</li>
+<li>发热和噪音控制比老电脑好很多</li>
+<li>续航表现明显更稳定</li>
+</ul>
+<p>对我这种以代码、文档、多任务切换为主的人来说，这次升级是有明显体感的。</p>
+<hr>
+<h2 id="这次购买里我最看重的结论"><a href="#这次购买里我最看重的结论" class="headerlink" title="这次购买里我最看重的结论"></a>这次购买里我最看重的结论</h2><h3 id="1-不要只看“哪一代更新”，也要看具体配置"><a href="#1-不要只看“哪一代更新”，也要看具体配置" class="headerlink" title="1. 不要只看“哪一代更新”，也要看具体配置"></a>1. 不要只看“哪一代更新”，也要看具体配置</h3><p>有时候新一代不一定就是更适合你的那一台。芯片、内存、价格要一起看。</p>
+<h3 id="2-如果当前选项都让你犹豫，先别急着买"><a href="#2-如果当前选项都让你犹豫，先别急着买" class="headerlink" title="2. 如果当前选项都让你犹豫，先别急着买"></a>2. 如果当前选项都让你犹豫，先别急着买</h3><p>当时我迟迟没买，其实说明判断已经很明确：现阶段没有完全合适的选项。</p>
+<h3 id="3-等待要有明确条件"><a href="#3-等待要有明确条件" class="headerlink" title="3. 等待要有明确条件"></a>3. 等待要有明确条件</h3><p>继续等不是无限期拖延，而是要知道自己在等什么：</p>
+<ul>
+<li>等新品</li>
+<li>等降价</li>
+<li>等更合理的配置组合</li>
+</ul>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次买 MacBook Air 的过程，说白了就是一次很普通的数码产品决策：</p>
+<ul>
+<li>先明确自己真实需求</li>
+<li>再比较具体配置</li>
+<li>最后等到自己能接受的价格和版本</li>
+</ul>
+<p>如果你也处在类似情况，我觉得最重要的不是听别人说哪台“最香”，而是先把自己的使用场景想清楚。<br>如果需求没有变，那等待本身也是一种正常决策，不是拖延。</p>
+]]></content>
+      <categories>
+        <category>生活随笔</category>
+      </categories>
+      <tags>
+        <tag>MacBook</tag>
+        <tag>等等党</tag>
+        <tag>购物心得</tag>
+        <tag>数码产品</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 博客损坏后的恢复记录：问题排查和修复过程</title>
+    <url>/My_Blog/2026/04/05/record-of-hexo-blog-repair/</url>
+    <content><![CDATA[<h2 id="这次问题的起点"><a href="#这次问题的起点" class="headerlink" title="这次问题的起点"></a>这次问题的起点</h2><p>这次博客出问题，不是简单的样式小故障，而是本地项目损坏后，我重新从远端拉代码，结果发现仓库并不是一份完整可恢复的版本。</p>
+<p>直接表现是：</p>
+<ul>
+<li>主题相关自定义内容丢失</li>
+<li>一些页面和功能不能正常使用</li>
+<li>部分资源在 GitHub Pages 子路径下失效</li>
+</ul>
+<p>这篇就按问题排查顺序把修复过程记下来。</p>
+<hr>
+<h2 id="第一类问题：主题目录被当成了子模块"><a href="#第一类问题：主题目录被当成了子模块" class="headerlink" title="第一类问题：主题目录被当成了子模块"></a>第一类问题：主题目录被当成了子模块</h2><p>最开始最明显的问题，是 <code>themes/anzhiyu</code> 目录里的很多自定义内容都没了。</p>
+<p>排查后发现，根源是主题目录自带 <code>.git</code>，导致它在主仓库里被当成了子模块处理。这样一来，主仓库里保存的不是主题源码本身，而只是一个指针。</p>
+<p>这会直接导致两个后果：</p>
+<ul>
+<li>主题里的本地修改不会跟着主仓库正常保存</li>
+<li>换机器或重新拉仓库时，主题目录很容易不完整</li>
+</ul>
+<h3 id="处理方式"><a href="#处理方式" class="headerlink" title="处理方式"></a>处理方式</h3><p>我当时做的处理是：</p>
+<ol>
+<li>重新拉取主题源码</li>
+<li>删除 <code>themes/anzhiyu/.git</code></li>
+<li>重新把主题目录纳入主仓库管理</li>
+<li>补齐依赖并重新生成站点</li>
+</ol>
+<p>这个问题本质上不是 Hexo 本身的问题，而是仓库结构管理的问题。</p>
+<hr>
+<h2 id="第二类问题：子路径部署导致资源和跳转异常"><a href="#第二类问题：子路径部署导致资源和跳转异常" class="headerlink" title="第二类问题：子路径部署导致资源和跳转异常"></a>第二类问题：子路径部署导致资源和跳转异常</h2><p>博客部署在 GitHub Pages 的子路径下，比如：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">/My_Blog/</span><br></pre></td></tr></table></figure>
+
+<p>这类部署方式最常见的问题就是：<br>代码里如果写了根路径 <code>/xxx</code>，在本地也许没问题，上线后就容易出错。</p>
+<h3 id="直接暴露出来的现象"><a href="#直接暴露出来的现象" class="headerlink" title="直接暴露出来的现象"></a>直接暴露出来的现象</h3><ul>
+<li>“随便逛逛”跳转异常</li>
+<li>音乐馆页面异常</li>
+<li>某些脚本和 JSON 文件加载失败</li>
+</ul>
+<p>这些问题表面上看是不同功能坏了，实际上根源一致：<strong>路径写死了</strong>。</p>
+<hr>
+<h2 id="问题-1：随机文章功能异常"><a href="#问题-1：随机文章功能异常" class="headerlink" title="问题 1：随机文章功能异常"></a>问题 1：随机文章功能异常</h2><p>“随便逛逛”这个功能当时一度会跳 404。</p>
+<p>排查后发现有两个点：</p>
+<h3 id="1-生成脚本本身有容错问题"><a href="#1-生成脚本本身有容错问题" class="headerlink" title="1. 生成脚本本身有容错问题"></a>1. 生成脚本本身有容错问题</h3><p>随机文章脚本在遍历友链数据时，没有处理空数组或缺失字段，导致生成阶段就可能出错。</p>
+<h3 id="2-跳转路径没有考虑子路径部署"><a href="#2-跳转路径没有考虑子路径部署" class="headerlink" title="2. 跳转路径没有考虑子路径部署"></a>2. 跳转路径没有考虑子路径部署</h3><p>脚本里直接按网站根目录拼接链接，这在 <code>/My_Blog/</code> 这种场景下就会出问题。</p>
+<h3 id="修复思路"><a href="#修复思路" class="headerlink" title="修复思路"></a>修复思路</h3><p>我做的修复主要是：</p>
+<ul>
+<li>给数据遍历补容错</li>
+<li>所有跳转路径改成基于站点根目录拼接</li>
+</ul>
+<p>这类问题的经验很简单：<br>只要项目不是部署在域名根目录，就尽量不要手写绝对路径。</p>
+<hr>
+<h2 id="问题-2：音乐馆页面和歌单切换异常"><a href="#问题-2：音乐馆页面和歌单切换异常" class="headerlink" title="问题 2：音乐馆页面和歌单切换异常"></a>问题 2：音乐馆页面和歌单切换异常</h2><p>音乐馆当时的问题更明显，直接表现为页面异常、歌单加载失败。</p>
+<p>排查后发现主要还是路径判断和资源拉取的问题。</p>
+<h3 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a>具体问题</h3><ul>
+<li>页面逻辑直接判断路径是否以 <code>/music/</code> 开头</li>
+<li>实际部署路径是 <code>/My_Blog/music/</code></li>
+<li>获取歌单数据时，直接请求 <code>/json/music.json</code></li>
+</ul>
+<p>这样一来，本地可能能跑，上线就会请求到错误地址。</p>
+<h3 id="修复方式"><a href="#修复方式" class="headerlink" title="修复方式"></a>修复方式</h3><p>处理逻辑主要是两点：</p>
+<ul>
+<li>路径判断不要写死根目录形式</li>
+<li>异步请求统一基于全局 <code>root</code> 配置拼接</li>
+</ul>
+<p>修完之后，音乐馆和歌单切换才恢复正常。</p>
+<hr>
+<h2 id="问题-3：控制台和界面局部样式异常"><a href="#问题-3：控制台和界面局部样式异常" class="headerlink" title="问题 3：控制台和界面局部样式异常"></a>问题 3：控制台和界面局部样式异常</h2><p>除了功能问题，还有一些样式问题，比如浅色模式下控制台文字显示不正常。</p>
+<p>这类问题排查起来虽然不如路径问题复杂，但也很烦，因为通常不是“功能完全失效”，而是样式优先级互相覆盖。</p>
+<p>我的处理方式是：</p>
+<ul>
+<li>不在零散位置临时补样式</li>
+<li>用单独覆盖文件集中处理</li>
+<li>尽量限制作用范围，避免误伤别的页面</li>
+</ul>
+<p>这种方式后面维护起来更清晰。</p>
+<hr>
+<h2 id="这次恢复里最关键的经验"><a href="#这次恢复里最关键的经验" class="headerlink" title="这次恢复里最关键的经验"></a>这次恢复里最关键的经验</h2><h3 id="1-主题目录不要带独立-Git-历史"><a href="#1-主题目录不要带独立-Git-历史" class="headerlink" title="1. 主题目录不要带独立 Git 历史"></a>1. 主题目录不要带独立 Git 历史</h3><p>如果主题目录本身带 <code>.git</code>，后续非常容易出子模块问题。除非你就是要用子模块管理，否则最好一开始就处理掉。</p>
+<h3 id="2-子路径部署时，不要写死"><a href="#2-子路径部署时，不要写死" class="headerlink" title="2. 子路径部署时，不要写死 /"></a>2. 子路径部署时，不要写死 <code>/</code></h3><p>只要站点不是挂在根域名，就尽量统一从配置里的根路径出发。</p>
+<h3 id="3-问题排查要按层次来"><a href="#3-问题排查要按层次来" class="headerlink" title="3. 问题排查要按层次来"></a>3. 问题排查要按层次来</h3><p>我这次后面比较顺，是因为排查顺序比较明确：</p>
+<ul>
+<li>先看仓库结构是不是完整</li>
+<li>再看依赖和生成过程</li>
+<li>再看路径</li>
+<li>最后处理样式和局部功能</li>
+</ul>
+<p>如果一开始就直接在页面上东改一点西改一点，很容易越改越乱。</p>
+<hr>
+<h2 id="这篇记录想留下什么"><a href="#这篇记录想留下什么" class="headerlink" title="这篇记录想留下什么"></a>这篇记录想留下什么</h2><p>这次恢复过程里，真正重要的不是“某个按钮为什么坏了”，而是下面这几个通用问题：</p>
+<ul>
+<li>仓库到底是不是完整可恢复的</li>
+<li>主题修改有没有被正确纳入版本管理</li>
+<li>部署路径有没有统一处理</li>
+<li>自定义修改有没有留痕</li>
+</ul>
+<p>只要这几项没处理好，博客这类项目在换机器、重装环境、重新部署的时候就很容易反复出问题。</p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次博客恢复说到底做了三件事：</p>
+<ol>
+<li>把仓库结构理顺</li>
+<li>把依赖补齐</li>
+<li>把所有路径和功能问题逐个修掉</li>
+</ol>
+<p>如果后面还有类似情况，我自己再回来看这篇，至少能快速知道排查应该从哪开始，而不是重新踩一遍之前的坑。</p>
+]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>教程</tag>
+        <tag>AnZhiYu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>东南网安考研初试记录：时间安排、复习进度和考试情况</title>
+    <url>/My_Blog/2024/12/25/%E5%88%9D%E8%AF%95/</url>
+    <content><![CDATA[<h2 id="基本情况"><a href="#基本情况" class="headerlink" title="基本情况"></a>基本情况</h2><p>这篇主要记录我准备东南网安初试的实际过程，尽量按时间线写清楚，方便以后自己回看，也给后来准备类似考试的人做参考。</p>
+<p>我正式准备考研是在 2 月底，目标一开始不是东南，后面在暑假阶段改成了东南网安。整体看下来，前期效率一般，真正有效的时间主要集中在暑假到 12 月考试前。</p>
+<hr>
+<h2 id="2-月：确定考研，买书"><a href="#2-月：确定考研，买书" class="headerlink" title="2 月：确定考研，买书"></a>2 月：确定考研，买书</h2><p>过年那段时间决定考研。最开始想考成电计算机，后面才转成东南网安。</p>
+<p>2 月 26 号把参考书买齐，顺手把考试时间记在手机日历里。从这一步开始，才算真正进入备考状态。</p>
+<p>这个阶段主要做了两件事：</p>
+<ul>
+<li>先把院校和专业的大方向定下来</li>
+<li>把基础资料和参考书准备好</li>
+</ul>
+<p>当时还谈不上复习方法，更多是先启动。</p>
+<hr>
+<h2 id="2-3-月：在家复习，效率不高"><a href="#2-3-月：在家复习，效率不高" class="headerlink" title="2-3 月：在家复习，效率不高"></a>2-3 月：在家复习，效率不高</h2><p>这段时间基本在家。作息比较松，通常下午两点开始，晚上十点结束，中间手机和走神比较多，整体效率一般。</p>
+<p>具体状态大概是：</p>
+<ul>
+<li>数学看得慢，容易走神</li>
+<li>英语单词反复背反复忘</li>
+<li>专业课一开始不知道重点</li>
+</ul>
+<p>回头看，这两个月最大的问题不是学得少，而是节奏没建立起来。每天坐在桌前的时间不算短，但真正有效输出不多。</p>
+<hr>
+<h2 id="4-6-月：回学校后进入稳定节奏"><a href="#4-6-月：回学校后进入稳定节奏" class="headerlink" title="4-6 月：回学校后进入稳定节奏"></a>4-6 月：回学校后进入稳定节奏</h2><p>回学校以后，作息还是比较佛系。通常中午起床，下午两点开始学，到晚上十点回宿舍。偶尔也会打游戏，但整体进度开始往前走了。</p>
+<p>这个阶段的主要进度：</p>
+<ul>
+<li>数学：高数上册过完，开始做 660</li>
+<li>英语：每天保持一篇真题阅读</li>
+<li>专业课：还在按原目标院校准备</li>
+</ul>
+<p>这一阶段的意义不在于强度高，而在于开始有持续输入。虽然效率不算很高，但没有完全停下来。</p>
+<hr>
+<h2 id="7-8-月：暑假阶段是整个初试复习里最有效的一段"><a href="#7-8-月：暑假阶段是整个初试复习里最有效的一段" class="headerlink" title="7-8 月：暑假阶段是整个初试复习里最有效的一段"></a>7-8 月：暑假阶段是整个初试复习里最有效的一段</h2><p>暑假我没回家躺着，而是在家附近找了付费自习室。作息基本是下午 2 点到晚上 10 点在自习室，中午休息。虽然依然不是早起型节奏，但这两个月效率明显比前面高。</p>
+<p>这段时间是我的主力提升期。</p>
+<p>暑假结束时的大致进度：</p>
+<ul>
+<li>数学：一轮结束，660 刷完一遍</li>
+<li>英语：阅读做完一遍</li>
+<li>专业课：改成东南网安参考书，过完一轮并开始做题</li>
+<li>政治：8 月底开始跟徐涛，做 1000 题</li>
+</ul>
+<p>中间印象比较深的一次是 8 月做数学真题只拿到 85 分。当时确实有点烦，但最后还是回去把错题一点点拆了。现在看，这种阶段性低分其实很正常，关键是后面有没有把问题落实掉。</p>
+<hr>
+<h2 id="9-10-月：时间开始不够，用整天复习"><a href="#9-10-月：时间开始不够，用整天复习" class="headerlink" title="9-10 月：时间开始不够，用整天复习"></a>9-10 月：时间开始不够，用整天复习</h2><p>到了 9 月以后，明显感觉时间不够了，所以开始把上午也用起来。那段时间基本是：</p>
+<ul>
+<li>8:30-9:00 到图书馆</li>
+<li>中午简单休息</li>
+<li>晚上到闭馆</li>
+</ul>
+<p>这个阶段的重点变成了真题和查漏补缺。</p>
+<p>安排大致如下：</p>
+<ul>
+<li>数学：整套真题限时做</li>
+<li>英语：二刷阅读，开始准备作文</li>
+<li>专业课：反复做真题和核心题</li>
+<li>政治：二刷 1000 题，开始背诵</li>
+</ul>
+<p>10 月完成报名，之后心态上会更明确一些，因为这个时候已经没有退路，只能往前推。</p>
+<hr>
+<h2 id="11-月：压力最大的一段"><a href="#11-月：压力最大的一段" class="headerlink" title="11 月：压力最大的一段"></a>11 月：压力最大的一段</h2><p>11 月是整个备考过程中最难受的阶段。各科都还没到“稳”的程度，但离考试已经很近了。</p>
+<p>当时的情况大概是：</p>
+<ul>
+<li>肖八选择题平均 28 分左右</li>
+<li>数学真题大多在 110-120</li>
+<li>英语阅读波动比较大</li>
+<li>睡眠和情绪都开始受影响</li>
+</ul>
+<p>这个月其实没有什么特别巧的方法，核心就是继续做题、继续改错、继续背。</p>
+<p>我那时候最有用的做法是：</p>
+<ul>
+<li>数学重点回看真题错题</li>
+<li>英语不要再无限加新内容，稳定阅读和作文</li>
+<li>政治开始集中背主观题素材</li>
+<li>专业课继续保持熟练度</li>
+</ul>
+<p>11 月最容易出现的问题不是不会，而是怀疑自己。这个阶段如果节奏乱了，后面很难收回来。</p>
+<hr>
+<h2 id="12-月：最后冲刺阶段"><a href="#12-月：最后冲刺阶段" class="headerlink" title="12 月：最后冲刺阶段"></a>12 月：最后冲刺阶段</h2><p>12 月之后，复习基本进入收口。</p>
+<p>当时我的处理方式是：</p>
+<ul>
+<li>数学：只看错题本、真题错题和重点题型</li>
+<li>英语：背作文模板，保持手感</li>
+<li>政治：集中背肖四</li>
+<li>专业课：只看核心考点和自己容易忘的部分</li>
+</ul>
+<p>这个阶段不适合大规模换资料，也不适合再开新体系。重点只有一个：把已经学过的东西尽量变熟。</p>
+<hr>
+<h2 id="考试当天情况"><a href="#考试当天情况" class="headerlink" title="考试当天情况"></a>考试当天情况</h2><h3 id="政治"><a href="#政治" class="headerlink" title="政治"></a>政治</h3><p>政治最大的感受是：肖四没有完全押中，主观题不能照抄模板，只能自己组织。</p>
+<p>选择题做完以后就觉得一般，不算特别稳。考完出来，大家脸色都差不多，说明这场普遍都不轻松。</p>
+<h3 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h3><p>英语是我考场上最难受的一门。</p>
+<p>实际感觉是：</p>
+<ul>
+<li>完形一开始就不顺</li>
+<li>阅读前三篇还能做，第四篇比较吃力</li>
+<li>翻译做得很卡</li>
+<li>大作文审题也花了不少时间</li>
+</ul>
+<p>交卷的时候已经能确定，英语不会太好看。</p>
+<h3 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h3><p>数学的感觉比较典型：选择填空相对顺，大题不顺。</p>
+<p>具体情况：</p>
+<ul>
+<li>选择填空做得比较舒服</li>
+<li>有一道证明题没完全打开</li>
+<li>一道曲面积分算了两遍都不对</li>
+<li>概率论最后一问直接放了</li>
+</ul>
+<p>所以数学整体不是“不会做”，而是大题完成度不够。</p>
+<h3 id="专业课"><a href="#专业课" class="headerlink" title="专业课"></a>专业课</h3><p>专业课是我四门里状态最好的一门。</p>
+<p>卷子结构以选择和大题为主，没有名词解释。选择里有一些参考书原题，大题虽然不是原题，但考点基本都复习到了，所以写得比较顺。</p>
+<p>这一门考完以后，心里大概知道：专业课不会拖后腿。</p>
+<hr>
+<h2 id="考后判断"><a href="#考后判断" class="headerlink" title="考后判断"></a>考后判断</h2><p>考完当天我的判断很直接：</p>
+<ul>
+<li>英语最差</li>
+<li>数学中档偏下</li>
+<li>政治一般</li>
+<li>专业课最好</li>
+</ul>
+<p>这个判断后来基本也和出分情况接近。</p>
+<p>考完之后我没有再继续纠结标准答案，直接收拾东西回家。对初试来说，考完就结束了，继续反复想也没有意义。</p>
+<hr>
+<h2 id="这段经历里对后来人最有参考价值的几点"><a href="#这段经历里对后来人最有参考价值的几点" class="headerlink" title="这段经历里对后来人最有参考价值的几点"></a>这段经历里对后来人最有参考价值的几点</h2><h3 id="1-前期状态一般，不代表后面救不回来"><a href="#1-前期状态一般，不代表后面救不回来" class="headerlink" title="1. 前期状态一般，不代表后面救不回来"></a>1. 前期状态一般，不代表后面救不回来</h3><p>我前期效率并不高，真正发力是在暑假以后。只要后面节奏建立起来，还是能把进度追上。</p>
+<h3 id="2-暑假阶段非常关键"><a href="#2-暑假阶段非常关键" class="headerlink" title="2. 暑假阶段非常关键"></a>2. 暑假阶段非常关键</h3><p>如果让我回看整个初试准备阶段，最重要的一段就是暑假。很多基础积累、题感建立、专业课切换，都是在这两个月完成的。</p>
+<h3 id="3-真题一定要早点进入"><a href="#3-真题一定要早点进入" class="headerlink" title="3. 真题一定要早点进入"></a>3. 真题一定要早点进入</h3><p>尤其是数学和专业课，真题能帮你尽快发现自己到底差在哪，而不是一直停留在“感觉学过了”。</p>
+<h3 id="4-到后期不要贪多"><a href="#4-到后期不要贪多" class="headerlink" title="4. 到后期不要贪多"></a>4. 到后期不要贪多</h3><p>11 月和 12 月最忌讳乱换资料、乱追进度。后期最重要的是收口，不是扩张。</p>
+<hr>
+<h2 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h2><p>这次初试如果用一句话概括，就是：前期普通，中期提速，后期硬顶，最后专业课兜底。</p>
+<p>没有特别标准的高强度励志模板，也没有完全失控。整体就是一段比较真实的备考过程。</p>
+<p>如果你也在准备类似的考试，我觉得最重要的不是复制别人的作息，而是尽快找到自己能长期执行的节奏，然后把关键阶段守住。</p>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>备考经历</tag>
+        <tag>东南大学</tag>
+        <tag>初试经验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>东南网安复试 C++ 笔试题回忆：题型整理和模拟题</title>
+    <url>/My_Blog/2025/04/02/%E4%B8%9C%E5%8D%97%E7%BD%91%E5%AE%89%E5%A4%8D%E8%AF%95C++%E7%AC%94%E8%AF%95%E9%A2%98%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%A8%A1%E6%8B%9F%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇主要整理我参加东南网安复试时，C++ 笔试的大致题型和我还能记住的内容。</p>
+<p>因为考完已经过了一段时间，不可能把原题一字不差还原，所以这里更适合看成：</p>
+<ul>
+<li>题型回忆</li>
+<li>高频考点回忆</li>
+<li>按原卷风格整理出来的一套模拟题</li>
+</ul>
+<p>如果后面还有人准备类似复试，这篇至少可以帮忙建立一个范围感。</p>
+<hr>
+<h2 id="我记得比较清楚的几个结论"><a href="#我记得比较清楚的几个结论" class="headerlink" title="我记得比较清楚的几个结论"></a>我记得比较清楚的几个结论</h2><p>先说最重要的几个点：</p>
+<ul>
+<li><strong>明确不考 STL</strong></li>
+<li>笔试更偏基础和经典题型</li>
+<li>类与对象、构造析构、继承、多态、递归、文件读写都很重要</li>
+<li>题目不偏，但细节很多，尤其是程序输出题</li>
+</ul>
+<p>也就是说，这套题不是考你会不会炫技，而是考你基础到底稳不稳。</p>
+<hr>
+<h2 id="我记得的笔试题型"><a href="#我记得的笔试题型" class="headerlink" title="我记得的笔试题型"></a>我记得的笔试题型</h2><p>按我现在还能回忆起来的，笔试大概是下面这些：</p>
+<h3 id="1-读程序题：6-道"><a href="#1-读程序题：6-道" class="headerlink" title="1. 读程序题：6 道"></a>1. 读程序题：6 道</h3><p>这一部分都是常见题型，但不代表简单。</p>
+<p>我印象比较深的是：</p>
+<ul>
+<li>有一道递归题递了三层</li>
+<li>最后输出有十几条</li>
+<li>如果平时只是会写递归，不会按调用过程分析输出，很容易乱</li>
+</ul>
+<p>这一类读程序题通常会混着考：</p>
+<ul>
+<li>构造函数和析构函数调用顺序</li>
+<li>继承和组合下的输出顺序</li>
+<li>递归调用过程</li>
+<li>静态变量或全局变量变化</li>
+</ul>
+<p>所以“看懂程序”和“能快速写出输出结果”完全是两回事。</p>
+<h3 id="2-程序填空题：2-道"><a href="#2-程序填空题：2-道" class="headerlink" title="2. 程序填空题：2 道"></a>2. 程序填空题：2 道</h3><p>这一部分我记得有一道是<strong>文件读写填空</strong>。</p>
+<p>这说明老师至少默认你要会：</p>
+<ul>
+<li><code>ifstream</code></li>
+<li><code>ofstream</code></li>
+<li>文件打开、关闭</li>
+<li>基本输入输出格式</li>
+</ul>
+<p>另一道填空我记不清具体内容了，但整体感觉也是比较基础，不是那种特别偏的题。</p>
+<h3 id="3-类设计题：1-道"><a href="#3-类设计题：1-道" class="headerlink" title="3. 类设计题：1 道"></a>3. 类设计题：1 道</h3><p>这个我印象很深，应该是两部分：</p>
+<ul>
+<li>一个 <code>String</code></li>
+<li>一个 <code>Animal</code></li>
+</ul>
+<p>其中 <code>Animal</code> 那题我记得大概是：</p>
+<ul>
+<li>先设计一个 <code>Animal</code> 基类</li>
+<li>再设计几个具体动物类继承 <code>Animal</code></li>
+<li>每种动物发出不同的叫声</li>
+</ul>
+<p>我印象里好像是 4 个种类。</p>
+<p>这题本质上考的是：</p>
+<ul>
+<li>类设计</li>
+<li>继承</li>
+<li>虚函数</li>
+<li>多态</li>
+</ul>
+<p>而 <code>String</code> 那题大概率就是考：</p>
+<ul>
+<li>构造函数</li>
+<li>拷贝构造</li>
+<li>析构函数</li>
+<li>深拷贝</li>
+</ul>
+<h3 id="4-简答题：2-道"><a href="#4-简答题：2-道" class="headerlink" title="4. 简答题：2 道"></a>4. 简答题：2 道</h3><p>这一部分不是写大段代码，而是看你对概念和实现思路清不清楚。</p>
+<p>我记得其中一道是：</p>
+<ul>
+<li><strong>C++ 大数存储</strong></li>
+<li>还要考虑<strong>正负号</strong></li>
+</ul>
+<p>我当时写的是数组实现，大概思路就是：</p>
+<ul>
+<li>用数组存每一位</li>
+<li>低位在前或高位在前都可以，但要统一</li>
+<li>用额外变量记录符号</li>
+</ul>
+<p>这一类题不一定要求你把完整高精度类一行不落写出来，但至少要把数据结构和加减的处理思路说清楚。</p>
+<hr>
+<h2 id="结合回忆，我觉得复习重点应该放在哪"><a href="#结合回忆，我觉得复习重点应该放在哪" class="headerlink" title="结合回忆，我觉得复习重点应该放在哪"></a>结合回忆，我觉得复习重点应该放在哪</h2><p>如果按这套题型反推，复试 C++ 笔试最值得优先准备的是这些：</p>
+<h3 id="第一层：最优先"><a href="#第一层：最优先" class="headerlink" title="第一层：最优先"></a>第一层：最优先</h3><ul>
+<li>类与对象</li>
+<li>构造函数、析构函数</li>
+<li>拷贝构造、赋值运算符</li>
+<li>继承与多态</li>
+<li>递归</li>
+</ul>
+<h3 id="第二层：也要准备"><a href="#第二层：也要准备" class="headerlink" title="第二层：也要准备"></a>第二层：也要准备</h3><ul>
+<li>文件读写</li>
+<li>虚函数</li>
+<li>程序输出题</li>
+<li>简单类设计题</li>
+</ul>
+<h3 id="第三层：不用花太多时间"><a href="#第三层：不用花太多时间" class="headerlink" title="第三层：不用花太多时间"></a>第三层：不用花太多时间</h3><ul>
+<li>STL</li>
+</ul>
+<p>至少按我这场来看，<strong>STL 明确不考</strong>，那就不要把有限时间大量堆在 <code>vector</code>、<code>map</code>、算法模板这些地方。</p>
+<hr>
+<h2 id="按这场风格整理的一套模拟题"><a href="#按这场风格整理的一套模拟题" class="headerlink" title="按这场风格整理的一套模拟题"></a>按这场风格整理的一套模拟题</h2><p>下面这套不是原题复刻，而是我按当时那张卷子的风格整理的。</p>
+<hr>
+<h2 id="模拟题一：读程序题"><a href="#模拟题一：读程序题" class="headerlink" title="模拟题一：读程序题"></a>模拟题一：读程序题</h2><h3 id="题目-1：构造、析构和继承"><a href="#题目-1：构造、析构和继承" class="headerlink" title="题目 1：构造、析构和继承"></a>题目 1：构造、析构和继承</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Animal</span>() &#123; cout &lt;&lt; <span class="string">&quot;Animal ctor&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">    ~<span class="built_in">Animal</span>() &#123; cout &lt;&lt; <span class="string">&quot;Animal dtor&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> : <span class="keyword">public</span> Animal &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Dog</span>() &#123; cout &lt;&lt; <span class="string">&quot;Dog ctor&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">    ~<span class="built_in">Dog</span>() &#123; cout &lt;&lt; <span class="string">&quot;Dog dtor&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Dog d;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">Animal ctor</span><br><span class="line">Dog ctor</span><br><span class="line">Dog dtor</span><br><span class="line">Animal dtor</span><br></pre></td></tr></table></figure>
+
+<h3 id="这题考什么"><a href="#这题考什么" class="headerlink" title="这题考什么"></a>这题考什么</h3><ul>
+<li>父类先构造</li>
+<li>子类后构造</li>
+<li>析构顺序反过来</li>
+</ul>
+<hr>
+<h3 id="题目-2：递归输出"><a href="#题目-2：递归输出" class="headerlink" title="题目 2：递归输出"></a>题目 2：递归输出</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;enter &quot;</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">if</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">fun</span>(n - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;leave &quot;</span> &lt;&lt; n &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">fun</span>(<span class="number">3</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考答案-1"><a href="#参考答案-1" class="headerlink" title="参考答案"></a>参考答案</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">enter <span class="number">3</span></span><br><span class="line">enter <span class="number">2</span></span><br><span class="line">enter <span class="number">1</span></span><br><span class="line">enter <span class="number">0</span></span><br><span class="line">leave <span class="number">0</span></span><br><span class="line">leave <span class="number">1</span></span><br><span class="line">leave <span class="number">2</span></span><br><span class="line">leave <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="这题考什么-1"><a href="#这题考什么-1" class="headerlink" title="这题考什么"></a>这题考什么</h3><p>这就是那类很容易“看着简单，写输出时乱掉”的递归题。</p>
+<p>判断方法：</p>
+<ul>
+<li>先看递归调用前输出什么</li>
+<li>再看递归结束后输出什么</li>
+<li>进入递归和退出递归是两条线</li>
+</ul>
+<p>如果题目再套一层循环或者再多一次递归，输出条数马上就很多。</p>
+<hr>
+<h3 id="题目-3：组合对象顺序"><a href="#题目-3：组合对象顺序" class="headerlink" title="题目 3：组合对象顺序"></a>题目 3：组合对象顺序</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;A &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;~A &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A a1;</span><br><span class="line">    A a2;</span><br><span class="line">    <span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;B &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;~B &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    B b;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考答案-2"><a href="#参考答案-2" class="headerlink" title="参考答案"></a>参考答案</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">A A B ~B ~A ~A</span><br></pre></td></tr></table></figure>
+
+<h3 id="这题考什么-2"><a href="#这题考什么-2" class="headerlink" title="这题考什么"></a>这题考什么</h3><ul>
+<li>成员对象按声明顺序构造</li>
+<li>按逆序析构</li>
+</ul>
+<hr>
+<h2 id="模拟题二：程序填空题"><a href="#模拟题二：程序填空题" class="headerlink" title="模拟题二：程序填空题"></a>模拟题二：程序填空题</h2><h3 id="题目-4：文件读写填空"><a href="#题目-4：文件读写填空" class="headerlink" title="题目 4：文件读写填空"></a>题目 4：文件读写填空</h3><p>补全下面程序，使其把 <code>input.txt</code> 中的整数读出来，并写入 <code>output.txt</code>，每个整数占一行。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">______ <span class="title">fin</span><span class="params">(<span class="string">&quot;input.txt&quot;</span>)</span></span>;</span><br><span class="line">    <span class="function">______ <span class="title">fout</span><span class="params">(<span class="string">&quot;output.txt&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="keyword">while</span> (fin &gt;&gt; x) &#123;</span><br><span class="line">        fout &lt;&lt; x &lt;&lt; ______;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    fin.______;</span><br><span class="line">    fout.______;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考答案-3"><a href="#参考答案-3" class="headerlink" title="参考答案"></a>参考答案</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">ifstream</span></span><br><span class="line"><span class="function">ofstream</span></span><br><span class="line"><span class="function">endl</span></span><br><span class="line"><span class="function"><span class="title">close</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">close</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="这题考什么-3"><a href="#这题考什么-3" class="headerlink" title="这题考什么"></a>这题考什么</h3><p>就是基础文件读写，不复杂，但你平时如果没手写过，考场上很容易把类名和成员函数写混。</p>
+<hr>
+<h3 id="题目-5：构造函数初始化列表填空"><a href="#题目-5：构造函数初始化列表填空" class="headerlink" title="题目 5：构造函数初始化列表填空"></a>题目 5：构造函数初始化列表填空</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="type">int</span> y;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Point</span>(<span class="type">int</span> a, <span class="type">int</span> b) : ______(a), ______(b) &#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考答案-4"><a href="#参考答案-4" class="headerlink" title="参考答案"></a>参考答案</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">x</span><br><span class="line">y</span><br></pre></td></tr></table></figure>
+
+<h3 id="这题考什么-4"><a href="#这题考什么-4" class="headerlink" title="这题考什么"></a>这题考什么</h3><p>初始化列表是高频点，尤其是类设计题里经常顺手就会用到。</p>
+<hr>
+<h2 id="模拟题三：类设计题"><a href="#模拟题三：类设计题" class="headerlink" title="模拟题三：类设计题"></a>模拟题三：类设计题</h2><h3 id="题目-6：设计一个简化版-String-类"><a href="#题目-6：设计一个简化版-String-类" class="headerlink" title="题目 6：设计一个简化版 String 类"></a>题目 6：设计一个简化版 String 类</h3><p>设计一个 <code>String</code> 类，包含一个字符指针成员，要求实现：</p>
+<ul>
+<li>构造函数</li>
+<li>拷贝构造函数</li>
+<li>析构函数</li>
+<li>输出字符串内容的成员函数</li>
+</ul>
+<h3 id="参考答案-5"><a href="#参考答案-5" class="headerlink" title="参考答案"></a>参考答案</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">String</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">char</span>* str;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">String</span>(<span class="type">const</span> <span class="type">char</span>* s = <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">        str = <span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(s) + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">strcpy</span>(str, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">String</span>(<span class="type">const</span> String&amp; other) &#123;</span><br><span class="line">        str = <span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(other.str) + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">strcpy</span>(str, other.str);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">String</span>() &#123;</span><br><span class="line">        <span class="keyword">delete</span>[] str;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; str &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="这题考什么-5"><a href="#这题考什么-5" class="headerlink" title="这题考什么"></a>这题考什么</h3><ul>
+<li>动态内存申请</li>
+<li>深拷贝</li>
+<li>析构释放</li>
+</ul>
+<p>这类题和复试笔试风格很接近，属于必会。</p>
+<hr>
+<h3 id="题目-7：设计-Animal-类层次"><a href="#题目-7：设计-Animal-类层次" class="headerlink" title="题目 7：设计 Animal 类层次"></a>题目 7：设计 Animal 类层次</h3><p>定义一个 <code>Animal</code> 基类，包含虚函数 <code>speak()</code>。<br>再定义 4 个派生类：<code>Dog</code>、<code>Cat</code>、<code>Duck</code>、<code>Cow</code>，每个类输出不同叫声。</p>
+<h3 id="参考答案-6"><a href="#参考答案-6" class="headerlink" title="参考答案"></a>参考答案</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">speak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Animal sound&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">Animal</span>() &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> : <span class="keyword">public</span> Animal &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">speak</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;wang wang&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span> : <span class="keyword">public</span> Animal &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">speak</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;miao miao&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Duck</span> : <span class="keyword">public</span> Animal &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">speak</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;ga ga&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cow</span> : <span class="keyword">public</span> Animal &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">speak</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;moo moo&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Animal* p[<span class="number">4</span>];</span><br><span class="line">    p[<span class="number">0</span>] = <span class="keyword">new</span> <span class="built_in">Dog</span>();</span><br><span class="line">    p[<span class="number">1</span>] = <span class="keyword">new</span> <span class="built_in">Cat</span>();</span><br><span class="line">    p[<span class="number">2</span>] = <span class="keyword">new</span> <span class="built_in">Duck</span>();</span><br><span class="line">    p[<span class="number">3</span>] = <span class="keyword">new</span> <span class="built_in">Cow</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">        p[i]-&gt;<span class="built_in">speak</span>();</span><br><span class="line">        <span class="keyword">delete</span> p[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="这题考什么-6"><a href="#这题考什么-6" class="headerlink" title="这题考什么"></a>这题考什么</h3><ul>
+<li>基类和派生类</li>
+<li>虚函数</li>
+<li>多态</li>
+<li>虚析构函数</li>
+</ul>
+<p>这就是很标准的复试笔试类设计题。</p>
+<hr>
+<h2 id="模拟题四：简答题"><a href="#模拟题四：简答题" class="headerlink" title="模拟题四：简答题"></a>模拟题四：简答题</h2><h3 id="题目-8：简述-C-中大数存储的基本实现思路，并说明如何处理正负号"><a href="#题目-8：简述-C-中大数存储的基本实现思路，并说明如何处理正负号" class="headerlink" title="题目 8：简述 C++ 中大数存储的基本实现思路，并说明如何处理正负号"></a>题目 8：简述 C++ 中大数存储的基本实现思路，并说明如何处理正负号</h3><h3 id="参考答案思路"><a href="#参考答案思路" class="headerlink" title="参考答案思路"></a>参考答案思路</h3><p>可以这样答：</p>
+<ol>
+<li>普通整型有范围限制，超出后不能直接存储大整数</li>
+<li>可以用数组或字符串逐位存储数字</li>
+<li>一般为了方便计算，可以把低位放在数组前面</li>
+<li>用一个额外变量记录符号，比如：<ul>
+<li><code>1</code> 表示正数</li>
+<li><code>-1</code> 表示负数</li>
+</ul>
+</li>
+<li>加减运算时要分情况讨论：<ul>
+<li>同号相加，结果同号</li>
+<li>异号相减，本质转化为绝对值比较后再做减法</li>
+</ul>
+</li>
+</ol>
+<p>如果是我自己在考场上写，我会优先写“数组实现”，因为表达最直观，也容易说明正负号怎么处理。</p>
+<hr>
+<h3 id="题目-9：简述-C-多态的实现机制"><a href="#题目-9：简述-C-多态的实现机制" class="headerlink" title="题目 9：简述 C++ 多态的实现机制"></a>题目 9：简述 C++ 多态的实现机制</h3><h3 id="参考答案思路-1"><a href="#参考答案思路-1" class="headerlink" title="参考答案思路"></a>参考答案思路</h3><p>可以按下面几点写：</p>
+<ol>
+<li>多态分为编译时多态和运行时多态</li>
+<li>编译时多态主要体现在函数重载和模板</li>
+<li>运行时多态主要依靠虚函数实现</li>
+<li>含虚函数的类通常会维护一张虚函数表</li>
+<li>对象内部通过虚指针关联虚表</li>
+<li>当父类指针指向子类对象并调用虚函数时，会在运行时根据实际对象类型找到对应函数</li>
+</ol>
+<p>这道题不一定要求你把虚表底层机制说得特别深，但最少要把“虚函数表 + 虚指针 + 运行时绑定”这三件事说清楚。</p>
+<hr>
+<h2 id="如果按这场风格准备，我建议这样分配时间"><a href="#如果按这场风格准备，我建议这样分配时间" class="headerlink" title="如果按这场风格准备，我建议这样分配时间"></a>如果按这场风格准备，我建议这样分配时间</h2><h3 id="第一优先级"><a href="#第一优先级" class="headerlink" title="第一优先级"></a>第一优先级</h3><ul>
+<li>构造函数、析构函数</li>
+<li>拷贝构造、赋值运算符</li>
+<li>继承和多态</li>
+<li>程序输出题</li>
+<li>递归</li>
+</ul>
+<h3 id="第二优先级"><a href="#第二优先级" class="headerlink" title="第二优先级"></a>第二优先级</h3><ul>
+<li>文件读写</li>
+<li>简单类设计</li>
+<li>虚函数和虚析构</li>
+</ul>
+<h3 id="可以少花时间的部分"><a href="#可以少花时间的部分" class="headerlink" title="可以少花时间的部分"></a>可以少花时间的部分</h3><ul>
+<li>STL</li>
+</ul>
+<p>因为至少按我这次的情况，笔试<strong>明确不考 STL</strong>。</p>
+<hr>
+<h2 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h2><p>这场复试笔试给我的感觉是：范围不算偏，但基础要很稳。</p>
+<p>最容易丢分的地方不是你完全不会的题，而是你“看起来会，其实写不利索”的题，比如：</p>
+<ul>
+<li>递归输出</li>
+<li>构造析构顺序</li>
+<li>深拷贝</li>
+<li>文件读写</li>
+<li>多态类设计</li>
+</ul>
+<p>所以如果后面还有人准备这类复试，我觉得最有效的方式不是疯狂看新资料，而是把这些经典题型自己动手写几遍。</p>
+<p>如果后面我又想起更具体的原题细节，我会继续补在这篇里。</p>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>东南大学</tag>
+        <tag>Cpp</tag>
+        <tag>考研复试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>半个月速成复试 C++：重点整理构造函数、析构函数和常见题</title>
+    <url>/My_Blog/2025/04/01/%E5%8D%8A%E4%B8%AA%E6%9C%88%E9%80%9F%E6%88%90%E5%A4%8D%E8%AF%95C++/</url>
+    <content><![CDATA[<h2 id="这篇主要写什么"><a href="#这篇主要写什么" class="headerlink" title="这篇主要写什么"></a>这篇主要写什么</h2><p>这篇主要记录我准备复试 C++ 时最花时间的一块：构造函数、析构函数、拷贝构造、赋值运算符，以及构造和析构顺序。</p>
+<p>我当时复习时间不长，整体大概半个月，所以不可能什么都铺开细讲。最后我的做法是抓高频考点，重点把最容易出程序输出题、手写题和概念题的部分彻底理顺。</p>
+<p>其中最费时间的就是这类问题：</p>
+<ul>
+<li>对象什么时候构造？</li>
+<li>为什么会先调用父类构造函数？</li>
+<li>拷贝构造和赋值运算符到底有什么区别？</li>
+<li>析构函数为什么不能重载？</li>
+<li>为什么有时候程序没报错，但就是会“炸”在析构上？</li>
+</ul>
+<p>这篇不追求完整教材式讲法，重点是把复试里最容易考、最容易混、最容易写错的点单独拎出来。</p>
+<hr>
+<h2 id="第一件事：先把四个概念分开"><a href="#第一件事：先把四个概念分开" class="headerlink" title="第一件事：先把四个概念分开"></a>第一件事：先把四个概念分开</h2><p>很多人学不明白，不是因为不会写，而是因为一开始就把几个概念搅在一起了。</p>
+<h3 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1. 构造函数"></a>1. 构造函数</h3><p>构造函数的作用是：<strong>对象创建时完成初始化</strong>。</p>
+<p>特点：</p>
+<ul>
+<li>函数名和类名相同</li>
+<li>没有返回值，连 <code>void</code> 都不能写</li>
+<li>对象一创建就自动调用</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    string name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Student</span>() &#123;</span><br><span class="line">        name = <span class="string">&quot;unknown&quot;</span>;</span><br><span class="line">        age = <span class="number">0</span>;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;调用了无参构造函数&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student s;</span><br><span class="line">    cout &lt;&lt; s.name &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; s.age &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里 <code>Student s;</code> 一执行，对象就创建了，所以构造函数会自动执行。</p>
+<h3 id="2-析构函数"><a href="#2-析构函数" class="headerlink" title="2. 析构函数"></a>2. 析构函数</h3><p>析构函数的作用是：<strong>对象生命周期结束时做清理工作</strong>。</p>
+<p>特点：</p>
+<ul>
+<li>名字是 <code>~类名</code></li>
+<li>没有参数</li>
+<li>不能重载</li>
+<li>对象销毁时自动调用</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Student</span>() &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;构造函数调用&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">Student</span>() &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;析构函数调用&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student s;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">构造函数调用</span><br><span class="line">析构函数调用</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="第二件事：构造函数可以重载，但析构函数不行"><a href="#第二件事：构造函数可以重载，但析构函数不行" class="headerlink" title="第二件事：构造函数可以重载，但析构函数不行"></a>第二件事：构造函数可以重载，但析构函数不行</h2><p>这是非常高频的选择题点。</p>
+<h3 id="构造函数为什么可以重载？"><a href="#构造函数为什么可以重载？" class="headerlink" title="构造函数为什么可以重载？"></a>构造函数为什么可以重载？</h3><p>因为你可能想用不同方式初始化对象。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> x, y;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Point</span>() &#123;</span><br><span class="line">        x = <span class="number">0</span>;</span><br><span class="line">        y = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Point</span>(<span class="type">int</span> a, <span class="type">int</span> b) &#123;</span><br><span class="line">        x = a;</span><br><span class="line">        y = b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这样既可以写：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">Point p1;</span><br><span class="line"><span class="function">Point <span class="title">p2</span><span class="params">(<span class="number">3</span>, <span class="number">4</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="析构函数为什么不能重载？"><a href="#析构函数为什么不能重载？" class="headerlink" title="析构函数为什么不能重载？"></a>析构函数为什么不能重载？</h3><p>因为一个对象“死”的方式只有一种。<br>系统只需要知道：这个对象结束时该调用哪个清理函数。</p>
+<p>所以析构函数只能有一个。</p>
+<hr>
+<h2 id="第三件事：最推荐用初始化列表"><a href="#第三件事：最推荐用初始化列表" class="headerlink" title="第三件事：最推荐用初始化列表"></a>第三件事：最推荐用初始化列表</h2><p>刚学的时候大家都喜欢在构造函数函数体里赋值：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="built_in">Test</span>(<span class="type">int</span> a) &#123;</span><br><span class="line">        x = a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这没错，但复试更喜欢你理解<strong>初始化列表</strong>：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="built_in">Test</span>(<span class="type">int</span> a) : <span class="built_in">x</span>(a) &#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="为什么初始化列表更重要？"><a href="#为什么初始化列表更重要？" class="headerlink" title="为什么初始化列表更重要？"></a>为什么初始化列表更重要？</h3><p>因为有些成员<strong>必须</strong>用初始化列表：</p>
+<ul>
+<li>常量成员 <code>const</code></li>
+<li>引用成员</li>
+<li>没有默认构造函数的对象成员</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> x;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Test</span>(<span class="type">int</span> a) : <span class="built_in">x</span>(a) &#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>如果你写成：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Test</span>(<span class="type">int</span> a) &#123;</span><br><span class="line">    x = a;   <span class="comment">// 错误</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>就不行，因为 <code>const</code> 成员必须在对象创建时就初始化，后面不能再赋值。</p>
+<hr>
+<h2 id="第四件事：拷贝构造和赋值运算符，不是一个东西"><a href="#第四件事：拷贝构造和赋值运算符，不是一个东西" class="headerlink" title="第四件事：拷贝构造和赋值运算符，不是一个东西"></a>第四件事：拷贝构造和赋值运算符，不是一个东西</h2><p>这真的是复试笔试最爱考的坑。</p>
+<h3 id="拷贝构造"><a href="#拷贝构造" class="headerlink" title="拷贝构造"></a>拷贝构造</h3><p>拷贝构造函数的作用是：<strong>用一个已存在对象，去初始化一个新对象</strong>。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">A</span>(<span class="type">int</span> a) : <span class="built_in">x</span>(a) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">A</span>(<span class="type">const</span> A&amp; other) &#123;</span><br><span class="line">        x = other.x;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;调用拷贝构造&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>会触发拷贝构造的情况：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">A <span class="title">a1</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line">A a2 = a1;</span><br><span class="line"><span class="function">A <span class="title">a3</span><span class="params">(a1)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="赋值运算符重载"><a href="#赋值运算符重载" class="headerlink" title="赋值运算符重载"></a>赋值运算符重载</h3><p>赋值运算符的作用是：<strong>两个都已经存在的对象之间做赋值</strong>。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">A <span class="title">a1</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line"><span class="function">A <span class="title">a2</span><span class="params">(<span class="number">20</span>)</span></span>;</span><br><span class="line">a2 = a1;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ul>
+<li><code>A a2 = a1;</code> 是初始化，走拷贝构造</li>
+<li><code>a2 = a1;</code> 是赋值，走赋值运算符</li>
+</ul>
+<p>这一点特别爱出选择题。</p>
+<hr>
+<h2 id="第五件事：为什么深拷贝会和析构函数绑在一起考"><a href="#第五件事：为什么深拷贝会和析构函数绑在一起考" class="headerlink" title="第五件事：为什么深拷贝会和析构函数绑在一起考"></a>第五件事：为什么深拷贝会和析构函数绑在一起考</h2><p>因为如果类里面有动态内存，默认拷贝往往会出事。</p>
+<p>看这个例子：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">StringDemo</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">char</span>* data;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">StringDemo</span>(<span class="type">const</span> <span class="type">char</span>* str) &#123;</span><br><span class="line">        data = <span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(str) + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">strcpy</span>(data, str);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">StringDemo</span>() &#123;</span><br><span class="line">        <span class="keyword">delete</span>[] data;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">StringDemo <span class="title">s1</span><span class="params">(<span class="string">&quot;hello&quot;</span>)</span></span>;</span><br><span class="line">    StringDemo s2 = s1;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码看起来很正常，但其实很危险。</p>
+<h3 id="问题在哪？"><a href="#问题在哪？" class="headerlink" title="问题在哪？"></a>问题在哪？</h3><p><code>s2 = s1</code> 这里如果没有自己写拷贝构造，系统默认做的是<strong>浅拷贝</strong>。</p>
+<p>也就是说：</p>
+<ul>
+<li><code>s1.data</code> 指向一块堆内存</li>
+<li><code>s2.data</code> 也指向同一块堆内存</li>
+</ul>
+<p>最后 <code>s1</code> 析构一次，<code>s2</code> 再析构一次，就会对同一块内存 <code>delete[]</code> 两次。</p>
+<p>这就是经典的 <strong>double free</strong> 问题。</p>
+<h3 id="正确写法：深拷贝"><a href="#正确写法：深拷贝" class="headerlink" title="正确写法：深拷贝"></a>正确写法：深拷贝</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">StringDemo</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">char</span>* data;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">StringDemo</span>(<span class="type">const</span> <span class="type">char</span>* str) &#123;</span><br><span class="line">        data = <span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(str) + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">strcpy</span>(data, str);</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;普通构造&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">StringDemo</span>(<span class="type">const</span> StringDemo&amp; other) &#123;</span><br><span class="line">        data = <span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(other.data) + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">strcpy</span>(data, other.data);</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;拷贝构造&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">StringDemo</span>() &#123;</span><br><span class="line">        <span class="keyword">delete</span>[] data;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;析构函数&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">StringDemo <span class="title">s1</span><span class="params">(<span class="string">&quot;hello&quot;</span>)</span></span>;</span><br><span class="line">    StringDemo s2 = s1;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在每个对象都有自己独立的一份 <code>data</code>，析构时就不会互相踩了。</p>
+<hr>
+<h2 id="第六件事：构造和析构的调用顺序必须会背"><a href="#第六件事：构造和析构的调用顺序必须会背" class="headerlink" title="第六件事：构造和析构的调用顺序必须会背"></a>第六件事：构造和析构的调用顺序必须会背</h2><p>这部分经常直接考程序输出。</p>
+<h3 id="1-局部对象：先构造的后析构"><a href="#1-局部对象：先构造的后析构" class="headerlink" title="1. 局部对象：先构造的后析构"></a>1. 局部对象：先构造的后析构</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;A构造&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">    ~<span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;A析构&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    A a1;</span><br><span class="line">    A a2;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">A构造</span><br><span class="line">A构造</span><br><span class="line">A析构</span><br><span class="line">A析构</span><br></pre></td></tr></table></figure>
+
+<p>规律：<strong>后创建，先销毁</strong>，像栈一样。</p>
+<h3 id="2-继承：先父类构造，再子类构造"><a href="#2-继承：先父类构造，再子类构造" class="headerlink" title="2. 继承：先父类构造，再子类构造"></a>2. 继承：先父类构造，再子类构造</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Base</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Base</span>() &#123; cout &lt;&lt; <span class="string">&quot;Base构造&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">    ~<span class="built_in">Base</span>() &#123; cout &lt;&lt; <span class="string">&quot;Base析构&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Derived</span> : <span class="keyword">public</span> Base &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Derived</span>() &#123; cout &lt;&lt; <span class="string">&quot;Derived构造&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">    ~<span class="built_in">Derived</span>() &#123; cout &lt;&lt; <span class="string">&quot;Derived析构&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Derived d;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">Base构造</span><br><span class="line">Derived构造</span><br><span class="line">Derived析构</span><br><span class="line">Base析构</span><br></pre></td></tr></table></figure>
+
+<p>规律：</p>
+<ul>
+<li>构造：先父后子</li>
+<li>析构：先子后父</li>
+</ul>
+<h3 id="3-组合：先成员对象构造，再本类构造"><a href="#3-组合：先成员对象构造，再本类构造" class="headerlink" title="3. 组合：先成员对象构造，再本类构造"></a>3. 组合：先成员对象构造，再本类构造</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;A构造&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">    ~<span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;A析构&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A a;</span><br><span class="line">    <span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;B构造&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">    ~<span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;B析构&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    B b;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">A构造</span><br><span class="line">B构造</span><br><span class="line">B析构</span><br><span class="line">A析构</span><br></pre></td></tr></table></figure>
+
+<p>规律：</p>
+<ul>
+<li>构造：先成员，后自己</li>
+<li>析构：先自己，后成员</li>
+</ul>
+<h3 id="4-我当时最崩溃的点：3-5-个类嵌套时，析构顺序到底怎么看"><a href="#4-我当时最崩溃的点：3-5-个类嵌套时，析构顺序到底怎么看" class="headerlink" title="4. 我当时最崩溃的点：3-5 个类嵌套时，析构顺序到底怎么看"></a>4. 我当时最崩溃的点：3-5 个类嵌套时，析构顺序到底怎么看</h3><p>这一块我当时真的被搞得很烦。</p>
+<p>两个类还好，一旦题目开始这样套：</p>
+<ul>
+<li><code>A</code> 里面有 <code>B</code></li>
+<li><code>B</code> 继承 <code>C</code></li>
+<li><code>D</code> 里面又有 <code>A</code> 和 <code>C</code></li>
+</ul>
+<p>脑子一下就乱了。</p>
+<p>后来我总结出一个特别管用的判断方法：</p>
+<h3 id="判断口诀"><a href="#判断口诀" class="headerlink" title="判断口诀"></a>判断口诀</h3><p><strong>先看“谁里面包含谁”，再看“谁继承谁”，最后把构造顺序整个反过来，就是析构顺序。</strong></p>
+<p>也就是说：</p>
+<ol>
+<li>先把构造顺序老老实实写出来</li>
+<li>析构顺序直接反着读</li>
+</ol>
+<p>因为对象销毁本质上就是“按创建的逆序回收”。</p>
+<h3 id="再压缩成一句话"><a href="#再压缩成一句话" class="headerlink" title="再压缩成一句话"></a>再压缩成一句话</h3><p><strong>构造一路向里，析构一路向外。</strong></p>
+<p>比如：</p>
+<ul>
+<li>有父类，先进去父类</li>
+<li>有成员对象，先进去成员对象</li>
+<li>最后才到自己</li>
+</ul>
+<p>那析构时就反过来：</p>
+<ul>
+<li>先析构自己</li>
+<li>再析构成员</li>
+<li>最后析构父类</li>
+</ul>
+<p>这句话看起来土，但考试的时候真有用。</p>
+<hr>
+<h2 id="第六点五件事：专门讲析构顺序，尤其是多层嵌套"><a href="#第六点五件事：专门讲析构顺序，尤其是多层嵌套" class="headerlink" title="第六点五件事：专门讲析构顺序，尤其是多层嵌套"></a>第六点五件事：专门讲析构顺序，尤其是多层嵌套</h2><p>下面这两道题，特别适合用来练“脑中排顺序”。</p>
+<h3 id="例题-A：三层嵌套，先写构造，再反推析构"><a href="#例题-A：三层嵌套，先写构造，再反推析构" class="headerlink" title="例题 A：三层嵌套，先写构造，再反推析构"></a>例题 A：三层嵌套，先写构造，再反推析构</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;A构 &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;A析 &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A a;</span><br><span class="line">    <span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;B构 &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;B析 &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">C</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    B b;</span><br><span class="line">    A a;</span><br><span class="line">    <span class="built_in">C</span>() &#123; cout &lt;&lt; <span class="string">&quot;C构 &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">C</span>() &#123; cout &lt;&lt; <span class="string">&quot;C析 &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    C c;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第一步：先看构造顺序"><a href="#第一步：先看构造顺序" class="headerlink" title="第一步：先看构造顺序"></a>第一步：先看构造顺序</h3><p>创建 <code>C c;</code> 时：</p>
+<ol>
+<li>先构造成员 <code>b</code></li>
+<li>构造 <code>b</code> 时，先构造 <code>b</code> 里面的 <code>a</code></li>
+<li>然后才构造 <code>B</code></li>
+<li>再构造 <code>C</code> 自己的成员 <code>a</code></li>
+<li>最后构造 <code>C</code></li>
+</ol>
+<p>所以构造顺序是：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">A构 B构 A构 C构</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二步：析构顺序直接反着来"><a href="#第二步：析构顺序直接反着来" class="headerlink" title="第二步：析构顺序直接反着来"></a>第二步：析构顺序直接反着来</h3><p>析构顺序就是：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">C析 A析 B析 A析</span><br></pre></td></tr></table></figure>
+
+<h3 id="最终输出"><a href="#最终输出" class="headerlink" title="最终输出"></a>最终输出</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">A构 B构 A构 C构 C析 A析 B析 A析</span><br></pre></td></tr></table></figure>
+
+<p>这个题特别适合帮你建立一个感觉：</p>
+<ul>
+<li>成员对象的析构顺序和构造顺序相反</li>
+<li>同一个类里的多个成员，也是<strong>按声明顺序构造，按逆序析构</strong></li>
+</ul>
+<p>注意这里 <code>C</code> 里的成员声明顺序是：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">B b;</span><br><span class="line">A a;</span><br></pre></td></tr></table></figure>
+
+<p>所以析构时一定是：</p>
+<ol>
+<li>先 <code>C</code></li>
+<li>再 <code>a</code></li>
+<li>再 <code>b</code></li>
+</ol>
+<p>不是你想当然的谁看着顺眼先析构谁。</p>
+<hr>
+<h3 id="例题-B：继承-组合一起套，最容易把人绕晕"><a href="#例题-B：继承-组合一起套，最容易把人绕晕" class="headerlink" title="例题 B：继承 + 组合一起套，最容易把人绕晕"></a>例题 B：继承 + 组合一起套，最容易把人绕晕</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;A构 &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;A析 &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;B构 &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;B析 &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">C</span> : <span class="keyword">public</span> B &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A a;</span><br><span class="line">    <span class="built_in">C</span>() &#123; cout &lt;&lt; <span class="string">&quot;C构 &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">C</span>() &#123; cout &lt;&lt; <span class="string">&quot;C析 &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">D</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    C c;</span><br><span class="line">    B b;</span><br><span class="line">    <span class="built_in">D</span>() &#123; cout &lt;&lt; <span class="string">&quot;D构 &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">D</span>() &#123; cout &lt;&lt; <span class="string">&quot;D析 &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    D d;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="先别急着看答案，先拆"><a href="#先别急着看答案，先拆" class="headerlink" title="先别急着看答案，先拆"></a>先别急着看答案，先拆</h3><p>创建 <code>D d;</code>，先看 <code>D</code> 的成员：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">C c;</span><br><span class="line">B b;</span><br></pre></td></tr></table></figure>
+
+<p>所以一定先构造 <code>c</code>，再构造 <code>b</code>，最后构造 <code>D</code>。</p>
+<p>然后展开 <code>c</code>：</p>
+<ul>
+<li><code>C</code> 继承 <code>B</code>，所以先构造父类 <code>B</code></li>
+<li><code>C</code> 里还有成员 <code>A a</code>，所以再构造 <code>A</code></li>
+<li>最后构造 <code>C</code></li>
+</ul>
+<p>所以 <code>c</code> 的构造顺序是：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">B构 A构 C构</span><br></pre></td></tr></table></figure>
+
+<p>接着构造 <code>D</code> 自己的另一个成员 <code>b</code>：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">B构</span><br></pre></td></tr></table></figure>
+
+<p>最后构造 <code>D</code>：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">D构</span><br></pre></td></tr></table></figure>
+
+<h3 id="所以总构造顺序"><a href="#所以总构造顺序" class="headerlink" title="所以总构造顺序"></a>所以总构造顺序</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">B构 A构 C构 B构 D构</span><br></pre></td></tr></table></figure>
+
+<h3 id="析构顺序直接倒着写"><a href="#析构顺序直接倒着写" class="headerlink" title="析构顺序直接倒着写"></a>析构顺序直接倒着写</h3><p>先析构 <code>D</code> 自己：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">D析</span><br></pre></td></tr></table></figure>
+
+<p>然后按成员逆序析构：</p>
+<ol>
+<li>先析构 <code>b</code></li>
+<li>再析构 <code>c</code></li>
+</ol>
+<p>析构 <code>c</code> 时，又要按 <code>C</code> 的规则：</p>
+<ol>
+<li>先析构 <code>C</code></li>
+<li>再析构成员 <code>A</code></li>
+<li>最后析构父类 <code>B</code></li>
+</ol>
+<p>所以总析构顺序是：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">D析 B析 C析 A析 B析</span><br></pre></td></tr></table></figure>
+
+<h3 id="最终输出-1"><a href="#最终输出-1" class="headerlink" title="最终输出"></a>最终输出</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">B构 A构 C构 B构 D构 D析 B析 C析 A析 B析</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="例题-C：五个类嵌套时，我是怎么不让自己乱掉的"><a href="#例题-C：五个类嵌套时，我是怎么不让自己乱掉的" class="headerlink" title="例题 C：五个类嵌套时，我是怎么不让自己乱掉的"></a>例题 C：五个类嵌套时，我是怎么不让自己乱掉的</h3><p>这个例子更像考试里真正会把人整懵的题。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;A &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;~A &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A a1;</span><br><span class="line">    <span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;B &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;~B &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">C</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A a2;</span><br><span class="line">    <span class="built_in">C</span>() &#123; cout &lt;&lt; <span class="string">&quot;C &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">C</span>() &#123; cout &lt;&lt; <span class="string">&quot;~C &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">D</span> : <span class="keyword">public</span> B &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    C c;</span><br><span class="line">    <span class="built_in">D</span>() &#123; cout &lt;&lt; <span class="string">&quot;D &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">D</span>() &#123; cout &lt;&lt; <span class="string">&quot;~D &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">E</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    D d;</span><br><span class="line">    A a3;</span><br><span class="line">    <span class="built_in">E</span>() &#123; cout &lt;&lt; <span class="string">&quot;E &quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">E</span>() &#123; cout &lt;&lt; <span class="string">&quot;~E &quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    E e;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="这种题我建议你这样打草稿"><a href="#这种题我建议你这样打草稿" class="headerlink" title="这种题我建议你这样打草稿"></a>这种题我建议你这样打草稿</h3><p>不要试图一眼秒。</p>
+<p>直接在草稿纸上写树：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">E</span><br><span class="line">|- D</span><br><span class="line">|  |- B</span><br><span class="line">|  |  |- A(a1)</span><br><span class="line">|  |- C</span><br><span class="line">|     |- A(a2)</span><br><span class="line">|- A(a3)</span><br></pre></td></tr></table></figure>
+
+<p>然后构造时一路往里走：</p>
+<ol>
+<li>构造 <code>E</code></li>
+<li>先构造成员 <code>d</code></li>
+<li>构造 <code>d</code> 的父类 <code>B</code></li>
+<li>构造 <code>B</code> 的成员 <code>a1</code></li>
+<li>构造 <code>B</code></li>
+<li>构造 <code>D</code> 的成员 <code>c</code></li>
+<li>构造 <code>C</code> 的成员 <code>a2</code></li>
+<li>构造 <code>C</code></li>
+<li>构造 <code>D</code></li>
+<li>构造 <code>E</code> 的成员 <code>a3</code></li>
+<li>最后构造 <code>E</code></li>
+</ol>
+<p>所以构造顺序：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">A B A C D A E</span><br></pre></td></tr></table></figure>
+
+<p>析构顺序就反过来：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">~E ~A ~D ~C ~A ~B ~A</span><br></pre></td></tr></table></figure>
+
+<h3 id="这里最容易错的地方"><a href="#这里最容易错的地方" class="headerlink" title="这里最容易错的地方"></a>这里最容易错的地方</h3><ol>
+<li><p><strong>把继承关系和成员关系混着看</strong><br>一定先区分：谁是父类，谁是成员。</p>
+</li>
+<li><p><strong>忽略成员声明顺序</strong><br>成员构造顺序看的是声明顺序，不看初始化列表顺序。</p>
+</li>
+<li><p><strong>析构时忘记“自己先析构”</strong><br>比如 <code>D</code> 析构时，不是先析构父类 <code>B</code>，而是：<br><code>D自己 -&gt; 成员 -&gt; 父类</code></p>
+</li>
+</ol>
+<hr>
+<h3 id="最后一个实用技巧：看到-4-层以上嵌套，别心算"><a href="#最后一个实用技巧：看到-4-层以上嵌套，别心算" class="headerlink" title="最后一个实用技巧：看到 4 层以上嵌套，别心算"></a>最后一个实用技巧：看到 4 层以上嵌套，别心算</h3><p>我当时最痛苦的地方就在这儿。</p>
+<p>题目一复杂，我总想在脑子里硬排，结果经常把自己绕进去。</p>
+<p>后面我强制自己这样做：</p>
+<ol>
+<li>先画结构</li>
+<li>先写构造顺序</li>
+<li>再把构造顺序反过来得到析构顺序</li>
+</ol>
+<p>这三步虽然笨，但极其稳。</p>
+<p>复试笔试不是比谁快，是比谁不出低级错误。<br>尤其这种 3-5 个类嵌套的题，你只要顺序不乱，分基本就稳了。</p>
+<hr>
+<h2 id="例题-1：判断输出顺序"><a href="#例题-1：判断输出顺序" class="headerlink" title="例题 1：判断输出顺序"></a>例题 1：判断输出顺序</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;1&quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">A</span>() &#123; cout &lt;&lt; <span class="string">&quot;2&quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A a;</span><br><span class="line">    <span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;3&quot;</span>; &#125;</span><br><span class="line">    ~<span class="built_in">B</span>() &#123; cout &lt;&lt; <span class="string">&quot;4&quot;</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    B b;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>对象 <code>b</code> 是 <code>B</code> 类对象，而 <code>B</code> 里面有一个成员对象 <code>a</code>。</p>
+<p>所以：</p>
+<ol>
+<li>先构造成员对象 <code>a</code>，输出 <code>1</code></li>
+<li>再构造 <code>b</code> 自己，输出 <code>3</code></li>
+<li>程序结束，先析构 <code>b</code> 自己，输出 <code>4</code></li>
+<li>再析构成员对象 <code>a</code>，输出 <code>2</code></li>
+</ol>
+<p>答案：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1342</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="例题-2：下面哪一句会调用拷贝构造？"><a href="#例题-2：下面哪一句会调用拷贝构造？" class="headerlink" title="例题 2：下面哪一句会调用拷贝构造？"></a>例题 2：下面哪一句会调用拷贝构造？</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">A <span class="title">a1</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line"><span class="function">A <span class="title">a2</span><span class="params">(<span class="number">20</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>四个选项：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> A a3 = a1;</span><br><span class="line"><span class="number">2.</span> a2 = a1;</span><br><span class="line"><span class="number">3.</span> <span class="function">A <span class="title">a4</span><span class="params">(a1)</span></span>;</span><br><span class="line"><span class="number">4.</span> <span class="built_in">func</span>(a1);   <span class="comment">// 假设按值传参</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h3><p>会调用拷贝构造的是：</p>
+<ul>
+<li><code>A a3 = a1;</code></li>
+<li><code>A a4(a1);</code></li>
+<li><code>func(a1);</code> 按值传参时也会拷贝一份临时对象</li>
+</ul>
+<p>不会调用拷贝构造的是：</p>
+<ul>
+<li><code>a2 = a1;</code> 这是赋值</li>
+</ul>
+<p>所以如果是多选，答案一般是：<strong>1、3、4</strong>。</p>
+<hr>
+<h2 id="例题-3：为什么这个类会出问题？"><a href="#例题-3：为什么这个类会出问题？" class="headerlink" title="例题 3：为什么这个类会出问题？"></a>例题 3：为什么这个类会出问题？</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span>* p;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Demo</span>(<span class="type">int</span> x) &#123;</span><br><span class="line">        p = <span class="keyword">new</span> <span class="built_in">int</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">Demo</span>() &#123;</span><br><span class="line">        <span class="keyword">delete</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>如果写：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">Demo <span class="title">d1</span><span class="params">(<span class="number">5</span>)</span></span>;</span><br><span class="line">Demo d2 = d1;</span><br></pre></td></tr></table></figure>
+
+<h3 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h3><p>问题在于默认拷贝构造是浅拷贝。<br>两个对象里的 <code>p</code> 指向同一块内存。</p>
+<p>最终析构时会 <code>delete</code> 两次。</p>
+<h3 id="该怎么改？"><a href="#该怎么改？" class="headerlink" title="该怎么改？"></a>该怎么改？</h3><p>要么自己写深拷贝的拷贝构造函数，要么进一步把赋值运算符也一起重载。</p>
+<p>这其实就是复试里经常提到的那套东西：</p>
+<ul>
+<li>析构函数</li>
+<li>拷贝构造函数</li>
+<li>赋值运算符重载</li>
+</ul>
+<p>如果一个类自己管理资源，这三者通常要成套考虑。</p>
+<hr>
+<h2 id="例题-4：手写一个最简版类，考构造、拷贝、析构"><a href="#例题-4：手写一个最简版类，考构造、拷贝、析构" class="headerlink" title="例题 4：手写一个最简版类，考构造、拷贝、析构"></a>例题 4：手写一个最简版类，考构造、拷贝、析构</h2><p>这是很像复试手写题的风格。</p>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>设计一个 <code>Book</code> 类，包含书名（动态申请字符数组）和价格，要求实现：</p>
+<ul>
+<li>普通构造函数</li>
+<li>拷贝构造函数</li>
+<li>析构函数</li>
+</ul>
+<h3 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Book</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">char</span>* title;</span><br><span class="line">    <span class="type">double</span> price;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Book</span>(<span class="type">const</span> <span class="type">char</span>* t = <span class="string">&quot;&quot;</span>, <span class="type">double</span> p = <span class="number">0</span>) &#123;</span><br><span class="line">        title = <span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(t) + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">strcpy</span>(title, t);</span><br><span class="line">        price = p;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Book</span>(<span class="type">const</span> Book&amp; other) &#123;</span><br><span class="line">        title = <span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(other.title) + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">strcpy</span>(title, other.title);</span><br><span class="line">        price = other.price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">Book</span>() &#123;</span><br><span class="line">        <span class="keyword">delete</span>[] title;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; title &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; price &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">Book <span class="title">b1</span><span class="params">(<span class="string">&quot;C++ Primer&quot;</span>, <span class="number">88.0</span>)</span></span>;</span><br><span class="line">    Book b2 = b1;</span><br><span class="line">    b<span class="number">1.</span><span class="built_in">show</span>();</span><br><span class="line">    b<span class="number">2.</span><span class="built_in">show</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="这题老师想看什么？"><a href="#这题老师想看什么？" class="headerlink" title="这题老师想看什么？"></a>这题老师想看什么？</h3><p>不是看你能不能背整段代码，而是看你是否真的知道：</p>
+<ul>
+<li>动态内存要自己释放</li>
+<li>有指针成员时不能只靠默认拷贝</li>
+<li>拷贝构造必须重新申请空间</li>
+</ul>
+<hr>
+<h2 id="复试时这部分最容易被问的口头题"><a href="#复试时这部分最容易被问的口头题" class="headerlink" title="复试时这部分最容易被问的口头题"></a>复试时这部分最容易被问的口头题</h2><p>我把这类问题总结成几句最常见的话。</p>
+<h3 id="1-构造函数能不能是虚函数？"><a href="#1-构造函数能不能是虚函数？" class="headerlink" title="1. 构造函数能不能是虚函数？"></a>1. 构造函数能不能是虚函数？</h3><p>不能。</p>
+<p>因为虚函数机制依赖对象已经存在，而构造函数本身就是在“创建对象”。</p>
+<h3 id="2-析构函数能不能是虚函数？"><a href="#2-析构函数能不能是虚函数？" class="headerlink" title="2. 析构函数能不能是虚函数？"></a>2. 析构函数能不能是虚函数？</h3><p>能，而且<strong>父类析构函数在多态场景下经常应该写成虚函数</strong>。</p>
+<p>比如：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">Base* p = <span class="keyword">new</span> Derived;</span><br><span class="line"><span class="keyword">delete</span> p;</span><br></pre></td></tr></table></figure>
+
+<p>如果父类析构函数不是虚函数，可能只调用父类析构，不调用子类析构，资源释放就不完整。</p>
+<h3 id="3-为什么拷贝构造参数一般写成-const-A-？"><a href="#3-为什么拷贝构造参数一般写成-const-A-？" class="headerlink" title="3. 为什么拷贝构造参数一般写成 const A&amp;？"></a>3. 为什么拷贝构造参数一般写成 <code>const A&amp;</code>？</h3><p>因为：</p>
+<ul>
+<li>不加引用会再次调用拷贝构造，死循环</li>
+<li>加 <code>const</code> 表示不会修改源对象，也能接收常对象</li>
+</ul>
+<p>标准写法就是：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">A</span>(<span class="type">const</span> A&amp; other)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="我最后是怎么把这部分理顺的"><a href="#我最后是怎么把这部分理顺的" class="headerlink" title="我最后是怎么把这部分理顺的"></a>我最后是怎么把这部分理顺的</h2><p>我后面不再死记定义，而是强迫自己每次都问三个问题：</p>
+<ol>
+<li><strong>对象是什么时候被创建的？</strong></li>
+<li><strong>对象里面有没有资源需要自己管理？</strong></li>
+<li><strong>对象结束时谁来释放资源？</strong></li>
+</ol>
+<p>只要围着这三个问题转，构造、拷贝、析构其实就顺起来了。</p>
+<p>比如看到一个类里有 <code>new</code>，我脑子里就会立刻响警报：</p>
+<ul>
+<li>构造函数里申请了资源</li>
+<li>析构函数里大概率要释放</li>
+<li>拷贝构造不能偷懒</li>
+<li>赋值运算符也得小心</li>
+</ul>
+<p>这样就不容易被题目绕进去。</p>
+<hr>
+<h2 id="最后给复试突击一个建议"><a href="#最后给复试突击一个建议" class="headerlink" title="最后给复试突击一个建议"></a>最后给复试突击一个建议</h2><p>如果你时间很紧，类的构造与析构至少要保证下面这些会：</p>
+<ul>
+<li>构造函数、析构函数的定义与特点</li>
+<li>初始化列表</li>
+<li>拷贝构造与赋值的区别</li>
+<li>浅拷贝、深拷贝</li>
+<li>继承和组合下的构造&#x2F;析构顺序</li>
+<li>虚析构函数的意义</li>
+</ul>
+<p>这几块真的太常考了。</p>
+<p>我自己卡了很久，尤其是“为什么析构会出错”和“拷贝构造到底什么时候触发”这两个点。后来一旦顺过来，很多看似复杂的题一下就通了。</p>
+<p>如果你复试时间也不长，这一块我建议至少把文中的程序输出题和深拷贝题自己手写一遍。只看不写，考场上还是容易乱。</p>
+]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Cpp</tag>
+        <tag>考研复试</tag>
+        <tag>类与对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搭建记录：Hexo + AnZhiYu + GitHub Pages</title>
+    <url>/My_Blog/2026/04/04/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇记录我把博客从零搭起来的过程，主要写技术选型、环境准备、安装步骤和后续配置。内容不追求官方文档式完整，重点是把我实际走过的流程写清楚，方便自己以后重搭，也给后来的人做参考。</p>
+<hr>
+<h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p>我最后用的是这套：</p>
+<ul>
+<li>Hexo 8.1.1</li>
+<li>AnZhiYu 主题</li>
+<li>GitHub Pages 托管</li>
+</ul>
+<p>选择这套的原因很实际：</p>
+<ul>
+<li>Hexo 是静态博客，部署简单</li>
+<li>主题生态成熟</li>
+<li>GitHub Pages 免费，够用</li>
+</ul>
+<p>如果只是做个人博客、学习记录和技术笔记，这套方案基本够了。</p>
+<hr>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>开始之前，本地需要有：</p>
+<ul>
+<li>Node.js</li>
+<li>npm</li>
+<li>Git</li>
+</ul>
+<p>可以先检查版本：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>如果这三样都正常，后面安装 Hexo 会顺很多。</p>
+<hr>
+<h2 id="初始化-Hexo-项目"><a href="#初始化-Hexo-项目" class="headerlink" title="初始化 Hexo 项目"></a>初始化 Hexo 项目</h2><p>先全局安装 Hexo CLI：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>然后初始化博客：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>本地预览：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>这时候访问 <code>http://localhost:4000</code>，默认页面就能起来。</p>
+<hr>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>我这里用的是 AnZhiYu。</p>
+<p>安装命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu</span><br></pre></td></tr></table></figure>
+
+<p>然后在站点根目录的 <code>_config.yml</code> 里把主题改成：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">anzhiyu</span></span><br></pre></td></tr></table></figure>
+
+<p>主题依赖也要补上：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus</span><br></pre></td></tr></table></figure>
+
+<p>这一步做完之后，主题基本就能跑起来。</p>
+<hr>
+<h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><p>主要会改两个配置文件：</p>
+<ul>
+<li><code>_config.yml</code></li>
+<li><code>_config.anzhiyu.yml</code> 或主题配置文件</li>
+</ul>
+<p>站点级别一般要先把这些配好：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Echo&#x27;s</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">个人学习记录</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Echo</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://yourname.github.io/repo</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/repo/</span></span><br></pre></td></tr></table></figure>
+
+<p>这里最容易出问题的是 <code>url</code> 和 <code>root</code>。</p>
+<p>如果你部署在 GitHub Pages 仓库子路径下，比如：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">https://用户名.github.io/My_Blog/</span><br></pre></td></tr></table></figure>
+
+<p>那 <code>root</code> 就必须是：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">root:</span> <span class="string">/My_Blog/</span></span><br></pre></td></tr></table></figure>
+
+<p>这一项配错，后面很多静态资源和页面跳转都会出问题。</p>
+<hr>
+<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p>我实际装过这些插件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git</span><br><span class="line">npm install hexo-tag-aplayer</span><br><span class="line">npm install hexo-butterfly-envelope</span><br></pre></td></tr></table></figure>
+
+<p>分别对应：</p>
+<ul>
+<li>GitHub 部署</li>
+<li>音乐播放器</li>
+<li>评论区信封样式</li>
+</ul>
+<p>Hexo 项目很容易出现“本地能跑，换电脑就缺依赖”的情况，所以装过的插件最好都记下来。</p>
+<hr>
+<h2 id="部署到-GitHub-Pages"><a href="#部署到-GitHub-Pages" class="headerlink" title="部署到 GitHub Pages"></a>部署到 GitHub Pages</h2><p>生成静态文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>部署：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>如果你在 <code>package.json</code> 里配了脚本，也可以直接用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run deploy</span><br></pre></td></tr></table></figure>
+
+<p>这一步的前提是 <code>_config.yml</code> 里的 <code>deploy</code> 配置正确，比如：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/yourname/repo.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="实际使用里我比较在意的几块"><a href="#实际使用里我比较在意的几块" class="headerlink" title="实际使用里我比较在意的几块"></a>实际使用里我比较在意的几块</h2><p>搭完之后，我主要花时间处理的是这些：</p>
+<ul>
+<li>顶部导航</li>
+<li>侧边栏信息</li>
+<li>评论系统</li>
+<li>音乐播放器</li>
+<li>页面样式细节</li>
+</ul>
+<p>AnZhiYu 的可配项很多，优点是能改的地方多，缺点是出问题时排查范围也更大。所以建议一开始不要一次性改太多，先保证站能稳定运行，再慢慢加功能。</p>
+<hr>
+<h2 id="这套方案的优点和问题"><a href="#这套方案的优点和问题" class="headerlink" title="这套方案的优点和问题"></a>这套方案的优点和问题</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>成本低</li>
+<li>部署快</li>
+<li>静态页面访问速度可以</li>
+<li>主题和插件比较丰富</li>
+</ul>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>配置项多，容易改乱</li>
+<li>子路径部署时路径问题很多</li>
+<li>主题升级后容易和自定义修改冲突</li>
+</ul>
+<p>如果只是轻量使用，优点大于问题；如果改动很多，后期维护成本会明显上来。</p>
+<hr>
+<h2 id="我后来总结的几个经验"><a href="#我后来总结的几个经验" class="headerlink" title="我后来总结的几个经验"></a>我后来总结的几个经验</h2><h3 id="1-子路径部署一定要先把-root-配对"><a href="#1-子路径部署一定要先把-root-配对" class="headerlink" title="1. 子路径部署一定要先把 root 配对"></a>1. 子路径部署一定要先把 <code>root</code> 配对</h3><p>这件事值得单独说一次。很多“页面 404”“资源丢失”“脚本失效”，根本原因都不是代码本身，而是路径没配对。</p>
+<h3 id="2-主题尽量不要无脑直接改核心文件"><a href="#2-主题尽量不要无脑直接改核心文件" class="headerlink" title="2. 主题尽量不要无脑直接改核心文件"></a>2. 主题尽量不要无脑直接改核心文件</h3><p>如果后面升级主题或者换设备，很容易忘掉自己改过哪些东西。能用额外覆盖文件处理的，就尽量不要直接散改。</p>
+<h3 id="3-每改完一个大功能就先-generate-一次"><a href="#3-每改完一个大功能就先-generate-一次" class="headerlink" title="3. 每改完一个大功能就先 generate 一次"></a>3. 每改完一个大功能就先 <code>generate</code> 一次</h3><p>不要攒一堆修改最后一起看，不然出问题时很难定位到底是哪一步弄坏的。</p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次搭博客本身不算复杂，真正麻烦的是后面的配置、路径和自定义细节。</p>
+<p>如果只是想尽快把博客搭起来，Hexo + AnZhiYu + GitHub Pages 是一套可以直接上手的方案。<br>如果后面还要做很多魔改，那最好从一开始就把配置、依赖和修改记录整理好，不然后期维护会比较累。</p>
+]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>东南网安复试记录：分数、准备内容、笔试和面试情况</title>
+    <url>/My_Blog/2025/04/10/%E5%A4%8D%E8%AF%95/</url>
+    <content><![CDATA[<h2 id="基本情况"><a href="#基本情况" class="headerlink" title="基本情况"></a>基本情况</h2><p>这篇主要记录我参加东南网安复试的整个过程，包括出分、准备内容、笔试、面试和最后结果，尽量写成一份可参考的记录。</p>
+<p>我的初试总分是 365，复试线是 330，属于能进复试但不算特别稳的区间。所以这次复试的目标很明确：不要失误，尽量把笔试和面试都保持在正常水平。</p>
+<hr>
+<h2 id="初试出分和复试线"><a href="#初试出分和复试线" class="headerlink" title="初试出分和复试线"></a>初试出分和复试线</h2><p>2 月 24 日查到初试成绩：</p>
+<ul>
+<li>政治 65</li>
+<li>英语一 66</li>
+<li>数学 113</li>
+<li>专业课 121</li>
+<li>总分 365</li>
+</ul>
+<p>这个分数在东南网安往年的区间里属于能进复试，但不能掉以轻心。</p>
+<p>3 月初出复试线，线是 330。过线 35 分，说明至少拿到了复试资格，下一步就很直接：开始准备复试内容。</p>
+<hr>
+<h2 id="复习时间和复习重点"><a href="#复习时间和复习重点" class="headerlink" title="复习时间和复习重点"></a>复习时间和复习重点</h2><p>我的复试准备时间大概是半个月，重点分成两部分：</p>
+<ul>
+<li>笔试：C++ 程序设计</li>
+<li>面试：英语口语、专业问答、综合问题</li>
+</ul>
+<h3 id="C-笔试部分"><a href="#C-笔试部分" class="headerlink" title="C++ 笔试部分"></a>C++ 笔试部分</h3><p>我当时重点看的内容主要是：</p>
+<ul>
+<li>类与对象</li>
+<li>构造函数和析构函数</li>
+<li>继承与多态</li>
+<li>运算符重载</li>
+<li>模板</li>
+<li>STL 常用容器和算法</li>
+</ul>
+<p>里面花时间最多的是构造、析构、拷贝构造、赋值运算符这块。因为这类题特别容易出程序输出和手写代码题，一旦没理清，做题很容易丢分。</p>
+<h3 id="面试部分"><a href="#面试部分" class="headerlink" title="面试部分"></a>面试部分</h3><p>面试我主要准备了三类内容：</p>
+<ul>
+<li>英语自我介绍和常见英语问题</li>
+<li>常见专业问答</li>
+<li>本科项目和个人经历</li>
+</ul>
+<p>整体上没有准备得特别花哨，就是把高频问题先过一遍，保证进场后不至于完全卡壳。</p>
+<hr>
+<h2 id="一个插曲：机票订错"><a href="#一个插曲：机票订错" class="headerlink" title="一个插曲：机票订错"></a>一个插曲：机票订错</h2><p>复试那次我还犯了个低级错误：把时间看错，机票订晚了一天。</p>
+<p>发现之后只能重买，额外多花了几百块。这个事本身不复杂，但提醒意义很强：</p>
+<ul>
+<li>复试前一定把时间、地点、进校安排反复确认</li>
+<li>住宿和交通最好都提前留出缓冲</li>
+</ul>
+<p>这种低级错误如果没及时发现，影响会比复习本身还大。</p>
+<hr>
+<h2 id="笔试情况"><a href="#笔试情况" class="headerlink" title="笔试情况"></a>笔试情况</h2><p>笔试安排在第一天下午，时间是 14:00-16:00，科目是 C++，满分 150。</p>
+<h3 id="题型和考点"><a href="#题型和考点" class="headerlink" title="题型和考点"></a>题型和考点</h3><p>我那次遇到的题型大致包括：</p>
+<ul>
+<li>程序阅读题</li>
+<li>代码填空</li>
+<li>手写代码题</li>
+<li>简答题</li>
+</ul>
+<p>常见考点主要是：</p>
+<ul>
+<li>类与对象</li>
+<li>构造与析构</li>
+<li>继承和多态</li>
+<li>虚函数</li>
+<li>运算符重载</li>
+</ul>
+<h3 id="我印象比较深的题"><a href="#我印象比较深的题" class="headerlink" title="我印象比较深的题"></a>我印象比较深的题</h3><p>有几道题印象比较深：</p>
+<ul>
+<li>一道虚函数相关的程序输出题</li>
+<li>一道手写简化版 <code>String</code> 类</li>
+<li>一道异常处理题</li>
+<li>最后一题是简答：多态的实现机制，以及虚函数表的作用</li>
+</ul>
+<p>其中 <code>String</code> 类那题比较典型，核心就是看你会不会：</p>
+<ul>
+<li>构造函数</li>
+<li>拷贝构造</li>
+<li>赋值运算符</li>
+<li>析构函数</li>
+<li>深拷贝</li>
+</ul>
+<p>这题如果平时只是看懂概念但没自己写过，很容易在考场上写乱。</p>
+<h3 id="我的完成情况"><a href="#我的完成情况" class="headerlink" title="我的完成情况"></a>我的完成情况</h3><p>整体上我做得比较顺：</p>
+<ul>
+<li>选择和阅读题推进得快</li>
+<li><code>String</code> 类主干写出来了</li>
+<li>简答题也写到了点上</li>
+</ul>
+<p>考完之后我的判断是：这场笔试发挥正常偏上，没有明显失误。</p>
+<hr>
+<h2 id="面试情况"><a href="#面试情况" class="headerlink" title="面试情况"></a>面试情况</h2><p>面试在第二天上午，9 点开始分组。我排在中间，实际轮到我大概是 10:40 左右。</p>
+<p>进去之后，一共 6 位老师。</p>
+<h3 id="英语部分"><a href="#英语部分" class="headerlink" title="英语部分"></a>英语部分</h3><p>先是英文自我介绍，这部分我提前准备过，所以整体还算顺。</p>
+<p>之后老师问了一个比较常见的问题：</p>
+<p><code>Why do you choose network security?</code></p>
+<p>我的回答不算特别流畅，但至少把意思说清楚了，没有完全卡住。</p>
+<h3 id="专业问答"><a href="#专业问答" class="headerlink" title="专业问答"></a>专业问答</h3><p>我抽到的是一道数据结构题，主题是“找中位数”，分别讨论数组和链表。</p>
+<p>我的回答思路是：</p>
+<ul>
+<li>数组已排序：直接取中间位置</li>
+<li>数组未排序：可以说快速选择，也可以说双堆维护</li>
+<li>单链表：快慢指针</li>
+</ul>
+<p>老师有继续追问，但整体都在我能答的范围内，没有问到特别偏的内容。</p>
+<h3 id="综合问题"><a href="#综合问题" class="headerlink" title="综合问题"></a>综合问题</h3><p>后面还问了本科项目和为什么选东南。</p>
+<p>我这里的处理比较直接：</p>
+<ul>
+<li>做过什么就说什么</li>
+<li>不夸大项目</li>
+<li>回答尽量简洁</li>
+</ul>
+<p>这部分我自己的经验是：项目说得太虚反而容易被追问崩掉，不如说清楚自己真正做过什么。</p>
+<hr>
+<h2 id="我当时准备的面试资料"><a href="#我当时准备的面试资料" class="headerlink" title="我当时准备的面试资料"></a>我当时准备的面试资料</h2><p>下面这些内容是我当时实际准备过的材料。为了避免暴露个人信息，我把姓名、本科院校、家乡、具体项目署名这些都换成了通用写法，但整体结构和答题思路保留了下来，后面准备复试的人可以直接参考这个框架。</p>
+<p>另外说明一下，这部分资料里有一部分内容参考或转载自“雨探青鸟”的相关整理。“雨探青鸟”是 2023 年上岸东南网安的一位学长的博客名称，在我的友链里可以找到，这里一并注明来源。</p>
+<h3 id="1-中文自我介绍框架"><a href="#1-中文自我介绍框架" class="headerlink" title="1. 中文自我介绍框架"></a>1. 中文自我介绍框架</h3><p>我当时准备的是 1 分钟左右版本，核心思路是：</p>
+<ul>
+<li>先说基本背景</li>
+<li>再说成绩和排名</li>
+<li>再说竞赛、项目、毕设</li>
+<li>最后说读研规划</li>
+</ul>
+<p>整理成脱敏后的版本，大概可以写成这样：</p>
+<blockquote>
+<p>各位老师好，我今年 22 岁，来自某省某市，本科就读于某理工类院校计算机相关专业。很高兴能够参加这次面试。<br>本科期间，我的专业排名在前 10% 左右，绩点和核心课程成绩都还可以，C++ 程序设计、数据结构、操作系统等课程基础相对扎实，英语方面通过了四级和六级。<br>在竞赛和项目方面，我参加过数学建模类竞赛，也做过与信息安全相关的毕业设计，主要涉及 AES、RSA、数字签名、身份认证这些内容。另外还参与过一个偏工程实践的项目开发，整体上让我对安全方向的实际应用有了更直观的理解。<br>如果有机会继续读研，我希望在第一年先把课程基础和方向知识补扎实，第二年进一步确定研究方向，第三年完成论文和更系统的研究训练。<br>我的介绍就是这些，谢谢各位老师。</p>
+</blockquote>
+<h3 id="2-英文自我介绍框架"><a href="#2-英文自我介绍框架" class="headerlink" title="2. 英文自我介绍框架"></a>2. 英文自我介绍框架</h3><p>英文部分我准备的是一个比较稳妥的模板，不追求特别华丽，重点是尽量少出错、信息完整。</p>
+<p>脱敏后的版本可以这样写：</p>
+<blockquote>
+<p>Good morning, professors. I am a 22-year-old student from a city in northern China. I major in a computer-related field at a provincial university. It is a great honor for me to attend this interview.<br>During my undergraduate study, I maintained a relatively good ranking in my major and built a solid foundation in courses such as C++ programming, data structures, and operating systems. I also passed CET-4 and CET-6.<br>In terms of practice, I participated in academic competitions and completed projects related to information security. My graduation project focused on secure authentication and data protection, which helped me understand the practical value of cybersecurity.<br>For my graduate study plan, I hope to strengthen my theoretical foundation in the first year, identify a suitable research direction in the second year, and complete meaningful research work in the final stage.<br>Thank you for your time.</p>
+</blockquote>
+<h3 id="3-我准备过的英语问答"><a href="#3-我准备过的英语问答" class="headerlink" title="3. 我准备过的英语问答"></a>3. 我准备过的英语问答</h3><p>我当时不是把所有题都背下来，而是把高频问题整理成几个固定答题模块。这样现场即使题目不完全一样，也能快速拼出答案。</p>
+<h4 id="关于优点和缺点"><a href="#关于优点和缺点" class="headerlink" title="关于优点和缺点"></a>关于优点和缺点</h4><p><code>What is your greatest strength?</code></p>
+<p>可以答：</p>
+<blockquote>
+<p>My greatest strength is that I learn new knowledge relatively fast. When I become interested in a topic, I can spend a lot of time understanding it and summarizing it in my own way.</p>
+</blockquote>
+<p><code>What is your greatest weakness?</code></p>
+<p>可以答：</p>
+<blockquote>
+<p>One weakness is that I sometimes spend too much time on one difficult problem. Later I learned that it is important to balance depth and efficiency, especially during exam preparation and project work.</p>
+</blockquote>
+<p>这种答法比“我不喜欢的就学不会”更安全，因为不会把缺点说得太直接。</p>
+<h4 id="关于未来规划"><a href="#关于未来规划" class="headerlink" title="关于未来规划"></a>关于未来规划</h4><p><code>What would you like to be doing five years after graduation?</code></p>
+<p>可以答：</p>
+<blockquote>
+<p>I hope to continue working in the cybersecurity field, either in research or in engineering practice. At this stage, my main goal is to build strong professional ability first.</p>
+</blockquote>
+<p>我建议不要把未来说得过满，比如直接说“一定读博、一定留校”，除非你非常确定老师会认可这个表述。</p>
+<h4 id="关于为什么选网络安全"><a href="#关于为什么选网络安全" class="headerlink" title="关于为什么选网络安全"></a>关于为什么选网络安全</h4><p><code>Why do you choose cyber security?</code></p>
+<p>可以答：</p>
+<blockquote>
+<p>I choose cyber security for two reasons. First, I am interested in the technical side of this field, especially how systems defend against attacks. Second, data security is increasingly important in real applications, so I think this field has both research value and practical value.</p>
+</blockquote>
+<h4 id="关于失败和压力"><a href="#关于失败和压力" class="headerlink" title="关于失败和压力"></a>关于失败和压力</h4><p><code>If you fail this time, what will you do?</code></p>
+<p>可以答：</p>
+<blockquote>
+<p>I will first review where I did not perform well, then improve those weak points and continue moving forward. I think the key point is not to avoid failure, but to respond to it rationally.</p>
+</blockquote>
+<h4 id="关于空闲时间和性格"><a href="#关于空闲时间和性格" class="headerlink" title="关于空闲时间和性格"></a>关于空闲时间和性格</h4><p><code>What do you do in your spare time?</code></p>
+<p>可以答：</p>
+<blockquote>
+<p>In my spare time, I usually review technical knowledge, read materials related to my major, and also do some exercise or light entertainment to keep a balanced routine.</p>
+</blockquote>
+<p><code>What kind of person do you think you are?</code></p>
+<p>可以答：</p>
+<blockquote>
+<p>I think I am a steady and persistent person. When I set a goal, I usually stay with it for a long time and try to solve problems step by step.</p>
+</blockquote>
+<h3 id="4-专业和项目问题，我当时的准备方式"><a href="#4-专业和项目问题，我当时的准备方式" class="headerlink" title="4. 专业和项目问题，我当时的准备方式"></a>4. 专业和项目问题，我当时的准备方式</h3><p>我发现老师问项目时，一般不会只让你把题目念一遍，更常见的是追问你：</p>
+<ul>
+<li>这个项目解决什么问题</li>
+<li>你具体做了哪一部分</li>
+<li>用了什么技术</li>
+<li>为什么这样设计</li>
+</ul>
+<p>所以项目准备最好按下面这个结构说：</p>
+<h4 id="毕设介绍模板"><a href="#毕设介绍模板" class="headerlink" title="毕设介绍模板"></a>毕设介绍模板</h4><blockquote>
+<p>我的毕业设计主要是做一个面向某类业务场景的安全认证方案。核心思路是把对称加密和非对称加密结合起来，用对称加密保证传输效率，用非对称加密解决密钥分发和身份认证问题。<br>在方案设计里，还加入了时间戳、挑战应答、哈希和数字签名这些机制，主要是为了防止重放攻击、保证数据完整性并提高认证可靠性。<br>我在这个项目里主要负责方案设计、流程实现和功能验证。通过这个项目，我对密码学基础机制和身份认证流程有了更具体的理解。</p>
+</blockquote>
+<p>这种答法的好处是：老师如果继续追问，也能自然往 AES、RSA、数字签名、哈希、重放攻击这些点上展开。</p>
+<h4 id="本科项目经历模板"><a href="#本科项目经历模板" class="headerlink" title="本科项目经历模板"></a>本科项目经历模板</h4><blockquote>
+<p>我参与过一个偏工程实践的项目，主要负责其中一部分功能实现和调试。这个过程让我比较明显地体会到，学校里的课程知识和实际系统开发之间还是有距离的，尤其是在需求理解、模块协作和调试定位问题这几个方面。</p>
+</blockquote>
+<p>如果自己的项目不算特别强，就老老实实讲“做了什么、学到了什么”，不要强行拔高。</p>
+<h3 id="5-我准备过的一些中文问题"><a href="#5-我准备过的一些中文问题" class="headerlink" title="5. 我准备过的一些中文问题"></a>5. 我准备过的一些中文问题</h3><p>除了英语问题，我还提前想过一些中文追问，因为这些题很容易在综合面试里出现：</p>
+<ul>
+<li>为什么选择这个方向</li>
+<li>你对网络安全的理解是什么</li>
+<li>你本科专业和报考方向之间有什么联系</li>
+<li>你做过的项目里最难的部分是什么</li>
+<li>如果老师让你介绍你的本科院校，你怎么说</li>
+</ul>
+<p>这里面我觉得最容易答空的是“你对网络安全的理解”。我后来把它压缩成了两句话：</p>
+<blockquote>
+<p>一方面，网络安全有很强的现实需求，数据、系统和业务都离不开安全保障。另一方面，这个方向既有理论问题，也有很强的工程落地价值，所以我想继续往这个方向深入学习。</p>
+</blockquote>
+<h3 id="6-一个很实用的兜底说法"><a href="#6-一个很实用的兜底说法" class="headerlink" title="6. 一个很实用的兜底说法"></a>6. 一个很实用的兜底说法</h3><p>面试里如果真的遇到不会的问题，最怕的不是不会，而是开始乱答。</p>
+<p>我当时给自己准备的兜底原则很简单：</p>
+<ul>
+<li>先承认这个问题自己掌握得不够完整</li>
+<li>再尽量把自己确定的部分说出来</li>
+<li>实在不会，就转到相关知识点，不要硬编</li>
+</ul>
+<p>比如可以这样说：</p>
+<blockquote>
+<p>对这个问题我的理解还不够完整，我先尝试从我比较确定的部分来回答。如果有不准确的地方，还请老师指正。</p>
+</blockquote>
+<p>这比直接沉默或者胡乱展开都稳很多。</p>
+<hr>
+<h2 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h2><p>4 月 8 日出了拟录取名单。</p>
+<p>我的结果大概是：</p>
+<ul>
+<li>笔试 138 &#x2F; 150</li>
+<li>面试 121 &#x2F; 150</li>
+<li>总排名在录取区间内</li>
+</ul>
+<p>这个结果说明我前面对复试的判断基本没偏：</p>
+<ul>
+<li>笔试发挥比较稳</li>
+<li>面试没有特别亮眼，但也没有出问题</li>
+</ul>
+<p>对我这种初试分数不算特别高的情况来说，这样的结果已经足够了。</p>
+<hr>
+<h2 id="这次复试里对后来人有参考价值的几点"><a href="#这次复试里对后来人有参考价值的几点" class="headerlink" title="这次复试里对后来人有参考价值的几点"></a>这次复试里对后来人有参考价值的几点</h2><h3 id="1-笔试复习不要只看概念，要手写"><a href="#1-笔试复习不要只看概念，要手写" class="headerlink" title="1. 笔试复习不要只看概念，要手写"></a>1. 笔试复习不要只看概念，要手写</h3><p>尤其是 C++ 这种科目，很多题看答案觉得懂，一到手写就不稳。像构造、析构、深拷贝、继承、多态，最好都自己写过。</p>
+<h3 id="2-面试准备不需要追求“完美答案”"><a href="#2-面试准备不需要追求“完美答案”" class="headerlink" title="2. 面试准备不需要追求“完美答案”"></a>2. 面试准备不需要追求“完美答案”</h3><p>自我介绍和常见问题提前准备好，保证现场能稳定输出，比临时追求特别高级的表达更重要。</p>
+<h3 id="3-项目经历一定要真实"><a href="#3-项目经历一定要真实" class="headerlink" title="3. 项目经历一定要真实"></a>3. 项目经历一定要真实</h3><p>老师追问的时候，最怕的不是项目普通，而是你自己说不清。真实、清楚、能展开，比包装得很厉害更安全。</p>
+<h3 id="4-行程安排别出低级错误"><a href="#4-行程安排别出低级错误" class="headerlink" title="4. 行程安排别出低级错误"></a>4. 行程安排别出低级错误</h3><p>复试前的交通、住宿、入校安排，最好都提前确认，不要在这种地方浪费精力。</p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次复试整体上没有什么戏剧性情节，更多就是一场正常发挥。</p>
+<p>回头看，最关键的还是两点：</p>
+<ul>
+<li>笔试重点内容提前啃透</li>
+<li>面试保持稳定，不乱说</li>
+</ul>
+<p>如果初试分数已经够进复试，后面最重要的不是幻想逆天翻盘，而是尽量避免失误，把自己会的东西正常发挥出来。</p>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>东南大学</tag>
+        <tag>考研复试</tag>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI 编程工具使用记录（一）：Codex 从登录 OpenAI 到用 ccswitch 调 API</title>
+    <url>/My_Blog/2026/06/12/Codex%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%EF%BC%9A%E4%BB%8E%E7%99%BB%E5%BD%95%20OpenAI%20%E5%88%B0%E7%94%A8%20ccswitch%20%E8%B0%83%20API/</url>
+    <content><![CDATA[<h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><p>这是“AI 编程工具使用记录”系列的第一篇。</p>
+<p>这个系列主要记录我自己折腾 AI 编程工具的过程，不追求写成完整教程，更偏向实际使用后的取舍和总结。</p>
+<p>目前这个系列暂时分成两篇：</p>
+<ul>
+<li>第一篇：Codex 从登录 OpenAI 到用 <code>ccswitch</code> 调 API</li>
+<li>第二篇：Claude Code 和 Codex 对比，为什么最后选择 Codex</li>
+</ul>
+<p>这一篇先写 Codex 本身的使用方式，下一篇再把它和 Claude Code 放在一起比较。</p>
+<hr>
+<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇记录一下我最近使用 Codex 的过程，主要写两种用法：</p>
+<ul>
+<li>直接登录 OpenAI 账号使用</li>
+<li>通过 <code>ccswitch</code> 调用 API 使用</li>
+</ul>
+<p>一开始我用的是第一种方式，因为上手最简单，基本就是登录账号，然后直接在终端里让 Codex 帮我看项目、改代码、跑命令。后面用了一段时间之后，我慢慢改成了第二种方式，也就是用 <code>ccswitch</code> 管理接口和模型，再让 Codex 走 API。</p>
+<p>这篇不写成官方教程，主要记录我自己的使用体验和取舍。</p>
+<hr>
+<h2 id="最开始：直接登录-OpenAI-账号"><a href="#最开始：直接登录-OpenAI-账号" class="headerlink" title="最开始：直接登录 OpenAI 账号"></a>最开始：直接登录 OpenAI 账号</h2><p>刚开始接触 Codex 的时候，我的想法很简单：先跑起来再说。</p>
+<p>这种方式的流程比较直观：</p>
+<ol>
+<li>安装 Codex CLI</li>
+<li>在终端里启动 Codex</li>
+<li>按提示登录 OpenAI 账号</li>
+<li>授权之后开始使用</li>
+</ol>
+<p>优点也很明显：</p>
+<ul>
+<li>配置少</li>
+<li>不需要自己管理 API Key</li>
+<li>对新手比较友好</li>
+<li>登录成功后基本可以直接进入工作流</li>
+</ul>
+<p>如果只是临时体验，或者只是让 Codex 帮忙解释一段代码、改一个小 bug，这种方式确实很舒服。</p>
+<hr>
+<h2 id="直接登录方式的问题"><a href="#直接登录方式的问题" class="headerlink" title="直接登录方式的问题"></a>直接登录方式的问题</h2><p>但用久一点之后，我发现这种方式也有一些不太适合我的地方。</p>
+<p>首先是可控性不够强。<br>我更希望自己能明确知道当前走的是哪个接口、哪个模型、哪个服务地址，以及后续要不要切换到别的配置。</p>
+<p>其次是环境迁移不够顺手。<br>如果换电脑、换终端环境，或者在不同项目之间切换，我不太想每次都重新处理登录状态。登录账号这种方式适合“单点使用”，但不太适合我这种经常折腾开发环境的人。</p>
+<p>还有一点是心理上的：<br>我更习惯把 AI 工具当成开发链路里的一个组件，而不是一个绑定账号状态的黑盒。既然它最终也是在和模型交互，那我更希望这部分配置能像数据库连接、部署密钥一样被明确管理。</p>
+<hr>
+<h2 id="后来：用-ccswitch-调-API"><a href="#后来：用-ccswitch-调-API" class="headerlink" title="后来：用 ccswitch 调 API"></a>后来：用 ccswitch 调 API</h2><p>后面我开始改成用 <code>ccswitch</code> 来管理 API 调用。</p>
+<p>我这里对它的定位很简单：<br><code>ccswitch</code> 更像是一个“接口切换器”或者“配置中间层”，把模型、接口地址、密钥这些东西统一管起来。Codex 需要调用模型时，就不再完全依赖账号登录状态，而是走我配置好的 API。</p>
+<p>这样做之后，整个使用方式变成了：</p>
+<ol>
+<li>在 <code>ccswitch</code> 里配置 API Key</li>
+<li>配置接口地址和默认模型</li>
+<li>根据需要切换不同的服务或模型</li>
+<li>让 Codex 通过 API 完成代码阅读、修改和命令执行</li>
+</ol>
+<p>这个流程比直接登录稍微麻烦一点，但一旦配置好，后面会更稳定。</p>
+<hr>
+<h2 id="两种方式的对比"><a href="#两种方式的对比" class="headerlink" title="两种方式的对比"></a>两种方式的对比</h2><p>如果简单对比，我会这样理解：</p>
+<table>
+<thead>
+<tr>
+<th>使用方式</th>
+<th>优点</th>
+<th>问题</th>
+<th>适合场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>登录 OpenAI 账号</td>
+<td>上手快、配置少、适合体验</td>
+<td>可控性弱、迁移不够顺手</td>
+<td>临时使用、轻量体验</td>
+</tr>
+<tr>
+<td><code>ccswitch</code> 调 API</td>
+<td>可控性强、方便切换、适合长期使用</td>
+<td>初始配置多一点</td>
+<td>长期开发、多环境、多模型切换</td>
+</tr>
+</tbody></table>
+<p>我不是说登录账号不好，而是它更像“开箱即用”的方案。<br><code>ccswitch</code> 调 API 则更像“工程化使用”的方案。</p>
+<p>如果只是偶尔用一下，直接登录就够了。<br>但如果打算把 Codex 放进日常开发流程里，经常让它读项目、改代码、跑测试、整理文档，那我更推荐后者。</p>
+<hr>
+<h2 id="为什么最后选择-ccswitch"><a href="#为什么最后选择-ccswitch" class="headerlink" title="为什么最后选择 ccswitch"></a>为什么最后选择 ccswitch</h2><p>我最后选择 <code>ccswitch</code>，主要是因为这几个原因。</p>
+<h3 id="1-配置更透明"><a href="#1-配置更透明" class="headerlink" title="1. 配置更透明"></a>1. 配置更透明</h3><p>API Key、接口地址、模型名称都能自己看见，也能自己管理。</p>
+<p>这对我很重要，因为我不想在使用工具时完全不知道它背后走的是什么配置。尤其是在不同模型、不同服务之间切换时，透明配置能减少很多不确定性。</p>
+<h3 id="2-切换更方便"><a href="#2-切换更方便" class="headerlink" title="2. 切换更方便"></a>2. 切换更方便</h3><p>有时候我只是想写文章、改 Markdown，不一定需要很强的模型。<br>有时候我要让 Codex 看比较复杂的项目、改一串代码、分析报错，这时候就希望换成更强的模型。</p>
+<p>用 <code>ccswitch</code> 之后，切换这件事会自然很多，不需要每次都重新折腾登录或者环境。</p>
+<h3 id="3-更适合长期使用"><a href="#3-更适合长期使用" class="headerlink" title="3. 更适合长期使用"></a>3. 更适合长期使用</h3><p>直接登录适合“现在马上用一下”。<br>API 配置适合“以后一直用”。</p>
+<p>对我来说，Codex 不是一个偶尔打开的玩具，而是可以放进日常开发流程里的工具。既然要长期用，那我就更希望它的配置方式稳定、可迁移、可维护。</p>
+<h3 id="4-更符合开发习惯"><a href="#4-更符合开发习惯" class="headerlink" title="4. 更符合开发习惯"></a>4. 更符合开发习惯</h3><p>开发里很多东西本来就是配置化的：</p>
+<ul>
+<li>数据库连接</li>
+<li>部署 Token</li>
+<li>GitHub Access Token</li>
+<li>环境变量</li>
+<li>CI&#x2F;CD Secrets</li>
+</ul>
+<p>所以把 Codex 的模型调用也配置化，对我来说更顺手。</p>
+<hr>
+<h2 id="实际使用时我怎么分工"><a href="#实际使用时我怎么分工" class="headerlink" title="实际使用时我怎么分工"></a>实际使用时我怎么分工</h2><p>现在我的使用方式大概是这样：</p>
+<ul>
+<li>小问题：直接让 Codex 看当前文件并解释</li>
+<li>改配置：让 Codex 先检查项目结构，再给出修改方案</li>
+<li>写文章：先给主题和风格，让它参考已有文章生成初稿</li>
+<li>修 bug：先让它复现或定位，再小范围修改</li>
+<li>清理项目：让它找冗余依赖、无用文件和配置残留</li>
+</ul>
+<p>这类任务都很适合 Codex，因为它不是单纯聊天，而是能结合本地项目上下文工作。</p>
+<p>比如这次博客项目清理，我就更喜欢让它先看 <code>package.json</code>、<code>_config.yml</code>、主题配置和文章目录，再决定哪些东西能删，哪些东西不能动。</p>
+<p>这种工作流比单纯复制代码到网页对话框里舒服很多。</p>
+<hr>
+<h2 id="使用-Codex-时的一点经验"><a href="#使用-Codex-时的一点经验" class="headerlink" title="使用 Codex 时的一点经验"></a>使用 Codex 时的一点经验</h2><p>用了一段时间之后，我觉得最重要的不是“让 AI 一次性把所有事做完”，而是要把任务拆清楚。</p>
+<p>比较舒服的提问方式是：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">先检查项目结构，找出可能冗余的地方，不要直接删除。</span><br></pre></td></tr></table></figure>
+
+<p>或者：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">参考现有文章风格，帮我新增一篇同风格文章，并运行构建验证。</span><br></pre></td></tr></table></figure>
+
+<p>这样 Codex 会更容易按步骤做事，也更不容易改到不该改的地方。</p>
+<p>如果一上来就说“帮我优化一下项目”，范围太大，它可能会不知道优化到什么程度才算合适。</p>
+<hr>
+<h2 id="我的结论"><a href="#我的结论" class="headerlink" title="我的结论"></a>我的结论</h2><p>如果只想快速体验 Codex，直接登录 OpenAI 账号是最省事的方式。</p>
+<p>但如果是长期开发使用，我更推荐用 <code>ccswitch</code> 调 API。原因不是它更酷，而是它更可控、更稳定，也更符合开发者对工具链的管理习惯。</p>
+<p>简单说就是：</p>
+<ul>
+<li>想快速开始：登录 OpenAI 账号</li>
+<li>想长期使用：<code>ccswitch</code> 调 API</li>
+</ul>
+<p>我最后选择后者，是因为我希望 Codex 不只是一个临时助手，而是变成自己开发环境里一个可以长期维护的工具。</p>
+]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>Codex</tag>
+        <tag>OpenAI</tag>
+        <tag>AI工具</tag>
+        <tag>开发效率</tag>
+        <tag>AI编程工具使用记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex</title>
+    <url>/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/</url>
+    <content><![CDATA[<h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><p>这是“AI 编程工具使用记录”系列的第二篇。</p>
+<p>上一篇主要写 Codex 的使用方式：从直接登录 OpenAI 账号，到后来通过 <code>ccswitch</code> 调 API。<br>这一篇继续往后写，把 Claude Code 和 Codex 放在一起对比，最后说明为什么我还是选择 Codex 作为主力。</p>
+<p>这个系列不是官方教程，更像是我自己的工具迁移记录。</p>
+<hr>
+<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇记录一下我对 Claude Code 和 Codex 的使用感受。</p>
+<p>这两个工具的定位都很接近：都是面向开发者的 AI 编程助手，都不是单纯聊天，而是可以结合项目文件、终端命令和代码修改来工作。</p>
+<p>我一开始并没有特别明确地站队，只是都试了一下。用下来之后，我最后更倾向于把 Codex 放进自己的日常开发流程里。</p>
+<p>这篇不做参数表式的硬评测，也不写成“谁吊打谁”。更多是从我自己的使用习惯出发，写清楚为什么最后选择 Codex。</p>
+<hr>
+<h2 id="我对这类工具的期待"><a href="#我对这类工具的期待" class="headerlink" title="我对这类工具的期待"></a>我对这类工具的期待</h2><p>在对比之前，先说一下我对 AI 编程工具的期待。</p>
+<p>我不太需要它只做一个“高级搜索引擎”，也不希望它只是给我贴一段代码。我更希望它能做到：</p>
+<ul>
+<li>看懂当前项目结构</li>
+<li>知道哪些文件该改，哪些文件不该动</li>
+<li>修改之前先说明思路</li>
+<li>修改之后能跑构建或测试验证</li>
+<li>出问题时能继续定位，而不是让我重新描述一遍</li>
+</ul>
+<p>也就是说，我想要的不是一个单次问答工具，而是一个能参与项目维护的终端助手。</p>
+<p>从这个角度看，Claude Code 和 Codex 都比普通网页对话更适合写代码。</p>
+<hr>
+<h2 id="Claude-Code-给我的第一印象"><a href="#Claude-Code-给我的第一印象" class="headerlink" title="Claude Code 给我的第一印象"></a>Claude Code 给我的第一印象</h2><p>Claude Code 的第一印象是比较顺手。</p>
+<p>它很适合做这种事情：</p>
+<ul>
+<li>快速理解一个文件</li>
+<li>根据自然语言改一段代码</li>
+<li>帮忙解释报错</li>
+<li>生成一段比较完整的实现思路</li>
+</ul>
+<p>Claude 系列模型在长文本理解和表达上一直给我感觉比较稳，所以 Claude Code 在阅读代码、总结逻辑、解释项目结构时，体验是不错的。</p>
+<p>如果只是让它看一段代码，然后问“这里为什么报错”“这个函数做了什么”“帮我改成另一种写法”，它完成得很自然。</p>
+<hr>
+<h2 id="Claude-Code-用起来的问题"><a href="#Claude-Code-用起来的问题" class="headerlink" title="Claude Code 用起来的问题"></a>Claude Code 用起来的问题</h2><p>但真正放到我的开发流程里之后，我会遇到几个不太舒服的点。</p>
+<h3 id="1-工作流不够贴合我的习惯"><a href="#1-工作流不够贴合我的习惯" class="headerlink" title="1. 工作流不够贴合我的习惯"></a>1. 工作流不够贴合我的习惯</h3><p>我更习惯先让工具检查项目，再给出计划，然后小范围修改，最后跑命令验证。</p>
+<p>Claude Code 当然也能做这些事，但在我的体验里，它更像是一个很强的代码对话助手，而不是我最终想固定下来的“项目维护工具”。</p>
+<p>它适合快速帮我解决一个点，但我不太想把整个仓库清理、配置调整、文章生成、构建验证这些连续流程都交给它。</p>
+<h3 id="2-配置管理不是我最喜欢的方式"><a href="#2-配置管理不是我最喜欢的方式" class="headerlink" title="2. 配置管理不是我最喜欢的方式"></a>2. 配置管理不是我最喜欢的方式</h3><p>我现在更倾向于把模型调用这件事配置化，比如 API、模型、服务地址都能自己管理。</p>
+<p>如果一个工具更依赖自己的账号体系和默认配置，我会觉得可控性弱一点。不是不能用，而是不太符合我现在对开发工具的管理方式。</p>
+<p>我更希望它像 Git、Node、Hexo 这类工具一样：配置明确，行为透明，换环境时也比较容易迁移。</p>
+<h3 id="3-接口生态反而是-Claude-Code-更灵活"><a href="#3-接口生态反而是-Claude-Code-更灵活" class="headerlink" title="3. 接口生态反而是 Claude Code 更灵活"></a>3. 接口生态反而是 Claude Code 更灵活</h3><p>这里要单独说一下接口生态。</p>
+<p>如果只看模型接入范围，Claude Code 其实更灵活。它不只局限在一种接口形态里，很多第三方模型服务都可以折腾接入，比如 DeepSeek、小米 MiMo 这类模型。</p>
+<p>Codex 这边我目前的使用感受是，走 API 时主要还是围绕 OpenAI 的 Responses 接口来用。这样做的好处是路径更标准，和 OpenAI 自家的模型配合更顺；但问题也很明显：如果想随手切到 DeepSeek、小米 MiMo 这类模型，空间就没有 Claude Code 那么大。</p>
+<p>所以如果一个人的核心需求是“尽可能多地接不同模型”，那 Claude Code 在这一点上确实更有优势。</p>
+<p>但对我来说，模型接入范围不是唯一标准。<br>我更看重的是它放进真实项目之后，能不能稳定地读项目、改文件、跑验证、收尾。</p>
+<p>这也是为什么即使 Claude Code 的接口生态更开放，我最后还是更偏向 Codex。</p>
+<h3 id="4-我更在意“可维护性”"><a href="#4-我更在意“可维护性”" class="headerlink" title="4. 我更在意“可维护性”"></a>4. 我更在意“可维护性”</h3><p>很多时候我不是让 AI 写一个 demo，而是在维护一个真实项目。</p>
+<p>真实项目里最怕的不是“写不出来”，而是：</p>
+<ul>
+<li>改多了</li>
+<li>改偏了</li>
+<li>顺手修了不该修的东西</li>
+<li>没有验证就告诉我完成了</li>
+</ul>
+<p>所以我会更看重工具在修改边界、计划执行和验证反馈上的稳定感。</p>
+<hr>
+<h2 id="Codex-给我的第一印象"><a href="#Codex-给我的第一印象" class="headerlink" title="Codex 给我的第一印象"></a>Codex 给我的第一印象</h2><p>Codex 给我的第一印象更像一个“终端里的协作者”。</p>
+<p>它的使用方式天然围绕项目展开：</p>
+<ul>
+<li>先看文件结构</li>
+<li>再读关键配置</li>
+<li>然后给出修改计划</li>
+<li>接着改文件</li>
+<li>最后跑构建或测试</li>
+</ul>
+<p>这套流程和我平时自己维护项目的节奏很接近。</p>
+<p>比如这个博客项目里，我让 Codex 检查有没有冗余的地方，它不是一上来就乱删，而是先看 <code>package.json</code>、<code>.gitignore</code>、<code>_config.yml</code>、主题配置和文章目录，再判断哪些东西可以清理。</p>
+<p>这种感觉比单纯“回答我怎么做”更像是在一起处理一个项目。</p>
+<hr>
+<h2 id="我更喜欢-Codex-的地方"><a href="#我更喜欢-Codex-的地方" class="headerlink" title="我更喜欢 Codex 的地方"></a>我更喜欢 Codex 的地方</h2><h3 id="1-过程更透明"><a href="#1-过程更透明" class="headerlink" title="1. 过程更透明"></a>1. 过程更透明</h3><p>Codex 在做事时，我能看到它准备做什么、正在看什么文件、为什么要改某个地方。</p>
+<p>这点对我很重要。</p>
+<p>因为我不希望 AI 工具像黑盒一样直接告诉我“我改好了”。我更希望它每一步都有理由，尤其是在涉及删除文件、改依赖、跑命令的时候。</p>
+<p>透明不只是为了放心，也是为了后面出问题时能回溯。</p>
+<hr>
+<h3 id="2-更适合仓库级任务"><a href="#2-更适合仓库级任务" class="headerlink" title="2. 更适合仓库级任务"></a>2. 更适合仓库级任务</h3><p>Codex 很适合处理这种跨文件任务：</p>
+<ul>
+<li>清理冗余依赖</li>
+<li>修改配置并同步文档</li>
+<li>新增文章并运行构建</li>
+<li>根据报错定位项目问题</li>
+<li>检查哪些文件是生成产物，哪些文件应该进版本控制</li>
+</ul>
+<p>这些任务不是单点代码补全，而是需要理解整个项目状态。</p>
+<p>在这类场景里，我更愿意用 Codex。</p>
+<hr>
+<h3 id="3-和终端工作流更贴合"><a href="#3-和终端工作流更贴合" class="headerlink" title="3. 和终端工作流更贴合"></a>3. 和终端工作流更贴合</h3><p>我平时维护博客基本就是终端工作流：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run build</span><br><span class="line">git status</span><br><span class="line">npm audit --omit=dev</span><br></pre></td></tr></table></figure>
+
+<p>Codex 正好可以接在这个流程里。</p>
+<p>它不只是告诉我“你应该运行构建”，而是可以实际运行，然后根据输出继续判断下一步。</p>
+<p>比如构建失败，它可以继续看报错；审计有漏洞，它可以判断是依赖问题还是插件残留；文章 front matter 有问题，它也能直接定位。</p>
+<p>这种连续性是我最后选择它的重要原因。</p>
+<hr>
+<h3 id="4-配合-API-使用更灵活"><a href="#4-配合-API-使用更灵活" class="headerlink" title="4. 配合 API 使用更灵活"></a>4. 配合 API 使用更灵活</h3><p>上一篇我写过，我最后更倾向于通过 <code>ccswitch</code> 调 API 来使用 Codex。</p>
+<p>这样做之后，模型、接口、密钥这些配置都更明确。对我来说，这比单纯登录某个账号更符合开发习惯。</p>
+<p>我可以把它当成开发环境的一部分，而不是一个临时打开的工具。</p>
+<p>这点也是我选择 Codex 的原因之一：它更容易被纳入我自己的工具链。</p>
+<hr>
+<h2 id="两者简单对比"><a href="#两者简单对比" class="headerlink" title="两者简单对比"></a>两者简单对比</h2><p>如果按我的使用感受来总结，大概是这样：</p>
+<table>
+<thead>
+<tr>
+<th>对比点</th>
+<th>Claude Code</th>
+<th>Codex</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第一印象</td>
+<td>对话和解释能力强</td>
+<td>更像终端协作者</td>
+</tr>
+<tr>
+<td>适合任务</td>
+<td>单点代码理解、解释、改写</td>
+<td>仓库级修改、配置清理、验证流程</td>
+</tr>
+<tr>
+<td>工作方式</td>
+<td>更偏代码助手</td>
+<td>更偏项目维护助手</td>
+</tr>
+<tr>
+<td>接口生态</td>
+<td>更灵活，可接 DeepSeek、小米 MiMo 等模型</td>
+<td>目前更偏 OpenAI Responses 接口</td>
+</tr>
+<tr>
+<td>我在意的优势</td>
+<td>阅读和表达顺滑</td>
+<td>过程透明、执行闭环更强</td>
+</tr>
+<tr>
+<td>最终定位</td>
+<td>偶尔辅助</td>
+<td>日常主力</td>
+</tr>
+</tbody></table>
+<p>当然，这个表不是客观排名，只是我自己的使用取舍。</p>
+<p>如果一个人主要需求是解释代码、生成函数、写局部逻辑，Claude Code 可能已经很好用了。<br>但如果像我这样，经常围绕一个真实项目做连续修改，我会更偏向 Codex。</p>
+<hr>
+<h2 id="为什么最终选择-Codex"><a href="#为什么最终选择-Codex" class="headerlink" title="为什么最终选择 Codex"></a>为什么最终选择 Codex</h2><p>最后选择 Codex，其实不是因为 Claude Code 不好，而是 Codex 更符合我的工作方式。</p>
+<p>我最看重的是这几点：</p>
+<ul>
+<li>能围绕本地项目持续工作</li>
+<li>修改前后有清晰过程</li>
+<li>能把命令执行和结果验证串起来</li>
+<li>更适合处理配置、依赖、文档、文章这类综合任务</li>
+<li>配合 API 使用时更容易纳入自己的工具链</li>
+</ul>
+<p>对我来说，一个 AI 编程工具要成为主力，不能只会“写代码”。</p>
+<p>它还要能理解项目、控制修改范围、验证结果，并且在出错时继续排查。</p>
+<p>Codex 在这些方面给我的感觉更稳。</p>
+<hr>
+<h2 id="我的结论"><a href="#我的结论" class="headerlink" title="我的结论"></a>我的结论</h2><p>Claude Code 和 Codex 都值得试。</p>
+<p>如果只是轻量使用，Claude Code 的体验并不差，尤其是解释代码和整理思路时很顺手。</p>
+<p>但如果要在真实项目里长期使用，我最后还是会选 Codex。</p>
+<p>原因很简单：<br>它更像一个能参与完整开发流程的助手，而不是只在旁边回答问题的助手。</p>
+<p>所以我现在的选择是：</p>
+<ul>
+<li>Claude Code：作为备用工具，适合偶尔对比思路</li>
+<li>Codex：作为主力工具，负责日常项目维护和内容生产</li>
+</ul>
+<p>对我来说，这个分工比较自然，也更符合现在的使用习惯。</p>
+]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>Codex</tag>
+        <tag>AI工具</tag>
+        <tag>开发效率</tag>
+        <tag>Claude Code</tag>
+        <tag>AI编程工具使用记录</tag>
+      </tags>
+  </entry>
+</search>

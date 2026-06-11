@@ -506,14 +506,7 @@ body[data-type="tags"] .article-sort-title {
     justify-content: center;
 }
 
-#local-search {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1000;
-}
-
 #local-search .search-dialog,
 #local-search #search-mask {
-    pointer-events: auto;
+    display: none;
 }

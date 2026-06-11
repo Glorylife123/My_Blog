@@ -4,9 +4,16 @@
 
 # Site
 title: Echo's Blog
-subtitle: ''
-description: '道阻且长，行则将至'
+subtitle: '技术学习、AI 工具与生活记录'
+description: '记录 Hexo 建站、AI 编程工具使用、考研复盘与设备体验。'
 keywords:
+  - Hexo
+  - AI 编程工具
+  - Codex
+  - Claude Code
+  - 技术博客
+  - 考研复试
+  - 数码产品
 author: Echo
 language: zh-CN
 timezone: ''
@@ -70,6 +77,12 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
@@ -97,18 +110,26 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
+sitemap:
+  path: sitemap.xml
+
+feed:
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss2.xml
+  limit: 20
+  content: true
+  content_limit: 200
+  order_by: -date
+
 theme: anzhiyu
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 
-
-# APlayer
-# https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
-aplayer:
-  meting: true
-  meting_api: "https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r"
-  asset_inject: false
 
 #envelope_comment
 #seehttps://akilar.top/posts/e2d3c450/

@@ -14,7 +14,7 @@
 - 框架版本: `Hexo 8.1.1`
 - 主题: `anzhiyu`
 - 部署方式: `hexo-deployer-git` 发布到 GitHub Pages
-- 已配置能力: 分类、标签、归档、留言板、友链、相册、音乐馆、设备页、每日照片、即刻短文等
+- 已配置能力: 分类、标签、归档、站内搜索、留言板、友链、相册、音乐馆、设备页、每日照片、即刻短文、RSS 与站点地图输出等
 - 内容目录下已经包含多篇正式文章，主题集中在博客搭建、考研复试、C++ 学习和个人设备记录
 
 ## 目录说明
@@ -25,6 +25,7 @@
 │  ├─_posts/          博客文章
 │  ├─_data/           页面数据源，如相册、友链、设备清单、即刻
 │  ├─about/           关于页
+│  ├─ai-tools/        AI 编程工具专题页
 │  ├─album/           相册页
 │  ├─categories/      分类页
 │  ├─comments/        留言板
@@ -137,8 +138,10 @@ deploy:
 
 - `hexo`
 - `hexo-deployer-git`
+- `hexo-generator-feed`
+- `hexo-generator-searchdb`
+- `hexo-generator-sitemap`
 - `hexo-server`
-- `hexo-tag-aplayer`
 - `hexo-butterfly-envelope`
 
 此外，仓库内还包含 `scripts/helpers/wordcount.js`，用于扩展 Hexo 的辅助能力。

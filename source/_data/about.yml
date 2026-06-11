@@ -1,0 +1,96 @@
+- name: Echo
+  subtitle: 技术学习、AI 工具与生活记录
+  avatarImg: https://s41.ax1x.com/2026/04/07/peUD8PO.png
+  avatarSkills:
+    left:
+      - AI 工具
+      - Hexo
+      - 复盘
+    right:
+      - Codex
+      - 博客
+      - 折腾
+  description: 喜欢把正在学、正在用、刚踩过坑的东西写清楚，方便以后回头看，也希望对后来的人有点帮助。
+  helloAbout: 持续学习，持续记录，持续把工具用顺手。
+  aboutsiteTips:
+    tips: 站点定位
+    title1: 这里主要写
+    title2: 真正用过之后的内容
+    word:
+      - AI 工具
+      - Hexo 建站
+      - 项目维护
+      - 折腾记录
+      - 真实判断
+  skillsTips:
+    tips: 关注内容
+    title: 最近比较常写的方向
+  careers:
+    tips: 现在在做什么
+    title: 当前重心
+    list:
+      - desc: 把博客从“能用”整理到“更像作品”
+        color: "#4c6ef5"
+      - desc: 系统记录 Codex、Claude Code 这类 AI 编程工具
+        color: "#12b886"
+      - desc: 继续补技术教程和真实使用复盘
+        color: "#f59f00"
+  statistic:
+    cover: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80
+    link: /archives/
+    text: 看看最近都写了什么
+  map:
+    title: 目前主要记录的是
+    StrengthenTitle: 技术、工具和折腾过程
+    background: https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80
+    backgroundDark: https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80
+  selfInfo:
+    selfInfoTips1: 持续记录
+    selfInfoContentYear: 2024
+    selfInfoTips2: 当前主题
+    selfInfoContent2: AI 工具与博客维护
+    selfInfoTips3: 写作方式
+    selfInfoContent3: 用完再写，踩坑再记
+  personalities:
+    author_name: Echo
+    personality_type: 先试再判断型
+    personality_img: https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=900&q=80
+    photo_url: https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=900&q=80
+    name_url: /about/
+    personality_type_color: "#425AEF"
+  maxim:
+    maxim_tips: 最近的想法
+    maxim_top: 工具值不值得长期用
+    maxim_bottom: 还是要看它能不能进入真实工作流
+  buff:
+    buff_tips: 写作偏好
+    buff_top: 更喜欢记录
+    buff_bottom: 真实使用后的取舍，而不是参数表
+  game:
+    game_tips: 当前状态
+    game_title: 持续输出中
+    game_uid: 一边折腾，一边归档经验
+    game_bg: https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80
+  comic:
+    comic_tips: 最近在补什么
+    comic_title: 正在完善的内容线
+    comic_list:
+      - name: AI 编程工具专题
+        href: /ai-tools/
+        cover: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80
+      - name: Hexo 建站记录
+        href: /2026/04/04/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%AE%B0%E5%BD%95/
+        cover: https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&q=80
+      - name: 博客修复记录
+        href: /2026/04/05/record-of-hexo-blog-repair/
+        cover: https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80
+  like:
+    like_tips: 写作原则
+    like_title: 记录真实过程
+    like_bottom: 能复现、能回看、能给后来自己省时间
+    like_bg: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80
+  music:
+    music_tips: 继续看看
+    music_title: AI 工具专题
+    music_link: /ai-tools/
+    music_bg: https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&q=80

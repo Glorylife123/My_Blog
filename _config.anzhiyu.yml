@@ -18,6 +18,7 @@ menu:
    关于:
     # 关于本人: /about/ || anzhiyu-icon-paper-plane
      闲言碎语: /essay/ || anzhiyu-icon-lightbulb
+     AI 工具专题: /ai-tools/ || anzhiyu-icon-book-open
      随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
      我的装备: /equipment/ || anzhiyu-icon-cube
 
@@ -110,7 +111,7 @@ docsearch:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   preload: true
   CDN:
 
@@ -809,12 +810,12 @@ aside:
     category: true
   card_author:
     enable: true
-    description: # <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
+    description: 这里主要记录技术学习、AI 工具使用、博客搭建和一些真实的折腾过程。
     name_link: /
 
   card_announcement:
     enable: true
-    content: 欢迎来看我的博客鸭~
+    content: 新增 AI 工具专题，已收录 Codex 与 Claude Code 系列文章。
   card_weixin:
     enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
@@ -1051,15 +1052,20 @@ css_prefix: true
 home_top:
   enable: true # 开关
   timemode: date #date/updated
-  title: 生活明朗
-  subTitle: 万物可爱。
-  siteText: anheyu.com
+  title: 持续记录，持续折腾
+  subTitle: 写技术，写工具，也写真实使用后的判断。
+  siteText: Echo's Blog
   category:
     - name: 技术教程
       path: /categories/技术教程/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
+    - name: AI 工具专题
+      path: /ai-tools/
+      shadow: var(--anzhiyu-shadow-purple)
+      class: purple
+      icon: anzhiyu-icon-book-open
     - name: 生活随笔
       path: /categories/生活随笔/
       shadow: var(--anzhiyu-shadow-red)
@@ -1076,10 +1082,10 @@ home_top:
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
-    tips: 新品主题
-    title: Theme-AnZhiYu
-    image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
-    link: https://docs.anheyu.com/
+    tips: AI 编程工具专题
+    title: 从 Codex 到 Claude Code 的真实使用记录
+    image: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80
+    link: /ai-tools/
 
 # 朋友圈配置
 friends_vue:
@@ -1227,7 +1233,7 @@ pageThumbnailSuffix: ""
 
 # 隐私协议弹窗
 agreementPopup:
-  enable: false
+  enable: true
   url: /privacy
 
 # 右键菜单

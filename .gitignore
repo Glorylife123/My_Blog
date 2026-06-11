@@ -6,3 +6,7 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+.claude/
+live_site.html
+temp.html
+_config.landscape.yml

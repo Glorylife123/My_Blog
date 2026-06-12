@@ -1,279 +1,310 @@
 window.addEventListener("load", () => {
-  let loadFlag = false;
-  let dataObj = [];
-  const $searchMask = document.getElementById("search-mask");
+  const config = GLOBAL_CONFIG.localSearch;
+  if (!config) return;
 
-  const openSearch = () => {
-    const bodyStyle = document.body.style;
-    bodyStyle.width = "100%";
-    bodyStyle.overflow = "hidden";
-    anzhiyu.animateIn($searchMask, "to_show 0.5s");
-    anzhiyu.animateIn(document.querySelector("#local-search .search-dialog"), "titleScale 0.5s");
-    setTimeout(() => {
-      document.querySelector("#local-search-input input").focus();
-    }, 100);
-    if (!loadFlag) {
-      search();
-      loadFlag = true;
+  let isOpen = false;
+  let dataPromise = null;
+  let inputBound = false;
+  let latestQueryId = 0;
+
+  const root = (() => {
+    const value = GLOBAL_CONFIG.root || "/";
+    return value.endsWith("/") ? value : value + "/";
+  })();
+
+  const selectors = {
+    mask: "#search-mask",
+    dialog: "#local-search .search-dialog",
+    input: "#local-search-input input",
+    results: "#local-search-results",
+    loadingDatabase: "#loading-database",
+    loadingStatus: "#loading-status",
+    searchButtons: "#search-button > .search, #menu-search",
+    closeButton: "#local-search .search-close-button",
+  };
+
+  const $ = selector => document.querySelector(selector);
+  const $$ = selector => Array.from(document.querySelectorAll(selector));
+
+  const stripLeadingSlash = value => String(value || "").replace(/^\/+/, "");
+
+  const withRoot = path => {
+    const value = String(path || "");
+    if (/^(https?:)?\/\//i.test(value) || value.startsWith("#") || value.startsWith("mailto:")) return value;
+    return root + stripLeadingSlash(value);
+  };
+
+  const normalizeUrl = url => {
+    const value = String(url || "");
+    if (!value) return "";
+    if (/^(https?:)?\/\//i.test(value)) return value;
+    if (value.startsWith(root)) return value;
+    return withRoot(value);
+  };
+
+  const escapeHTML = text =>
+    String(text || "").replace(/[&<>"']/g, char => {
+      const entities = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;",
+      };
+      return entities[char];
+    });
+
+  const escapeRegExp = text => String(text || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  const stripHTML = html => {
+    const div = document.createElement("div");
+    div.innerHTML = html || "";
+    return div.textContent || div.innerText || "";
+  };
+
+  const getText = (node, selector) => {
+    const target = node.querySelector(selector);
+    return target ? target.textContent.trim() : "";
+  };
+
+  const getTags = node => $$From(node, "tags tag").map(tag => tag.textContent.trim()).filter(Boolean);
+
+  const $$From = (node, selector) => Array.from(node.querySelectorAll(selector));
+
+  const getFirstImage = html => {
+    const div = document.createElement("div");
+    div.innerHTML = html || "";
+    const image = div.querySelector("img[src], img[data-lazy-src]");
+    if (!image) return "";
+    return image.getAttribute("data-lazy-src") || image.getAttribute("src") || "";
+  };
+
+  const setDatabaseReady = () => {
+    const loadingDatabase = $(selectors.loadingDatabase);
+    if (!loadingDatabase) return;
+
+    const searchWrap = loadingDatabase.nextElementSibling;
+    if (searchWrap) searchWrap.style.display = "block";
+    loadingDatabase.remove();
+  };
+
+  const setLoadingStatus = isLoading => {
+    const loadingStatus = $(selectors.loadingStatus);
+    if (!loadingStatus) return;
+    loadingStatus.innerHTML = isLoading ? '<i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i>' : "";
+  };
+
+  const parseXML = text => {
+    const documentXML = new DOMParser().parseFromString(text, "text/xml");
+    const parserError = documentXML.querySelector("parsererror");
+    if (parserError) throw new Error("Search index XML parse failed");
+
+    return $$From(documentXML, "entry").map(entry => {
+      const contentHTML = getText(entry, "content");
+      return {
+        title: getText(entry, "title"),
+        content: stripHTML(contentHTML),
+        url: normalizeUrl(getText(entry, "url")),
+        tags: getTags(entry),
+        oneImage: normalizeUrl(getFirstImage(contentHTML)),
+      };
+    });
+  };
+
+  const parseJSON = data =>
+    data.map(item => {
+      const contentHTML = item.content || "";
+      return {
+        title: item.title || "",
+        content: stripHTML(contentHTML),
+        url: normalizeUrl(item.url || ""),
+        tags: Array.isArray(item.tags) ? item.tags : [],
+        oneImage: normalizeUrl(getFirstImage(contentHTML)),
+      };
+    });
+
+  const loadData = async () => {
+    const response = await fetch(config.path, { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Search index request failed: ${response.status}`);
+
+    const data = /\.json(?:\?|#|$)/i.test(config.path) ? parseJSON(await response.json()) : parseXML(await response.text());
+    setDatabaseReady();
+    return data;
+  };
+
+  const ensureData = () => {
+    if (!dataPromise) dataPromise = loadData();
+    return dataPromise;
+  };
+
+  const makeExcerpt = (content, keywords) => {
+    const lowerContent = content.toLowerCase();
+    const firstIndex = keywords.reduce((current, keyword) => {
+      const index = lowerContent.indexOf(keyword);
+      if (index < 0) return current;
+      return current < 0 ? index : Math.min(current, index);
+    }, -1);
+
+    const start = Math.max(firstIndex - 30, 0);
+    const end = Math.min((firstIndex < 0 ? 0 : firstIndex) + 100, content.length);
+    const prefix = start > 0 ? "..." : "";
+    const suffix = end < content.length ? "..." : "";
+
+    return prefix + content.slice(start, end) + suffix;
+  };
+
+  const highlight = (text, keywords) => {
+    let html = escapeHTML(text);
+    keywords.forEach(keyword => {
+      html = html.replace(new RegExp(escapeRegExp(escapeHTML(keyword)), "gi"), match => {
+        return `<span class="search-keyword">${match}</span>`;
+      });
+    });
+    return html;
+  };
+
+  const itemMatches = (item, keywords) => {
+    const title = item.title.toLowerCase();
+    const content = item.content.toLowerCase();
+    const tags = item.tags.join(" ").toLowerCase();
+    return keywords.every(keyword => title.includes(keyword) || content.includes(keyword) || tags.includes(keyword));
+  };
+
+  const renderResults = (items, rawQuery) => {
+    const resultContent = $(selectors.results);
+    if (!resultContent) return;
+
+    const keywords = rawQuery
+      .trim()
+      .toLowerCase()
+      .split(/\s+/)
+      .filter(Boolean);
+
+    if (!keywords.length) {
+      resultContent.innerHTML = "";
+      return;
     }
-    // shortcut: ESC
-    document.addEventListener("keydown", function f(event) {
-      if (event.code === "Escape") {
-        closeSearch();
-        document.removeEventListener("keydown", f);
+
+    const matches = items.filter(item => itemMatches(item, keywords));
+
+    if (!matches.length) {
+      const emptyText = config.languages.hits_empty.replace(/\$\{query}/, escapeHTML(rawQuery.trim()));
+      resultContent.innerHTML = `<div class="search-result-list"><div id="local-search__hits-empty">${emptyText}</div></div>`;
+      return;
+    }
+
+    const html = matches
+      .map(item => {
+        const imageHTML = item.oneImage
+          ? `<div class="search-left"><img src="${escapeHTML(item.oneImage)}" alt="${escapeHTML(item.title)}" data-fancybox="gallery"></div>`
+          : '<div class="search-left" style="width:0"></div>';
+        const rightStyle = item.oneImage ? "" : ' style="width: 100%"';
+        const excerpt = makeExcerpt(item.content, keywords);
+        const tags = item.tags
+          .map(tag => {
+            const tagUrl = withRoot(`tags/${encodeURIComponent(tag)}/`);
+            return `<a class="tag-list" href="${escapeHTML(tagUrl)}" data-pjax-state="" one-link-mark="yes">#${escapeHTML(tag)}</a>`;
+          })
+          .join("");
+
+        return `<div class="local-search__hit-item">${imageHTML}<div class="search-right"${rightStyle}><a href="${escapeHTML(
+          item.url
+        )}" class="search-result-title">${highlight(item.title, keywords)}</a><p class="search-result" data-url="${escapeHTML(
+          item.url
+        )}">${highlight(excerpt, keywords)}</p>${tags ? `<div class="search-result-tags">${tags}</div>` : ""}</div></div>`;
+      })
+      .join("");
+
+    resultContent.innerHTML = `<div class="search-result-list">${html}</div>`;
+    window.pjax && window.pjax.refresh(resultContent);
+  };
+
+  const bindInput = () => {
+    if (inputBound) return;
+
+    const input = $(selectors.input);
+    const resultContent = $(selectors.results);
+    if (!input || !resultContent) return;
+
+    inputBound = true;
+
+    input.addEventListener("input", async event => {
+      const queryId = ++latestQueryId;
+      const query = event.target.value;
+
+      if (!query.trim()) {
+        resultContent.innerHTML = "";
+        setLoadingStatus(false);
+        return;
+      }
+
+      setLoadingStatus(true);
+
+      try {
+        const data = await ensureData();
+        if (queryId !== latestQueryId) return;
+        renderResults(data, query);
+      } catch (error) {
+        console.error(error);
+        resultContent.innerHTML = '<div class="search-result-list"><div id="local-search__hits-empty">搜索数据加载失败，请稍后再试。</div></div>';
+      } finally {
+        if (queryId === latestQueryId) setLoadingStatus(false);
+      }
+    });
+
+    resultContent.addEventListener("click", event => {
+      const result = event.target.closest(".search-result[data-url]");
+      if (!result) return;
+
+      const url = result.getAttribute("data-url");
+      if (window.pjax) {
+        window.pjax.loadUrl(url);
+      } else {
+        window.location.href = url;
       }
     });
   };
 
+  const openSearch = () => {
+    const mask = $(selectors.mask);
+    const dialog = $(selectors.dialog);
+    const input = $(selectors.input);
+    if (!mask || !dialog || !input) return;
+
+    document.body.style.width = "100%";
+    document.body.style.overflow = "hidden";
+    anzhiyu.animateIn(mask, "to_show 0.5s");
+    anzhiyu.animateIn(dialog, "titleScale 0.5s");
+    setTimeout(() => input.focus(), 100);
+    isOpen = true;
+    bindInput();
+    ensureData().catch(error => console.error(error));
+  };
+
   const closeSearch = () => {
-    const bodyStyle = document.body.style;
-    bodyStyle.width = "";
-    bodyStyle.overflow = "";
-    anzhiyu.animateOut(document.querySelector("#local-search .search-dialog"), "search_close .5s");
-    anzhiyu.animateOut($searchMask, "to_hide 0.5s");
+    const mask = $(selectors.mask);
+    const dialog = $(selectors.dialog);
+    if (!mask || !dialog) return;
+
+    document.body.style.width = "";
+    document.body.style.overflow = "";
+    anzhiyu.animateOut(dialog, "search_close .5s");
+    anzhiyu.animateOut(mask, "to_hide 0.5s");
+    isOpen = false;
   };
 
-  const searchClickFn = () => {
-    document.querySelector("#search-button > .search").addEventListener("click", openSearch);
-    document.querySelector("#menu-search").addEventListener("click", openSearch);
-  };
-
-  const searchClickFnOnce = () => {
-    document.querySelector("#local-search .search-close-button").addEventListener("click", closeSearch);
-    $searchMask.addEventListener("click", closeSearch);
-    if (GLOBAL_CONFIG.localSearch.preload) dataObj = fetchData(GLOBAL_CONFIG.localSearch.path);
-  };
-
-  // check url is json or not
-  const isJson = url => {
-    const reg = /\.json$/;
-    return reg.test(url);
-  };
-
-  const withRoot = path => {
-    const root = GLOBAL_CONFIG.root || "/";
-    const normalizedRoot = root.endsWith("/") ? root : root + "/";
-    const normalizedPath = String(path || "").replace(/^\/+/, "");
-    return normalizedRoot + normalizedPath;
-  };
-
-  const escapeRegExp = text => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-  const fetchData = async path => {
-    let data = [];
-    const response = await fetch(path);
-    if (isJson(path)) {
-      data = await response.json();
-    } else {
-      const res = await response.text();
-      const t = await new window.DOMParser().parseFromString(res, "text/xml");
-      const a = await t;
-
-      data = [...a.querySelectorAll("entry")].map(item => {
-        let tagsArr = [];
-        if (item.querySelector("tags") && item.querySelector("tags").getElementsByTagName("tag")) {
-          Array.prototype.forEach.call(item.querySelector("tags").getElementsByTagName("tag"), function (item, index) {
-            tagsArr.push(item.textContent);
-          });
-        }
-        let content = item.querySelector("content") && item.querySelector("content").textContent;
-        let imgReg = /<img.*?(?:>|\/>)/gi; //匹配图片中的img标签
-        let srcReg = /src=[\'\"]?([^\'\"]*)[\'\"]?/i; // 匹配图片中的src
-        let arr = content.match(imgReg); //筛选出所有的img
-
-        let srcArr = [];
-        if (arr) {
-          for (let i = 0; i < arr.length; i++) {
-            let src = arr[i].match(srcReg);
-            // 获取图片地址
-            if (!src[1].indexOf("http")) srcArr.push(src[1]);
-          }
-        }
-
-        return {
-          title: item.querySelector("title").textContent,
-          content: content,
-          url: item.querySelector("url").textContent,
-          tags: tagsArr,
-          oneImage: srcArr && srcArr[0],
-        };
-      });
-    }
-    if (response.ok) {
-      const $loadDataItem = document.getElementById("loading-database");
-      $loadDataItem.nextElementSibling.style.display = "block";
-      $loadDataItem.remove();
-    }
-    return data;
-  };
-
-  const search = () => {
-    if (!GLOBAL_CONFIG.localSearch.preload) {
-      dataObj = fetchData(GLOBAL_CONFIG.localSearch.path);
-    }
-    const $input = document.querySelector("#local-search-input input");
-    const $resultContent = document.getElementById("local-search-results");
-    const $loadingStatus = document.getElementById("loading-status");
-
-    $input.addEventListener("input", function () {
-      const keywords = this.value.trim().toLowerCase().split(/[\s]+/);
-      if (keywords[0] !== "")
-        $loadingStatus.innerHTML = '<i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i>';
-
-      $resultContent.innerHTML = "";
-      let str = '<div class="search-result-list">';
-      if (keywords.length <= 0) return;
-      let count = 0;
-      // perform local searching
-      dataObj.then(data => {
-        data.forEach(data => {
-          let isMatch = true;
-          let dataTitle = data.title ? data.title.trim().toLowerCase() : "";
-          let dataTags = data.tags;
-          let oneImage = data.oneImage ?? "";
-          const dataContent = data.content
-            ? data.content
-                .trim()
-                .replace(/<[^>]+>/g, "")
-                .toLowerCase()
-            : "";
-          const dataUrl = data.url.startsWith("/") ? data.url : withRoot(data.url);
-          let indexTitle = -1;
-          let indexContent = -1;
-          let firstOccur = -1;
-          // only match articles with not empty titles and contents
-          if (dataTitle !== "" || dataContent !== "") {
-            keywords.forEach((keyword, i) => {
-              indexTitle = dataTitle.indexOf(keyword);
-              indexContent = dataContent.indexOf(keyword);
-              if (indexTitle < 0 && indexContent < 0) {
-                isMatch = false;
-              } else {
-                if (indexContent < 0) {
-                  indexContent = 0;
-                }
-                if (i === 0) {
-                  firstOccur = indexContent;
-                }
-              }
-            });
-          } else {
-            isMatch = false;
-          }
-
-          // show search results
-          if (isMatch) {
-            if (firstOccur >= 0) {
-              // cut out 130 characters
-              // let start = firstOccur - 30 < 0 ? 0 : firstOccur - 30
-              // let end = firstOccur + 50 > dataContent.length ? dataContent.length : firstOccur + 50
-              let start = firstOccur - 30;
-              let end = firstOccur + 100;
-              let pre = "";
-              let post = "";
-
-              if (start < 0) {
-                start = 0;
-              }
-
-              if (start === 0) {
-                end = 100;
-              } else {
-                pre = "...";
-              }
-
-              if (end > dataContent.length) {
-                end = dataContent.length;
-              } else {
-                post = "...";
-              }
-
-              let matchContent = dataContent.substring(start, end);
-
-              // highlight all keywords
-              keywords.forEach(keyword => {
-                const regS = new RegExp(escapeRegExp(keyword), "gi");
-                matchContent = matchContent.replace(regS, '<span class="search-keyword">' + keyword + "</span>");
-                dataTitle = dataTitle.replace(regS, '<span class="search-keyword">' + keyword + "</span>");
-              });
-
-              str += '<div class="local-search__hit-item">';
-              if (oneImage) {
-                str += `<div class="search-left"><img src=${oneImage} alt=${dataTitle} data-fancybox='gallery'>`;
-              } else {
-                str += '<div class="search-left" style="width:0">';
-              }
-
-              str += "</div>";
-
-              if (oneImage) {
-                str +=
-                  '<div class="search-right"><a href="' +
-                  dataUrl +
-                  '" class="search-result-title">' +
-                  dataTitle +
-                  "</a>";
-              } else {
-                str +=
-                  '<div class="search-right" style="width: 100%"><a href="' +
-                  dataUrl +
-                  '" class="search-result-title">' +
-                  dataTitle +
-                  "</a>";
-              }
-
-              count += 1;
-
-              if (dataContent !== "") {
-                str +=
-                  '<p class="search-result" onclick="pjax.loadUrl(`' +
-                  dataUrl +
-                  '`)">' +
-                  pre +
-                  matchContent +
-                  post +
-                  "</p>";
-              }
-              if (dataTags.length) {
-                str += '<div class="search-result-tags">';
-
-                for (let i = 0; i < dataTags.length; i++) {
-                  const element = dataTags[i].trim();
-
-                  str +=
-                    '<a class="tag-list" href="' +
-                    withRoot("tags/" + encodeURIComponent(element) + "/") +
-                    '" data-pjax-state="" one-link-mark="yes">#' +
-                    element +
-                    "</a>";
-                }
-
-                str += "</div>";
-              }
-            }
-            str += "</div></div>";
-          }
-        });
-        if (count === 0) {
-          str +=
-            '<div id="local-search__hits-empty">' +
-            GLOBAL_CONFIG.localSearch.languages.hits_empty.replace(/\$\{query}/, this.value.trim()) +
-            "</div>";
-        }
-        str += "</div>";
-        $resultContent.innerHTML = str;
-        if (keywords[0] !== "") $loadingStatus.innerHTML = "";
-        window.pjax && window.pjax.refresh($resultContent);
-      });
-    });
-  };
-
-  searchClickFn();
-  searchClickFnOnce();
-
-  // pjax
-  window.addEventListener("pjax:complete", () => {
-    !anzhiyu.isHidden($searchMask) && closeSearch();
-    searchClickFn();
+  document.addEventListener("click", event => {
+    if (event.target.closest(selectors.searchButtons)) openSearch();
+    if (event.target.closest(selectors.closeButton) || event.target === $(selectors.mask)) closeSearch();
   });
+
+  document.addEventListener("keydown", event => {
+    if (event.code === "Escape" && isOpen) closeSearch();
+  });
+
+  window.addEventListener("pjax:complete", () => {
+    if (isOpen) closeSearch();
+  });
+
+  if (config.preload) ensureData().catch(error => console.error(error));
 });

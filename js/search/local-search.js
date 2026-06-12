@@ -50,6 +50,15 @@ window.addEventListener("load", () => {
     return reg.test(url);
   };
 
+  const withRoot = path => {
+    const root = GLOBAL_CONFIG.root || "/";
+    const normalizedRoot = root.endsWith("/") ? root : root + "/";
+    const normalizedPath = String(path || "").replace(/^\/+/, "");
+    return normalizedRoot + normalizedPath;
+  };
+
+  const escapeRegExp = text => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
   const fetchData = async path => {
     let data = [];
     const response = await fetch(path);
@@ -128,7 +137,7 @@ window.addEventListener("load", () => {
                 .replace(/<[^>]+>/g, "")
                 .toLowerCase()
             : "";
-          const dataUrl = data.url.startsWith("/") ? data.url : GLOBAL_CONFIG.root + data.url;
+          const dataUrl = data.url.startsWith("/") ? data.url : withRoot(data.url);
           let indexTitle = -1;
           let indexContent = -1;
           let firstOccur = -1;
@@ -183,7 +192,7 @@ window.addEventListener("load", () => {
 
               // highlight all keywords
               keywords.forEach(keyword => {
-                const regS = new RegExp(keyword, "gi");
+                const regS = new RegExp(escapeRegExp(keyword), "gi");
                 matchContent = matchContent.replace(regS, '<span class="search-keyword">' + keyword + "</span>");
                 dataTitle = dataTitle.replace(regS, '<span class="search-keyword">' + keyword + "</span>");
               });
@@ -232,9 +241,9 @@ window.addEventListener("load", () => {
                   const element = dataTags[i].trim();
 
                   str +=
-                    '<a class="tag-list" href="/tags/' +
-                    element +
-                    '/" data-pjax-state="" one-link-mark="yes">#' +
+                    '<a class="tag-list" href="' +
+                    withRoot("tags/" + encodeURIComponent(element) + "/") +
+                    '" data-pjax-state="" one-link-mark="yes">#' +
                     element +
                     "</a>";
                 }

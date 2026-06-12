@@ -1,3 +1,3 @@
-var posts=["2026/03/05/MacBook Air M5/","2026/04/05/record-of-hexo-blog-repair/","2024/12/25/初试/","2025/04/02/东南网安复试C++笔试题回忆与模拟题/","2025/04/01/半个月速成复试C++/","2026/04/04/博客搭建全记录/","2025/04/10/复试/","2026/06/12/Codex 使用记录：从登录 OpenAI 到用 ccswitch 调 API/","2026/06/12/Claude Code 和 Codex 使用对比：为什么我最后选择 Codex/"];function toRandomPost(){
+var posts=["2026/06/12/Claude Code 和 Codex 使用对比：为什么我最后选择 Codex/","2026/06/12/Codex 使用记录：从登录 OpenAI 到用 ccswitch 调 API/","2026/03/05/MacBook Air M5/","2025/04/02/东南网安复试C++笔试题回忆与模拟题/","2024/12/25/初试/","2026/04/05/record-of-hexo-blog-repair/","2025/04/01/半个月速成复试C++/","2025/04/10/复试/","2026/04/04/博客搭建全记录/"];function toRandomPost(){
     pjax.loadUrl('/My_Blog/'+posts[Math.floor(Math.random() * posts.length)]);
   };

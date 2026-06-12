@@ -1,6 +1,322 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex</title>
+    <url>/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/</url>
+    <content><![CDATA[<h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><p>这是“AI 编程工具使用记录”系列的第二篇。</p>
+<p>上一篇主要写 Codex 的使用方式：从直接登录 OpenAI 账号，到后来通过 <code>ccswitch</code> 调 API。<br>这一篇继续往后写，把 Claude Code 和 Codex 放在一起对比，最后说明为什么我还是选择 Codex 作为主力。</p>
+<p>这个系列不是官方教程，更像是我自己的工具迁移记录。</p>
+<hr>
+<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇记录一下我对 Claude Code 和 Codex 的使用感受。</p>
+<p>这两个工具的定位都很接近：都是面向开发者的 AI 编程助手，都不是单纯聊天，而是可以结合项目文件、终端命令和代码修改来工作。</p>
+<p>我一开始并没有特别明确地站队，只是都试了一下。用下来之后，我最后更倾向于把 Codex 放进自己的日常开发流程里。</p>
+<p>这篇不做参数表式的硬评测，也不写成“谁吊打谁”。更多是从我自己的使用习惯出发，写清楚为什么最后选择 Codex。</p>
+<hr>
+<h2 id="我对这类工具的期待"><a href="#我对这类工具的期待" class="headerlink" title="我对这类工具的期待"></a>我对这类工具的期待</h2><p>在对比之前，先说一下我对 AI 编程工具的期待。</p>
+<p>我不太需要它只做一个“高级搜索引擎”，也不希望它只是给我贴一段代码。我更希望它能做到：</p>
+<ul>
+<li>看懂当前项目结构</li>
+<li>知道哪些文件该改，哪些文件不该动</li>
+<li>修改之前先说明思路</li>
+<li>修改之后能跑构建或测试验证</li>
+<li>出问题时能继续定位，而不是让我重新描述一遍</li>
+</ul>
+<p>也就是说，我想要的不是一个单次问答工具，而是一个能参与项目维护的终端助手。</p>
+<p>从这个角度看，Claude Code 和 Codex 都比普通网页对话更适合写代码。</p>
+<hr>
+<h2 id="Claude-Code-给我的第一印象"><a href="#Claude-Code-给我的第一印象" class="headerlink" title="Claude Code 给我的第一印象"></a>Claude Code 给我的第一印象</h2><p>Claude Code 的第一印象是比较顺手。</p>
+<p>它很适合做这种事情：</p>
+<ul>
+<li>快速理解一个文件</li>
+<li>根据自然语言改一段代码</li>
+<li>帮忙解释报错</li>
+<li>生成一段比较完整的实现思路</li>
+</ul>
+<p>Claude 系列模型在长文本理解和表达上一直给我感觉比较稳，所以 Claude Code 在阅读代码、总结逻辑、解释项目结构时，体验是不错的。</p>
+<p>如果只是让它看一段代码，然后问“这里为什么报错”“这个函数做了什么”“帮我改成另一种写法”，它完成得很自然。</p>
+<hr>
+<h2 id="Claude-Code-用起来的问题"><a href="#Claude-Code-用起来的问题" class="headerlink" title="Claude Code 用起来的问题"></a>Claude Code 用起来的问题</h2><p>但真正放到我的开发流程里之后，我会遇到几个不太舒服的点。</p>
+<h3 id="1-工作流不够贴合我的习惯"><a href="#1-工作流不够贴合我的习惯" class="headerlink" title="1. 工作流不够贴合我的习惯"></a>1. 工作流不够贴合我的习惯</h3><p>我更习惯先让工具检查项目，再给出计划，然后小范围修改，最后跑命令验证。</p>
+<p>Claude Code 当然也能做这些事，但在我的体验里，它更像是一个很强的代码对话助手，而不是我最终想固定下来的“项目维护工具”。</p>
+<p>它适合快速帮我解决一个点，但我不太想把整个仓库清理、配置调整、文章生成、构建验证这些连续流程都交给它。</p>
+<h3 id="2-配置管理不是我最喜欢的方式"><a href="#2-配置管理不是我最喜欢的方式" class="headerlink" title="2. 配置管理不是我最喜欢的方式"></a>2. 配置管理不是我最喜欢的方式</h3><p>我现在更倾向于把模型调用这件事配置化，比如 API、模型、服务地址都能自己管理。</p>
+<p>如果一个工具更依赖自己的账号体系和默认配置，我会觉得可控性弱一点。不是不能用，而是不太符合我现在对开发工具的管理方式。</p>
+<p>我更希望它像 Git、Node、Hexo 这类工具一样：配置明确，行为透明，换环境时也比较容易迁移。</p>
+<h3 id="3-接口生态反而是-Claude-Code-更灵活"><a href="#3-接口生态反而是-Claude-Code-更灵活" class="headerlink" title="3. 接口生态反而是 Claude Code 更灵活"></a>3. 接口生态反而是 Claude Code 更灵活</h3><p>这里要单独说一下接口生态。</p>
+<p>如果只看模型接入范围，Claude Code 其实更灵活。它不只局限在一种接口形态里，很多第三方模型服务都可以折腾接入，比如 DeepSeek、小米 MiMo 这类模型。</p>
+<p>Codex 这边我目前的使用感受是，走 API 时主要还是围绕 OpenAI 的 Responses 接口来用。这样做的好处是路径更标准，和 OpenAI 自家的模型配合更顺；但问题也很明显：如果想随手切到 DeepSeek、小米 MiMo 这类模型，空间就没有 Claude Code 那么大。</p>
+<p>所以如果一个人的核心需求是“尽可能多地接不同模型”，那 Claude Code 在这一点上确实更有优势。</p>
+<p>但对我来说，模型接入范围不是唯一标准。<br>我更看重的是它放进真实项目之后，能不能稳定地读项目、改文件、跑验证、收尾。</p>
+<p>这也是为什么即使 Claude Code 的接口生态更开放，我最后还是更偏向 Codex。</p>
+<h3 id="4-我更在意“可维护性”"><a href="#4-我更在意“可维护性”" class="headerlink" title="4. 我更在意“可维护性”"></a>4. 我更在意“可维护性”</h3><p>很多时候我不是让 AI 写一个 demo，而是在维护一个真实项目。</p>
+<p>真实项目里最怕的不是“写不出来”，而是：</p>
+<ul>
+<li>改多了</li>
+<li>改偏了</li>
+<li>顺手修了不该修的东西</li>
+<li>没有验证就告诉我完成了</li>
+</ul>
+<p>所以我会更看重工具在修改边界、计划执行和验证反馈上的稳定感。</p>
+<hr>
+<h2 id="Codex-给我的第一印象"><a href="#Codex-给我的第一印象" class="headerlink" title="Codex 给我的第一印象"></a>Codex 给我的第一印象</h2><p>Codex 给我的第一印象更像一个“终端里的协作者”。</p>
+<p>它的使用方式天然围绕项目展开：</p>
+<ul>
+<li>先看文件结构</li>
+<li>再读关键配置</li>
+<li>然后给出修改计划</li>
+<li>接着改文件</li>
+<li>最后跑构建或测试</li>
+</ul>
+<p>这套流程和我平时自己维护项目的节奏很接近。</p>
+<p>比如这个博客项目里，我让 Codex 检查有没有冗余的地方，它不是一上来就乱删，而是先看 <code>package.json</code>、<code>.gitignore</code>、<code>_config.yml</code>、主题配置和文章目录，再判断哪些东西可以清理。</p>
+<p>这种感觉比单纯“回答我怎么做”更像是在一起处理一个项目。</p>
+<hr>
+<h2 id="我更喜欢-Codex-的地方"><a href="#我更喜欢-Codex-的地方" class="headerlink" title="我更喜欢 Codex 的地方"></a>我更喜欢 Codex 的地方</h2><h3 id="1-过程更透明"><a href="#1-过程更透明" class="headerlink" title="1. 过程更透明"></a>1. 过程更透明</h3><p>Codex 在做事时，我能看到它准备做什么、正在看什么文件、为什么要改某个地方。</p>
+<p>这点对我很重要。</p>
+<p>因为我不希望 AI 工具像黑盒一样直接告诉我“我改好了”。我更希望它每一步都有理由，尤其是在涉及删除文件、改依赖、跑命令的时候。</p>
+<p>透明不只是为了放心，也是为了后面出问题时能回溯。</p>
+<hr>
+<h3 id="2-更适合仓库级任务"><a href="#2-更适合仓库级任务" class="headerlink" title="2. 更适合仓库级任务"></a>2. 更适合仓库级任务</h3><p>Codex 很适合处理这种跨文件任务：</p>
+<ul>
+<li>清理冗余依赖</li>
+<li>修改配置并同步文档</li>
+<li>新增文章并运行构建</li>
+<li>根据报错定位项目问题</li>
+<li>检查哪些文件是生成产物，哪些文件应该进版本控制</li>
+</ul>
+<p>这些任务不是单点代码补全，而是需要理解整个项目状态。</p>
+<p>在这类场景里，我更愿意用 Codex。</p>
+<hr>
+<h3 id="3-和终端工作流更贴合"><a href="#3-和终端工作流更贴合" class="headerlink" title="3. 和终端工作流更贴合"></a>3. 和终端工作流更贴合</h3><p>我平时维护博客基本就是终端工作流：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run build</span><br><span class="line">git status</span><br><span class="line">npm audit --omit=dev</span><br></pre></td></tr></table></figure>
+
+<p>Codex 正好可以接在这个流程里。</p>
+<p>它不只是告诉我“你应该运行构建”，而是可以实际运行，然后根据输出继续判断下一步。</p>
+<p>比如构建失败，它可以继续看报错；审计有漏洞，它可以判断是依赖问题还是插件残留；文章 front matter 有问题，它也能直接定位。</p>
+<p>这种连续性是我最后选择它的重要原因。</p>
+<hr>
+<h3 id="4-配合-API-使用更灵活"><a href="#4-配合-API-使用更灵活" class="headerlink" title="4. 配合 API 使用更灵活"></a>4. 配合 API 使用更灵活</h3><p>上一篇我写过，我最后更倾向于通过 <code>ccswitch</code> 调 API 来使用 Codex。</p>
+<p>这样做之后，模型、接口、密钥这些配置都更明确。对我来说，这比单纯登录某个账号更符合开发习惯。</p>
+<p>我可以把它当成开发环境的一部分，而不是一个临时打开的工具。</p>
+<p>这点也是我选择 Codex 的原因之一：它更容易被纳入我自己的工具链。</p>
+<hr>
+<h2 id="两者简单对比"><a href="#两者简单对比" class="headerlink" title="两者简单对比"></a>两者简单对比</h2><p>如果按我的使用感受来总结，大概是这样：</p>
+<table>
+<thead>
+<tr>
+<th>对比点</th>
+<th>Claude Code</th>
+<th>Codex</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第一印象</td>
+<td>对话和解释能力强</td>
+<td>更像终端协作者</td>
+</tr>
+<tr>
+<td>适合任务</td>
+<td>单点代码理解、解释、改写</td>
+<td>仓库级修改、配置清理、验证流程</td>
+</tr>
+<tr>
+<td>工作方式</td>
+<td>更偏代码助手</td>
+<td>更偏项目维护助手</td>
+</tr>
+<tr>
+<td>接口生态</td>
+<td>更灵活，可接 DeepSeek、小米 MiMo 等模型</td>
+<td>目前更偏 OpenAI Responses 接口</td>
+</tr>
+<tr>
+<td>我在意的优势</td>
+<td>阅读和表达顺滑</td>
+<td>过程透明、执行闭环更强</td>
+</tr>
+<tr>
+<td>最终定位</td>
+<td>偶尔辅助</td>
+<td>日常主力</td>
+</tr>
+</tbody></table>
+<p>当然，这个表不是客观排名，只是我自己的使用取舍。</p>
+<p>如果一个人主要需求是解释代码、生成函数、写局部逻辑，Claude Code 可能已经很好用了。<br>但如果像我这样，经常围绕一个真实项目做连续修改，我会更偏向 Codex。</p>
+<hr>
+<h2 id="为什么最终选择-Codex"><a href="#为什么最终选择-Codex" class="headerlink" title="为什么最终选择 Codex"></a>为什么最终选择 Codex</h2><p>最后选择 Codex，其实不是因为 Claude Code 不好，而是 Codex 更符合我的工作方式。</p>
+<p>我最看重的是这几点：</p>
+<ul>
+<li>能围绕本地项目持续工作</li>
+<li>修改前后有清晰过程</li>
+<li>能把命令执行和结果验证串起来</li>
+<li>更适合处理配置、依赖、文档、文章这类综合任务</li>
+<li>配合 API 使用时更容易纳入自己的工具链</li>
+</ul>
+<p>对我来说，一个 AI 编程工具要成为主力，不能只会“写代码”。</p>
+<p>它还要能理解项目、控制修改范围、验证结果，并且在出错时继续排查。</p>
+<p>Codex 在这些方面给我的感觉更稳。</p>
+<hr>
+<h2 id="我的结论"><a href="#我的结论" class="headerlink" title="我的结论"></a>我的结论</h2><p>Claude Code 和 Codex 都值得试。</p>
+<p>如果只是轻量使用，Claude Code 的体验并不差，尤其是解释代码和整理思路时很顺手。</p>
+<p>但如果要在真实项目里长期使用，我最后还是会选 Codex。</p>
+<p>原因很简单：<br>它更像一个能参与完整开发流程的助手，而不是只在旁边回答问题的助手。</p>
+<p>所以我现在的选择是：</p>
+<ul>
+<li>Claude Code：作为备用工具，适合偶尔对比思路</li>
+<li>Codex：作为主力工具，负责日常项目维护和内容生产</li>
+</ul>
+<p>对我来说，这个分工比较自然，也更符合现在的使用习惯。</p>
+]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>Codex</tag>
+        <tag>Claude Code</tag>
+        <tag>AI工具</tag>
+        <tag>开发效率</tag>
+        <tag>AI编程工具使用记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI 编程工具使用记录（一）：Codex 从登录 OpenAI 到用 ccswitch 调 API</title>
+    <url>/My_Blog/2026/06/12/Codex%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%EF%BC%9A%E4%BB%8E%E7%99%BB%E5%BD%95%20OpenAI%20%E5%88%B0%E7%94%A8%20ccswitch%20%E8%B0%83%20API/</url>
+    <content><![CDATA[<h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><p>这是“AI 编程工具使用记录”系列的第一篇。</p>
+<p>这个系列主要记录我自己折腾 AI 编程工具的过程，不追求写成完整教程，更偏向实际使用后的取舍和总结。</p>
+<p>目前这个系列暂时分成两篇：</p>
+<ul>
+<li>第一篇：Codex 从登录 OpenAI 到用 <code>ccswitch</code> 调 API</li>
+<li>第二篇：Claude Code 和 Codex 对比，为什么最后选择 Codex</li>
+</ul>
+<p>这一篇先写 Codex 本身的使用方式，下一篇再把它和 Claude Code 放在一起比较。</p>
+<hr>
+<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇记录一下我最近使用 Codex 的过程，主要写两种用法：</p>
+<ul>
+<li>直接登录 OpenAI 账号使用</li>
+<li>通过 <code>ccswitch</code> 调用 API 使用</li>
+</ul>
+<p>一开始我用的是第一种方式，因为上手最简单，基本就是登录账号，然后直接在终端里让 Codex 帮我看项目、改代码、跑命令。后面用了一段时间之后，我慢慢改成了第二种方式，也就是用 <code>ccswitch</code> 管理接口和模型，再让 Codex 走 API。</p>
+<p>这篇不写成官方教程，主要记录我自己的使用体验和取舍。</p>
+<hr>
+<h2 id="最开始：直接登录-OpenAI-账号"><a href="#最开始：直接登录-OpenAI-账号" class="headerlink" title="最开始：直接登录 OpenAI 账号"></a>最开始：直接登录 OpenAI 账号</h2><p>刚开始接触 Codex 的时候，我的想法很简单：先跑起来再说。</p>
+<p>这种方式的流程比较直观：</p>
+<ol>
+<li>安装 Codex CLI</li>
+<li>在终端里启动 Codex</li>
+<li>按提示登录 OpenAI 账号</li>
+<li>授权之后开始使用</li>
+</ol>
+<p>优点也很明显：</p>
+<ul>
+<li>配置少</li>
+<li>不需要自己管理 API Key</li>
+<li>对新手比较友好</li>
+<li>登录成功后基本可以直接进入工作流</li>
+</ul>
+<p>如果只是临时体验，或者只是让 Codex 帮忙解释一段代码、改一个小 bug，这种方式确实很舒服。</p>
+<hr>
+<h2 id="直接登录方式的问题"><a href="#直接登录方式的问题" class="headerlink" title="直接登录方式的问题"></a>直接登录方式的问题</h2><p>但用久一点之后，我发现这种方式也有一些不太适合我的地方。</p>
+<p>首先是可控性不够强。<br>我更希望自己能明确知道当前走的是哪个接口、哪个模型、哪个服务地址，以及后续要不要切换到别的配置。</p>
+<p>其次是环境迁移不够顺手。<br>如果换电脑、换终端环境，或者在不同项目之间切换，我不太想每次都重新处理登录状态。登录账号这种方式适合“单点使用”，但不太适合我这种经常折腾开发环境的人。</p>
+<p>还有一点是心理上的：<br>我更习惯把 AI 工具当成开发链路里的一个组件，而不是一个绑定账号状态的黑盒。既然它最终也是在和模型交互，那我更希望这部分配置能像数据库连接、部署密钥一样被明确管理。</p>
+<hr>
+<h2 id="后来：用-ccswitch-调-API"><a href="#后来：用-ccswitch-调-API" class="headerlink" title="后来：用 ccswitch 调 API"></a>后来：用 ccswitch 调 API</h2><p>后面我开始改成用 <code>ccswitch</code> 来管理 API 调用。</p>
+<p>我这里对它的定位很简单：<br><code>ccswitch</code> 更像是一个“接口切换器”或者“配置中间层”，把模型、接口地址、密钥这些东西统一管起来。Codex 需要调用模型时，就不再完全依赖账号登录状态，而是走我配置好的 API。</p>
+<p>这样做之后，整个使用方式变成了：</p>
+<ol>
+<li>在 <code>ccswitch</code> 里配置 API Key</li>
+<li>配置接口地址和默认模型</li>
+<li>根据需要切换不同的服务或模型</li>
+<li>让 Codex 通过 API 完成代码阅读、修改和命令执行</li>
+</ol>
+<p>这个流程比直接登录稍微麻烦一点，但一旦配置好，后面会更稳定。</p>
+<hr>
+<h2 id="两种方式的对比"><a href="#两种方式的对比" class="headerlink" title="两种方式的对比"></a>两种方式的对比</h2><p>如果简单对比，我会这样理解：</p>
+<table>
+<thead>
+<tr>
+<th>使用方式</th>
+<th>优点</th>
+<th>问题</th>
+<th>适合场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>登录 OpenAI 账号</td>
+<td>上手快、配置少、适合体验</td>
+<td>可控性弱、迁移不够顺手</td>
+<td>临时使用、轻量体验</td>
+</tr>
+<tr>
+<td><code>ccswitch</code> 调 API</td>
+<td>可控性强、方便切换、适合长期使用</td>
+<td>初始配置多一点</td>
+<td>长期开发、多环境、多模型切换</td>
+</tr>
+</tbody></table>
+<p>我不是说登录账号不好，而是它更像“开箱即用”的方案。<br><code>ccswitch</code> 调 API 则更像“工程化使用”的方案。</p>
+<p>如果只是偶尔用一下，直接登录就够了。<br>但如果打算把 Codex 放进日常开发流程里，经常让它读项目、改代码、跑测试、整理文档，那我更推荐后者。</p>
+<hr>
+<h2 id="为什么最后选择-ccswitch"><a href="#为什么最后选择-ccswitch" class="headerlink" title="为什么最后选择 ccswitch"></a>为什么最后选择 ccswitch</h2><p>我最后选择 <code>ccswitch</code>，主要是因为这几个原因。</p>
+<h3 id="1-配置更透明"><a href="#1-配置更透明" class="headerlink" title="1. 配置更透明"></a>1. 配置更透明</h3><p>API Key、接口地址、模型名称都能自己看见，也能自己管理。</p>
+<p>这对我很重要，因为我不想在使用工具时完全不知道它背后走的是什么配置。尤其是在不同模型、不同服务之间切换时，透明配置能减少很多不确定性。</p>
+<h3 id="2-切换更方便"><a href="#2-切换更方便" class="headerlink" title="2. 切换更方便"></a>2. 切换更方便</h3><p>有时候我只是想写文章、改 Markdown，不一定需要很强的模型。<br>有时候我要让 Codex 看比较复杂的项目、改一串代码、分析报错，这时候就希望换成更强的模型。</p>
+<p>用 <code>ccswitch</code> 之后，切换这件事会自然很多，不需要每次都重新折腾登录或者环境。</p>
+<h3 id="3-更适合长期使用"><a href="#3-更适合长期使用" class="headerlink" title="3. 更适合长期使用"></a>3. 更适合长期使用</h3><p>直接登录适合“现在马上用一下”。<br>API 配置适合“以后一直用”。</p>
+<p>对我来说，Codex 不是一个偶尔打开的玩具，而是可以放进日常开发流程里的工具。既然要长期用，那我就更希望它的配置方式稳定、可迁移、可维护。</p>
+<h3 id="4-更符合开发习惯"><a href="#4-更符合开发习惯" class="headerlink" title="4. 更符合开发习惯"></a>4. 更符合开发习惯</h3><p>开发里很多东西本来就是配置化的：</p>
+<ul>
+<li>数据库连接</li>
+<li>部署 Token</li>
+<li>GitHub Access Token</li>
+<li>环境变量</li>
+<li>CI&#x2F;CD Secrets</li>
+</ul>
+<p>所以把 Codex 的模型调用也配置化，对我来说更顺手。</p>
+<hr>
+<h2 id="实际使用时我怎么分工"><a href="#实际使用时我怎么分工" class="headerlink" title="实际使用时我怎么分工"></a>实际使用时我怎么分工</h2><p>现在我的使用方式大概是这样：</p>
+<ul>
+<li>小问题：直接让 Codex 看当前文件并解释</li>
+<li>改配置：让 Codex 先检查项目结构，再给出修改方案</li>
+<li>写文章：先给主题和风格，让它参考已有文章生成初稿</li>
+<li>修 bug：先让它复现或定位，再小范围修改</li>
+<li>清理项目：让它找冗余依赖、无用文件和配置残留</li>
+</ul>
+<p>这类任务都很适合 Codex，因为它不是单纯聊天，而是能结合本地项目上下文工作。</p>
+<p>比如这次博客项目清理，我就更喜欢让它先看 <code>package.json</code>、<code>_config.yml</code>、主题配置和文章目录，再决定哪些东西能删，哪些东西不能动。</p>
+<p>这种工作流比单纯复制代码到网页对话框里舒服很多。</p>
+<hr>
+<h2 id="使用-Codex-时的一点经验"><a href="#使用-Codex-时的一点经验" class="headerlink" title="使用 Codex 时的一点经验"></a>使用 Codex 时的一点经验</h2><p>用了一段时间之后，我觉得最重要的不是“让 AI 一次性把所有事做完”，而是要把任务拆清楚。</p>
+<p>比较舒服的提问方式是：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">先检查项目结构，找出可能冗余的地方，不要直接删除。</span><br></pre></td></tr></table></figure>
+
+<p>或者：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">参考现有文章风格，帮我新增一篇同风格文章，并运行构建验证。</span><br></pre></td></tr></table></figure>
+
+<p>这样 Codex 会更容易按步骤做事，也更不容易改到不该改的地方。</p>
+<p>如果一上来就说“帮我优化一下项目”，范围太大，它可能会不知道优化到什么程度才算合适。</p>
+<hr>
+<h2 id="我的结论"><a href="#我的结论" class="headerlink" title="我的结论"></a>我的结论</h2><p>如果只想快速体验 Codex，直接登录 OpenAI 账号是最省事的方式。</p>
+<p>但如果是长期开发使用，我更推荐用 <code>ccswitch</code> 调 API。原因不是它更酷，而是它更可控、更稳定，也更符合开发者对工具链的管理习惯。</p>
+<p>简单说就是：</p>
+<ul>
+<li>想快速开始：登录 OpenAI 账号</li>
+<li>想长期使用：<code>ccswitch</code> 调 API</li>
+</ul>
+<p>我最后选择后者，是因为我希望 Codex 不只是一个临时助手，而是变成自己开发环境里一个可以长期维护的工具。</p>
+]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>Codex</tag>
+        <tag>AI工具</tag>
+        <tag>开发效率</tag>
+        <tag>AI编程工具使用记录</tag>
+        <tag>OpenAI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MacBook Air 购买记录：从双十一观望到最后入手 M5</title>
     <url>/My_Blog/2026/03/05/MacBook%20Air%20M5/</url>
     <content><![CDATA[<h2 id="购买背景"><a href="#购买背景" class="headerlink" title="购买背景"></a>购买背景</h2><p>这篇记录我这次买 MacBook Air 的决策过程，主要写为什么一开始没买、后来为什么改成继续等，以及最后为什么下单 M5。</p>
@@ -112,259 +428,6 @@
         <tag>等等党</tag>
         <tag>购物心得</tag>
         <tag>数码产品</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 博客损坏后的恢复记录：问题排查和修复过程</title>
-    <url>/My_Blog/2026/04/05/record-of-hexo-blog-repair/</url>
-    <content><![CDATA[<h2 id="这次问题的起点"><a href="#这次问题的起点" class="headerlink" title="这次问题的起点"></a>这次问题的起点</h2><p>这次博客出问题，不是简单的样式小故障，而是本地项目损坏后，我重新从远端拉代码，结果发现仓库并不是一份完整可恢复的版本。</p>
-<p>直接表现是：</p>
-<ul>
-<li>主题相关自定义内容丢失</li>
-<li>一些页面和功能不能正常使用</li>
-<li>部分资源在 GitHub Pages 子路径下失效</li>
-</ul>
-<p>这篇就按问题排查顺序把修复过程记下来。</p>
-<hr>
-<h2 id="第一类问题：主题目录被当成了子模块"><a href="#第一类问题：主题目录被当成了子模块" class="headerlink" title="第一类问题：主题目录被当成了子模块"></a>第一类问题：主题目录被当成了子模块</h2><p>最开始最明显的问题，是 <code>themes/anzhiyu</code> 目录里的很多自定义内容都没了。</p>
-<p>排查后发现，根源是主题目录自带 <code>.git</code>，导致它在主仓库里被当成了子模块处理。这样一来，主仓库里保存的不是主题源码本身，而只是一个指针。</p>
-<p>这会直接导致两个后果：</p>
-<ul>
-<li>主题里的本地修改不会跟着主仓库正常保存</li>
-<li>换机器或重新拉仓库时，主题目录很容易不完整</li>
-</ul>
-<h3 id="处理方式"><a href="#处理方式" class="headerlink" title="处理方式"></a>处理方式</h3><p>我当时做的处理是：</p>
-<ol>
-<li>重新拉取主题源码</li>
-<li>删除 <code>themes/anzhiyu/.git</code></li>
-<li>重新把主题目录纳入主仓库管理</li>
-<li>补齐依赖并重新生成站点</li>
-</ol>
-<p>这个问题本质上不是 Hexo 本身的问题，而是仓库结构管理的问题。</p>
-<hr>
-<h2 id="第二类问题：子路径部署导致资源和跳转异常"><a href="#第二类问题：子路径部署导致资源和跳转异常" class="headerlink" title="第二类问题：子路径部署导致资源和跳转异常"></a>第二类问题：子路径部署导致资源和跳转异常</h2><p>博客部署在 GitHub Pages 的子路径下，比如：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">/My_Blog/</span><br></pre></td></tr></table></figure>
-
-<p>这类部署方式最常见的问题就是：<br>代码里如果写了根路径 <code>/xxx</code>，在本地也许没问题，上线后就容易出错。</p>
-<h3 id="直接暴露出来的现象"><a href="#直接暴露出来的现象" class="headerlink" title="直接暴露出来的现象"></a>直接暴露出来的现象</h3><ul>
-<li>“随便逛逛”跳转异常</li>
-<li>音乐馆页面异常</li>
-<li>某些脚本和 JSON 文件加载失败</li>
-</ul>
-<p>这些问题表面上看是不同功能坏了，实际上根源一致：<strong>路径写死了</strong>。</p>
-<hr>
-<h2 id="问题-1：随机文章功能异常"><a href="#问题-1：随机文章功能异常" class="headerlink" title="问题 1：随机文章功能异常"></a>问题 1：随机文章功能异常</h2><p>“随便逛逛”这个功能当时一度会跳 404。</p>
-<p>排查后发现有两个点：</p>
-<h3 id="1-生成脚本本身有容错问题"><a href="#1-生成脚本本身有容错问题" class="headerlink" title="1. 生成脚本本身有容错问题"></a>1. 生成脚本本身有容错问题</h3><p>随机文章脚本在遍历友链数据时，没有处理空数组或缺失字段，导致生成阶段就可能出错。</p>
-<h3 id="2-跳转路径没有考虑子路径部署"><a href="#2-跳转路径没有考虑子路径部署" class="headerlink" title="2. 跳转路径没有考虑子路径部署"></a>2. 跳转路径没有考虑子路径部署</h3><p>脚本里直接按网站根目录拼接链接，这在 <code>/My_Blog/</code> 这种场景下就会出问题。</p>
-<h3 id="修复思路"><a href="#修复思路" class="headerlink" title="修复思路"></a>修复思路</h3><p>我做的修复主要是：</p>
-<ul>
-<li>给数据遍历补容错</li>
-<li>所有跳转路径改成基于站点根目录拼接</li>
-</ul>
-<p>这类问题的经验很简单：<br>只要项目不是部署在域名根目录，就尽量不要手写绝对路径。</p>
-<hr>
-<h2 id="问题-2：音乐馆页面和歌单切换异常"><a href="#问题-2：音乐馆页面和歌单切换异常" class="headerlink" title="问题 2：音乐馆页面和歌单切换异常"></a>问题 2：音乐馆页面和歌单切换异常</h2><p>音乐馆当时的问题更明显，直接表现为页面异常、歌单加载失败。</p>
-<p>排查后发现主要还是路径判断和资源拉取的问题。</p>
-<h3 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a>具体问题</h3><ul>
-<li>页面逻辑直接判断路径是否以 <code>/music/</code> 开头</li>
-<li>实际部署路径是 <code>/My_Blog/music/</code></li>
-<li>获取歌单数据时，直接请求 <code>/json/music.json</code></li>
-</ul>
-<p>这样一来，本地可能能跑，上线就会请求到错误地址。</p>
-<h3 id="修复方式"><a href="#修复方式" class="headerlink" title="修复方式"></a>修复方式</h3><p>处理逻辑主要是两点：</p>
-<ul>
-<li>路径判断不要写死根目录形式</li>
-<li>异步请求统一基于全局 <code>root</code> 配置拼接</li>
-</ul>
-<p>修完之后，音乐馆和歌单切换才恢复正常。</p>
-<hr>
-<h2 id="问题-3：控制台和界面局部样式异常"><a href="#问题-3：控制台和界面局部样式异常" class="headerlink" title="问题 3：控制台和界面局部样式异常"></a>问题 3：控制台和界面局部样式异常</h2><p>除了功能问题，还有一些样式问题，比如浅色模式下控制台文字显示不正常。</p>
-<p>这类问题排查起来虽然不如路径问题复杂，但也很烦，因为通常不是“功能完全失效”，而是样式优先级互相覆盖。</p>
-<p>我的处理方式是：</p>
-<ul>
-<li>不在零散位置临时补样式</li>
-<li>用单独覆盖文件集中处理</li>
-<li>尽量限制作用范围，避免误伤别的页面</li>
-</ul>
-<p>这种方式后面维护起来更清晰。</p>
-<hr>
-<h2 id="这次恢复里最关键的经验"><a href="#这次恢复里最关键的经验" class="headerlink" title="这次恢复里最关键的经验"></a>这次恢复里最关键的经验</h2><h3 id="1-主题目录不要带独立-Git-历史"><a href="#1-主题目录不要带独立-Git-历史" class="headerlink" title="1. 主题目录不要带独立 Git 历史"></a>1. 主题目录不要带独立 Git 历史</h3><p>如果主题目录本身带 <code>.git</code>，后续非常容易出子模块问题。除非你就是要用子模块管理，否则最好一开始就处理掉。</p>
-<h3 id="2-子路径部署时，不要写死"><a href="#2-子路径部署时，不要写死" class="headerlink" title="2. 子路径部署时，不要写死 /"></a>2. 子路径部署时，不要写死 <code>/</code></h3><p>只要站点不是挂在根域名，就尽量统一从配置里的根路径出发。</p>
-<h3 id="3-问题排查要按层次来"><a href="#3-问题排查要按层次来" class="headerlink" title="3. 问题排查要按层次来"></a>3. 问题排查要按层次来</h3><p>我这次后面比较顺，是因为排查顺序比较明确：</p>
-<ul>
-<li>先看仓库结构是不是完整</li>
-<li>再看依赖和生成过程</li>
-<li>再看路径</li>
-<li>最后处理样式和局部功能</li>
-</ul>
-<p>如果一开始就直接在页面上东改一点西改一点，很容易越改越乱。</p>
-<hr>
-<h2 id="这篇记录想留下什么"><a href="#这篇记录想留下什么" class="headerlink" title="这篇记录想留下什么"></a>这篇记录想留下什么</h2><p>这次恢复过程里，真正重要的不是“某个按钮为什么坏了”，而是下面这几个通用问题：</p>
-<ul>
-<li>仓库到底是不是完整可恢复的</li>
-<li>主题修改有没有被正确纳入版本管理</li>
-<li>部署路径有没有统一处理</li>
-<li>自定义修改有没有留痕</li>
-</ul>
-<p>只要这几项没处理好，博客这类项目在换机器、重装环境、重新部署的时候就很容易反复出问题。</p>
-<hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次博客恢复说到底做了三件事：</p>
-<ol>
-<li>把仓库结构理顺</li>
-<li>把依赖补齐</li>
-<li>把所有路径和功能问题逐个修掉</li>
-</ol>
-<p>如果后面还有类似情况，我自己再回来看这篇，至少能快速知道排查应该从哪开始，而不是重新踩一遍之前的坑。</p>
-]]></content>
-      <categories>
-        <category>技术教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-        <tag>教程</tag>
-        <tag>AnZhiYu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>东南网安考研初试记录：时间安排、复习进度和考试情况</title>
-    <url>/My_Blog/2024/12/25/%E5%88%9D%E8%AF%95/</url>
-    <content><![CDATA[<h2 id="基本情况"><a href="#基本情况" class="headerlink" title="基本情况"></a>基本情况</h2><p>这篇主要记录我准备东南网安初试的实际过程，尽量按时间线写清楚，方便以后自己回看，也给后来准备类似考试的人做参考。</p>
-<p>我正式准备考研是在 2 月底，目标一开始不是东南，后面在暑假阶段改成了东南网安。整体看下来，前期效率一般，真正有效的时间主要集中在暑假到 12 月考试前。</p>
-<hr>
-<h2 id="2-月：确定考研，买书"><a href="#2-月：确定考研，买书" class="headerlink" title="2 月：确定考研，买书"></a>2 月：确定考研，买书</h2><p>过年那段时间决定考研。最开始想考成电计算机，后面才转成东南网安。</p>
-<p>2 月 26 号把参考书买齐，顺手把考试时间记在手机日历里。从这一步开始，才算真正进入备考状态。</p>
-<p>这个阶段主要做了两件事：</p>
-<ul>
-<li>先把院校和专业的大方向定下来</li>
-<li>把基础资料和参考书准备好</li>
-</ul>
-<p>当时还谈不上复习方法，更多是先启动。</p>
-<hr>
-<h2 id="2-3-月：在家复习，效率不高"><a href="#2-3-月：在家复习，效率不高" class="headerlink" title="2-3 月：在家复习，效率不高"></a>2-3 月：在家复习，效率不高</h2><p>这段时间基本在家。作息比较松，通常下午两点开始，晚上十点结束，中间手机和走神比较多，整体效率一般。</p>
-<p>具体状态大概是：</p>
-<ul>
-<li>数学看得慢，容易走神</li>
-<li>英语单词反复背反复忘</li>
-<li>专业课一开始不知道重点</li>
-</ul>
-<p>回头看，这两个月最大的问题不是学得少，而是节奏没建立起来。每天坐在桌前的时间不算短，但真正有效输出不多。</p>
-<hr>
-<h2 id="4-6-月：回学校后进入稳定节奏"><a href="#4-6-月：回学校后进入稳定节奏" class="headerlink" title="4-6 月：回学校后进入稳定节奏"></a>4-6 月：回学校后进入稳定节奏</h2><p>回学校以后，作息还是比较佛系。通常中午起床，下午两点开始学，到晚上十点回宿舍。偶尔也会打游戏，但整体进度开始往前走了。</p>
-<p>这个阶段的主要进度：</p>
-<ul>
-<li>数学：高数上册过完，开始做 660</li>
-<li>英语：每天保持一篇真题阅读</li>
-<li>专业课：还在按原目标院校准备</li>
-</ul>
-<p>这一阶段的意义不在于强度高，而在于开始有持续输入。虽然效率不算很高，但没有完全停下来。</p>
-<hr>
-<h2 id="7-8-月：暑假阶段是整个初试复习里最有效的一段"><a href="#7-8-月：暑假阶段是整个初试复习里最有效的一段" class="headerlink" title="7-8 月：暑假阶段是整个初试复习里最有效的一段"></a>7-8 月：暑假阶段是整个初试复习里最有效的一段</h2><p>暑假我没回家躺着，而是在家附近找了付费自习室。作息基本是下午 2 点到晚上 10 点在自习室，中午休息。虽然依然不是早起型节奏，但这两个月效率明显比前面高。</p>
-<p>这段时间是我的主力提升期。</p>
-<p>暑假结束时的大致进度：</p>
-<ul>
-<li>数学：一轮结束，660 刷完一遍</li>
-<li>英语：阅读做完一遍</li>
-<li>专业课：改成东南网安参考书，过完一轮并开始做题</li>
-<li>政治：8 月底开始跟徐涛，做 1000 题</li>
-</ul>
-<p>中间印象比较深的一次是 8 月做数学真题只拿到 85 分。当时确实有点烦，但最后还是回去把错题一点点拆了。现在看，这种阶段性低分其实很正常，关键是后面有没有把问题落实掉。</p>
-<hr>
-<h2 id="9-10-月：时间开始不够，用整天复习"><a href="#9-10-月：时间开始不够，用整天复习" class="headerlink" title="9-10 月：时间开始不够，用整天复习"></a>9-10 月：时间开始不够，用整天复习</h2><p>到了 9 月以后，明显感觉时间不够了，所以开始把上午也用起来。那段时间基本是：</p>
-<ul>
-<li>8:30-9:00 到图书馆</li>
-<li>中午简单休息</li>
-<li>晚上到闭馆</li>
-</ul>
-<p>这个阶段的重点变成了真题和查漏补缺。</p>
-<p>安排大致如下：</p>
-<ul>
-<li>数学：整套真题限时做</li>
-<li>英语：二刷阅读，开始准备作文</li>
-<li>专业课：反复做真题和核心题</li>
-<li>政治：二刷 1000 题，开始背诵</li>
-</ul>
-<p>10 月完成报名，之后心态上会更明确一些，因为这个时候已经没有退路，只能往前推。</p>
-<hr>
-<h2 id="11-月：压力最大的一段"><a href="#11-月：压力最大的一段" class="headerlink" title="11 月：压力最大的一段"></a>11 月：压力最大的一段</h2><p>11 月是整个备考过程中最难受的阶段。各科都还没到“稳”的程度，但离考试已经很近了。</p>
-<p>当时的情况大概是：</p>
-<ul>
-<li>肖八选择题平均 28 分左右</li>
-<li>数学真题大多在 110-120</li>
-<li>英语阅读波动比较大</li>
-<li>睡眠和情绪都开始受影响</li>
-</ul>
-<p>这个月其实没有什么特别巧的方法，核心就是继续做题、继续改错、继续背。</p>
-<p>我那时候最有用的做法是：</p>
-<ul>
-<li>数学重点回看真题错题</li>
-<li>英语不要再无限加新内容，稳定阅读和作文</li>
-<li>政治开始集中背主观题素材</li>
-<li>专业课继续保持熟练度</li>
-</ul>
-<p>11 月最容易出现的问题不是不会，而是怀疑自己。这个阶段如果节奏乱了，后面很难收回来。</p>
-<hr>
-<h2 id="12-月：最后冲刺阶段"><a href="#12-月：最后冲刺阶段" class="headerlink" title="12 月：最后冲刺阶段"></a>12 月：最后冲刺阶段</h2><p>12 月之后，复习基本进入收口。</p>
-<p>当时我的处理方式是：</p>
-<ul>
-<li>数学：只看错题本、真题错题和重点题型</li>
-<li>英语：背作文模板，保持手感</li>
-<li>政治：集中背肖四</li>
-<li>专业课：只看核心考点和自己容易忘的部分</li>
-</ul>
-<p>这个阶段不适合大规模换资料，也不适合再开新体系。重点只有一个：把已经学过的东西尽量变熟。</p>
-<hr>
-<h2 id="考试当天情况"><a href="#考试当天情况" class="headerlink" title="考试当天情况"></a>考试当天情况</h2><h3 id="政治"><a href="#政治" class="headerlink" title="政治"></a>政治</h3><p>政治最大的感受是：肖四没有完全押中，主观题不能照抄模板，只能自己组织。</p>
-<p>选择题做完以后就觉得一般，不算特别稳。考完出来，大家脸色都差不多，说明这场普遍都不轻松。</p>
-<h3 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h3><p>英语是我考场上最难受的一门。</p>
-<p>实际感觉是：</p>
-<ul>
-<li>完形一开始就不顺</li>
-<li>阅读前三篇还能做，第四篇比较吃力</li>
-<li>翻译做得很卡</li>
-<li>大作文审题也花了不少时间</li>
-</ul>
-<p>交卷的时候已经能确定，英语不会太好看。</p>
-<h3 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h3><p>数学的感觉比较典型：选择填空相对顺，大题不顺。</p>
-<p>具体情况：</p>
-<ul>
-<li>选择填空做得比较舒服</li>
-<li>有一道证明题没完全打开</li>
-<li>一道曲面积分算了两遍都不对</li>
-<li>概率论最后一问直接放了</li>
-</ul>
-<p>所以数学整体不是“不会做”，而是大题完成度不够。</p>
-<h3 id="专业课"><a href="#专业课" class="headerlink" title="专业课"></a>专业课</h3><p>专业课是我四门里状态最好的一门。</p>
-<p>卷子结构以选择和大题为主，没有名词解释。选择里有一些参考书原题，大题虽然不是原题，但考点基本都复习到了，所以写得比较顺。</p>
-<p>这一门考完以后，心里大概知道：专业课不会拖后腿。</p>
-<hr>
-<h2 id="考后判断"><a href="#考后判断" class="headerlink" title="考后判断"></a>考后判断</h2><p>考完当天我的判断很直接：</p>
-<ul>
-<li>英语最差</li>
-<li>数学中档偏下</li>
-<li>政治一般</li>
-<li>专业课最好</li>
-</ul>
-<p>这个判断后来基本也和出分情况接近。</p>
-<p>考完之后我没有再继续纠结标准答案，直接收拾东西回家。对初试来说，考完就结束了，继续反复想也没有意义。</p>
-<hr>
-<h2 id="这段经历里对后来人最有参考价值的几点"><a href="#这段经历里对后来人最有参考价值的几点" class="headerlink" title="这段经历里对后来人最有参考价值的几点"></a>这段经历里对后来人最有参考价值的几点</h2><h3 id="1-前期状态一般，不代表后面救不回来"><a href="#1-前期状态一般，不代表后面救不回来" class="headerlink" title="1. 前期状态一般，不代表后面救不回来"></a>1. 前期状态一般，不代表后面救不回来</h3><p>我前期效率并不高，真正发力是在暑假以后。只要后面节奏建立起来，还是能把进度追上。</p>
-<h3 id="2-暑假阶段非常关键"><a href="#2-暑假阶段非常关键" class="headerlink" title="2. 暑假阶段非常关键"></a>2. 暑假阶段非常关键</h3><p>如果让我回看整个初试准备阶段，最重要的一段就是暑假。很多基础积累、题感建立、专业课切换，都是在这两个月完成的。</p>
-<h3 id="3-真题一定要早点进入"><a href="#3-真题一定要早点进入" class="headerlink" title="3. 真题一定要早点进入"></a>3. 真题一定要早点进入</h3><p>尤其是数学和专业课，真题能帮你尽快发现自己到底差在哪，而不是一直停留在“感觉学过了”。</p>
-<h3 id="4-到后期不要贪多"><a href="#4-到后期不要贪多" class="headerlink" title="4. 到后期不要贪多"></a>4. 到后期不要贪多</h3><p>11 月和 12 月最忌讳乱换资料、乱追进度。后期最重要的是收口，不是扩张。</p>
-<hr>
-<h2 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h2><p>这次初试如果用一句话概括，就是：前期普通，中期提速，后期硬顶，最后专业课兜底。</p>
-<p>没有特别标准的高强度励志模板，也没有完全失控。整体就是一段比较真实的备考过程。</p>
-<p>如果你也在准备类似的考试，我觉得最重要的不是复制别人的作息，而是尽快找到自己能长期执行的节奏，然后把关键阶段守住。</p>
-]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>备考经历</tag>
-        <tag>东南大学</tag>
-        <tag>初试经验</tag>
       </tags>
   </entry>
   <entry>
@@ -608,10 +671,263 @@
         <category>考研</category>
       </categories>
       <tags>
-        <tag>教程</tag>
-        <tag>东南大学</tag>
         <tag>Cpp</tag>
         <tag>考研复试</tag>
+        <tag>教程</tag>
+        <tag>东南大学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>东南网安考研初试记录：时间安排、复习进度和考试情况</title>
+    <url>/My_Blog/2024/12/25/%E5%88%9D%E8%AF%95/</url>
+    <content><![CDATA[<h2 id="基本情况"><a href="#基本情况" class="headerlink" title="基本情况"></a>基本情况</h2><p>这篇主要记录我准备东南网安初试的实际过程，尽量按时间线写清楚，方便以后自己回看，也给后来准备类似考试的人做参考。</p>
+<p>我正式准备考研是在 2 月底，目标一开始不是东南，后面在暑假阶段改成了东南网安。整体看下来，前期效率一般，真正有效的时间主要集中在暑假到 12 月考试前。</p>
+<hr>
+<h2 id="2-月：确定考研，买书"><a href="#2-月：确定考研，买书" class="headerlink" title="2 月：确定考研，买书"></a>2 月：确定考研，买书</h2><p>过年那段时间决定考研。最开始想考成电计算机，后面才转成东南网安。</p>
+<p>2 月 26 号把参考书买齐，顺手把考试时间记在手机日历里。从这一步开始，才算真正进入备考状态。</p>
+<p>这个阶段主要做了两件事：</p>
+<ul>
+<li>先把院校和专业的大方向定下来</li>
+<li>把基础资料和参考书准备好</li>
+</ul>
+<p>当时还谈不上复习方法，更多是先启动。</p>
+<hr>
+<h2 id="2-3-月：在家复习，效率不高"><a href="#2-3-月：在家复习，效率不高" class="headerlink" title="2-3 月：在家复习，效率不高"></a>2-3 月：在家复习，效率不高</h2><p>这段时间基本在家。作息比较松，通常下午两点开始，晚上十点结束，中间手机和走神比较多，整体效率一般。</p>
+<p>具体状态大概是：</p>
+<ul>
+<li>数学看得慢，容易走神</li>
+<li>英语单词反复背反复忘</li>
+<li>专业课一开始不知道重点</li>
+</ul>
+<p>回头看，这两个月最大的问题不是学得少，而是节奏没建立起来。每天坐在桌前的时间不算短，但真正有效输出不多。</p>
+<hr>
+<h2 id="4-6-月：回学校后进入稳定节奏"><a href="#4-6-月：回学校后进入稳定节奏" class="headerlink" title="4-6 月：回学校后进入稳定节奏"></a>4-6 月：回学校后进入稳定节奏</h2><p>回学校以后，作息还是比较佛系。通常中午起床，下午两点开始学，到晚上十点回宿舍。偶尔也会打游戏，但整体进度开始往前走了。</p>
+<p>这个阶段的主要进度：</p>
+<ul>
+<li>数学：高数上册过完，开始做 660</li>
+<li>英语：每天保持一篇真题阅读</li>
+<li>专业课：还在按原目标院校准备</li>
+</ul>
+<p>这一阶段的意义不在于强度高，而在于开始有持续输入。虽然效率不算很高，但没有完全停下来。</p>
+<hr>
+<h2 id="7-8-月：暑假阶段是整个初试复习里最有效的一段"><a href="#7-8-月：暑假阶段是整个初试复习里最有效的一段" class="headerlink" title="7-8 月：暑假阶段是整个初试复习里最有效的一段"></a>7-8 月：暑假阶段是整个初试复习里最有效的一段</h2><p>暑假我没回家躺着，而是在家附近找了付费自习室。作息基本是下午 2 点到晚上 10 点在自习室，中午休息。虽然依然不是早起型节奏，但这两个月效率明显比前面高。</p>
+<p>这段时间是我的主力提升期。</p>
+<p>暑假结束时的大致进度：</p>
+<ul>
+<li>数学：一轮结束，660 刷完一遍</li>
+<li>英语：阅读做完一遍</li>
+<li>专业课：改成东南网安参考书，过完一轮并开始做题</li>
+<li>政治：8 月底开始跟徐涛，做 1000 题</li>
+</ul>
+<p>中间印象比较深的一次是 8 月做数学真题只拿到 85 分。当时确实有点烦，但最后还是回去把错题一点点拆了。现在看，这种阶段性低分其实很正常，关键是后面有没有把问题落实掉。</p>
+<hr>
+<h2 id="9-10-月：时间开始不够，用整天复习"><a href="#9-10-月：时间开始不够，用整天复习" class="headerlink" title="9-10 月：时间开始不够，用整天复习"></a>9-10 月：时间开始不够，用整天复习</h2><p>到了 9 月以后，明显感觉时间不够了，所以开始把上午也用起来。那段时间基本是：</p>
+<ul>
+<li>8:30-9:00 到图书馆</li>
+<li>中午简单休息</li>
+<li>晚上到闭馆</li>
+</ul>
+<p>这个阶段的重点变成了真题和查漏补缺。</p>
+<p>安排大致如下：</p>
+<ul>
+<li>数学：整套真题限时做</li>
+<li>英语：二刷阅读，开始准备作文</li>
+<li>专业课：反复做真题和核心题</li>
+<li>政治：二刷 1000 题，开始背诵</li>
+</ul>
+<p>10 月完成报名，之后心态上会更明确一些，因为这个时候已经没有退路，只能往前推。</p>
+<hr>
+<h2 id="11-月：压力最大的一段"><a href="#11-月：压力最大的一段" class="headerlink" title="11 月：压力最大的一段"></a>11 月：压力最大的一段</h2><p>11 月是整个备考过程中最难受的阶段。各科都还没到“稳”的程度，但离考试已经很近了。</p>
+<p>当时的情况大概是：</p>
+<ul>
+<li>肖八选择题平均 28 分左右</li>
+<li>数学真题大多在 110-120</li>
+<li>英语阅读波动比较大</li>
+<li>睡眠和情绪都开始受影响</li>
+</ul>
+<p>这个月其实没有什么特别巧的方法，核心就是继续做题、继续改错、继续背。</p>
+<p>我那时候最有用的做法是：</p>
+<ul>
+<li>数学重点回看真题错题</li>
+<li>英语不要再无限加新内容，稳定阅读和作文</li>
+<li>政治开始集中背主观题素材</li>
+<li>专业课继续保持熟练度</li>
+</ul>
+<p>11 月最容易出现的问题不是不会，而是怀疑自己。这个阶段如果节奏乱了，后面很难收回来。</p>
+<hr>
+<h2 id="12-月：最后冲刺阶段"><a href="#12-月：最后冲刺阶段" class="headerlink" title="12 月：最后冲刺阶段"></a>12 月：最后冲刺阶段</h2><p>12 月之后，复习基本进入收口。</p>
+<p>当时我的处理方式是：</p>
+<ul>
+<li>数学：只看错题本、真题错题和重点题型</li>
+<li>英语：背作文模板，保持手感</li>
+<li>政治：集中背肖四</li>
+<li>专业课：只看核心考点和自己容易忘的部分</li>
+</ul>
+<p>这个阶段不适合大规模换资料，也不适合再开新体系。重点只有一个：把已经学过的东西尽量变熟。</p>
+<hr>
+<h2 id="考试当天情况"><a href="#考试当天情况" class="headerlink" title="考试当天情况"></a>考试当天情况</h2><h3 id="政治"><a href="#政治" class="headerlink" title="政治"></a>政治</h3><p>政治最大的感受是：肖四没有完全押中，主观题不能照抄模板，只能自己组织。</p>
+<p>选择题做完以后就觉得一般，不算特别稳。考完出来，大家脸色都差不多，说明这场普遍都不轻松。</p>
+<h3 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h3><p>英语是我考场上最难受的一门。</p>
+<p>实际感觉是：</p>
+<ul>
+<li>完形一开始就不顺</li>
+<li>阅读前三篇还能做，第四篇比较吃力</li>
+<li>翻译做得很卡</li>
+<li>大作文审题也花了不少时间</li>
+</ul>
+<p>交卷的时候已经能确定，英语不会太好看。</p>
+<h3 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h3><p>数学的感觉比较典型：选择填空相对顺，大题不顺。</p>
+<p>具体情况：</p>
+<ul>
+<li>选择填空做得比较舒服</li>
+<li>有一道证明题没完全打开</li>
+<li>一道曲面积分算了两遍都不对</li>
+<li>概率论最后一问直接放了</li>
+</ul>
+<p>所以数学整体不是“不会做”，而是大题完成度不够。</p>
+<h3 id="专业课"><a href="#专业课" class="headerlink" title="专业课"></a>专业课</h3><p>专业课是我四门里状态最好的一门。</p>
+<p>卷子结构以选择和大题为主，没有名词解释。选择里有一些参考书原题，大题虽然不是原题，但考点基本都复习到了，所以写得比较顺。</p>
+<p>这一门考完以后，心里大概知道：专业课不会拖后腿。</p>
+<hr>
+<h2 id="考后判断"><a href="#考后判断" class="headerlink" title="考后判断"></a>考后判断</h2><p>考完当天我的判断很直接：</p>
+<ul>
+<li>英语最差</li>
+<li>数学中档偏下</li>
+<li>政治一般</li>
+<li>专业课最好</li>
+</ul>
+<p>这个判断后来基本也和出分情况接近。</p>
+<p>考完之后我没有再继续纠结标准答案，直接收拾东西回家。对初试来说，考完就结束了，继续反复想也没有意义。</p>
+<hr>
+<h2 id="这段经历里对后来人最有参考价值的几点"><a href="#这段经历里对后来人最有参考价值的几点" class="headerlink" title="这段经历里对后来人最有参考价值的几点"></a>这段经历里对后来人最有参考价值的几点</h2><h3 id="1-前期状态一般，不代表后面救不回来"><a href="#1-前期状态一般，不代表后面救不回来" class="headerlink" title="1. 前期状态一般，不代表后面救不回来"></a>1. 前期状态一般，不代表后面救不回来</h3><p>我前期效率并不高，真正发力是在暑假以后。只要后面节奏建立起来，还是能把进度追上。</p>
+<h3 id="2-暑假阶段非常关键"><a href="#2-暑假阶段非常关键" class="headerlink" title="2. 暑假阶段非常关键"></a>2. 暑假阶段非常关键</h3><p>如果让我回看整个初试准备阶段，最重要的一段就是暑假。很多基础积累、题感建立、专业课切换，都是在这两个月完成的。</p>
+<h3 id="3-真题一定要早点进入"><a href="#3-真题一定要早点进入" class="headerlink" title="3. 真题一定要早点进入"></a>3. 真题一定要早点进入</h3><p>尤其是数学和专业课，真题能帮你尽快发现自己到底差在哪，而不是一直停留在“感觉学过了”。</p>
+<h3 id="4-到后期不要贪多"><a href="#4-到后期不要贪多" class="headerlink" title="4. 到后期不要贪多"></a>4. 到后期不要贪多</h3><p>11 月和 12 月最忌讳乱换资料、乱追进度。后期最重要的是收口，不是扩张。</p>
+<hr>
+<h2 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h2><p>这次初试如果用一句话概括，就是：前期普通，中期提速，后期硬顶，最后专业课兜底。</p>
+<p>没有特别标准的高强度励志模板，也没有完全失控。整体就是一段比较真实的备考过程。</p>
+<p>如果你也在准备类似的考试，我觉得最重要的不是复制别人的作息，而是尽快找到自己能长期执行的节奏，然后把关键阶段守住。</p>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>东南大学</tag>
+        <tag>初试经验</tag>
+        <tag>备考经历</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 博客损坏后的恢复记录：问题排查和修复过程</title>
+    <url>/My_Blog/2026/04/05/record-of-hexo-blog-repair/</url>
+    <content><![CDATA[<h2 id="这次问题的起点"><a href="#这次问题的起点" class="headerlink" title="这次问题的起点"></a>这次问题的起点</h2><p>这次博客出问题，不是简单的样式小故障，而是本地项目损坏后，我重新从远端拉代码，结果发现仓库并不是一份完整可恢复的版本。</p>
+<p>直接表现是：</p>
+<ul>
+<li>主题相关自定义内容丢失</li>
+<li>一些页面和功能不能正常使用</li>
+<li>部分资源在 GitHub Pages 子路径下失效</li>
+</ul>
+<p>这篇就按问题排查顺序把修复过程记下来。</p>
+<hr>
+<h2 id="第一类问题：主题目录被当成了子模块"><a href="#第一类问题：主题目录被当成了子模块" class="headerlink" title="第一类问题：主题目录被当成了子模块"></a>第一类问题：主题目录被当成了子模块</h2><p>最开始最明显的问题，是 <code>themes/anzhiyu</code> 目录里的很多自定义内容都没了。</p>
+<p>排查后发现，根源是主题目录自带 <code>.git</code>，导致它在主仓库里被当成了子模块处理。这样一来，主仓库里保存的不是主题源码本身，而只是一个指针。</p>
+<p>这会直接导致两个后果：</p>
+<ul>
+<li>主题里的本地修改不会跟着主仓库正常保存</li>
+<li>换机器或重新拉仓库时，主题目录很容易不完整</li>
+</ul>
+<h3 id="处理方式"><a href="#处理方式" class="headerlink" title="处理方式"></a>处理方式</h3><p>我当时做的处理是：</p>
+<ol>
+<li>重新拉取主题源码</li>
+<li>删除 <code>themes/anzhiyu/.git</code></li>
+<li>重新把主题目录纳入主仓库管理</li>
+<li>补齐依赖并重新生成站点</li>
+</ol>
+<p>这个问题本质上不是 Hexo 本身的问题，而是仓库结构管理的问题。</p>
+<hr>
+<h2 id="第二类问题：子路径部署导致资源和跳转异常"><a href="#第二类问题：子路径部署导致资源和跳转异常" class="headerlink" title="第二类问题：子路径部署导致资源和跳转异常"></a>第二类问题：子路径部署导致资源和跳转异常</h2><p>博客部署在 GitHub Pages 的子路径下，比如：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">/My_Blog/</span><br></pre></td></tr></table></figure>
+
+<p>这类部署方式最常见的问题就是：<br>代码里如果写了根路径 <code>/xxx</code>，在本地也许没问题，上线后就容易出错。</p>
+<h3 id="直接暴露出来的现象"><a href="#直接暴露出来的现象" class="headerlink" title="直接暴露出来的现象"></a>直接暴露出来的现象</h3><ul>
+<li>“随便逛逛”跳转异常</li>
+<li>音乐馆页面异常</li>
+<li>某些脚本和 JSON 文件加载失败</li>
+</ul>
+<p>这些问题表面上看是不同功能坏了，实际上根源一致：<strong>路径写死了</strong>。</p>
+<hr>
+<h2 id="问题-1：随机文章功能异常"><a href="#问题-1：随机文章功能异常" class="headerlink" title="问题 1：随机文章功能异常"></a>问题 1：随机文章功能异常</h2><p>“随便逛逛”这个功能当时一度会跳 404。</p>
+<p>排查后发现有两个点：</p>
+<h3 id="1-生成脚本本身有容错问题"><a href="#1-生成脚本本身有容错问题" class="headerlink" title="1. 生成脚本本身有容错问题"></a>1. 生成脚本本身有容错问题</h3><p>随机文章脚本在遍历友链数据时，没有处理空数组或缺失字段，导致生成阶段就可能出错。</p>
+<h3 id="2-跳转路径没有考虑子路径部署"><a href="#2-跳转路径没有考虑子路径部署" class="headerlink" title="2. 跳转路径没有考虑子路径部署"></a>2. 跳转路径没有考虑子路径部署</h3><p>脚本里直接按网站根目录拼接链接，这在 <code>/My_Blog/</code> 这种场景下就会出问题。</p>
+<h3 id="修复思路"><a href="#修复思路" class="headerlink" title="修复思路"></a>修复思路</h3><p>我做的修复主要是：</p>
+<ul>
+<li>给数据遍历补容错</li>
+<li>所有跳转路径改成基于站点根目录拼接</li>
+</ul>
+<p>这类问题的经验很简单：<br>只要项目不是部署在域名根目录，就尽量不要手写绝对路径。</p>
+<hr>
+<h2 id="问题-2：音乐馆页面和歌单切换异常"><a href="#问题-2：音乐馆页面和歌单切换异常" class="headerlink" title="问题 2：音乐馆页面和歌单切换异常"></a>问题 2：音乐馆页面和歌单切换异常</h2><p>音乐馆当时的问题更明显，直接表现为页面异常、歌单加载失败。</p>
+<p>排查后发现主要还是路径判断和资源拉取的问题。</p>
+<h3 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a>具体问题</h3><ul>
+<li>页面逻辑直接判断路径是否以 <code>/music/</code> 开头</li>
+<li>实际部署路径是 <code>/My_Blog/music/</code></li>
+<li>获取歌单数据时，直接请求 <code>/json/music.json</code></li>
+</ul>
+<p>这样一来，本地可能能跑，上线就会请求到错误地址。</p>
+<h3 id="修复方式"><a href="#修复方式" class="headerlink" title="修复方式"></a>修复方式</h3><p>处理逻辑主要是两点：</p>
+<ul>
+<li>路径判断不要写死根目录形式</li>
+<li>异步请求统一基于全局 <code>root</code> 配置拼接</li>
+</ul>
+<p>修完之后，音乐馆和歌单切换才恢复正常。</p>
+<hr>
+<h2 id="问题-3：控制台和界面局部样式异常"><a href="#问题-3：控制台和界面局部样式异常" class="headerlink" title="问题 3：控制台和界面局部样式异常"></a>问题 3：控制台和界面局部样式异常</h2><p>除了功能问题，还有一些样式问题，比如浅色模式下控制台文字显示不正常。</p>
+<p>这类问题排查起来虽然不如路径问题复杂，但也很烦，因为通常不是“功能完全失效”，而是样式优先级互相覆盖。</p>
+<p>我的处理方式是：</p>
+<ul>
+<li>不在零散位置临时补样式</li>
+<li>用单独覆盖文件集中处理</li>
+<li>尽量限制作用范围，避免误伤别的页面</li>
+</ul>
+<p>这种方式后面维护起来更清晰。</p>
+<hr>
+<h2 id="这次恢复里最关键的经验"><a href="#这次恢复里最关键的经验" class="headerlink" title="这次恢复里最关键的经验"></a>这次恢复里最关键的经验</h2><h3 id="1-主题目录不要带独立-Git-历史"><a href="#1-主题目录不要带独立-Git-历史" class="headerlink" title="1. 主题目录不要带独立 Git 历史"></a>1. 主题目录不要带独立 Git 历史</h3><p>如果主题目录本身带 <code>.git</code>，后续非常容易出子模块问题。除非你就是要用子模块管理，否则最好一开始就处理掉。</p>
+<h3 id="2-子路径部署时，不要写死"><a href="#2-子路径部署时，不要写死" class="headerlink" title="2. 子路径部署时，不要写死 /"></a>2. 子路径部署时，不要写死 <code>/</code></h3><p>只要站点不是挂在根域名，就尽量统一从配置里的根路径出发。</p>
+<h3 id="3-问题排查要按层次来"><a href="#3-问题排查要按层次来" class="headerlink" title="3. 问题排查要按层次来"></a>3. 问题排查要按层次来</h3><p>我这次后面比较顺，是因为排查顺序比较明确：</p>
+<ul>
+<li>先看仓库结构是不是完整</li>
+<li>再看依赖和生成过程</li>
+<li>再看路径</li>
+<li>最后处理样式和局部功能</li>
+</ul>
+<p>如果一开始就直接在页面上东改一点西改一点，很容易越改越乱。</p>
+<hr>
+<h2 id="这篇记录想留下什么"><a href="#这篇记录想留下什么" class="headerlink" title="这篇记录想留下什么"></a>这篇记录想留下什么</h2><p>这次恢复过程里，真正重要的不是“某个按钮为什么坏了”，而是下面这几个通用问题：</p>
+<ul>
+<li>仓库到底是不是完整可恢复的</li>
+<li>主题修改有没有被正确纳入版本管理</li>
+<li>部署路径有没有统一处理</li>
+<li>自定义修改有没有留痕</li>
+</ul>
+<p>只要这几项没处理好，博客这类项目在换机器、重装环境、重新部署的时候就很容易反复出问题。</p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次博客恢复说到底做了三件事：</p>
+<ol>
+<li>把仓库结构理顺</li>
+<li>把依赖补齐</li>
+<li>把所有路径和功能问题逐个修掉</li>
+</ol>
+<p>如果后面还有类似情况，我自己再回来看这篇，至少能快速知道排查应该从哪开始，而不是重新踩一遍之前的坑。</p>
+]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>AnZhiYu</tag>
       </tags>
   </entry>
   <entry>
@@ -1014,143 +1330,10 @@
         <category>技术教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>Cpp</tag>
         <tag>考研复试</tag>
-        <tag>类与对象</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建记录：Hexo + AnZhiYu + GitHub Pages</title>
-    <url>/My_Blog/2026/04/04/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇记录我把博客从零搭起来的过程，主要写技术选型、环境准备、安装步骤和后续配置。内容不追求官方文档式完整，重点是把我实际走过的流程写清楚，方便自己以后重搭，也给后来的人做参考。</p>
-<hr>
-<h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p>我最后用的是这套：</p>
-<ul>
-<li>Hexo 8.1.1</li>
-<li>AnZhiYu 主题</li>
-<li>GitHub Pages 托管</li>
-</ul>
-<p>选择这套的原因很实际：</p>
-<ul>
-<li>Hexo 是静态博客，部署简单</li>
-<li>主题生态成熟</li>
-<li>GitHub Pages 免费，够用</li>
-</ul>
-<p>如果只是做个人博客、学习记录和技术笔记，这套方案基本够了。</p>
-<hr>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>开始之前，本地需要有：</p>
-<ul>
-<li>Node.js</li>
-<li>npm</li>
-<li>Git</li>
-</ul>
-<p>可以先检查版本：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
-
-<p>如果这三样都正常，后面安装 Hexo 会顺很多。</p>
-<hr>
-<h2 id="初始化-Hexo-项目"><a href="#初始化-Hexo-项目" class="headerlink" title="初始化 Hexo 项目"></a>初始化 Hexo 项目</h2><p>先全局安装 Hexo CLI：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>然后初始化博客：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>本地预览：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>这时候访问 <code>http://localhost:4000</code>，默认页面就能起来。</p>
-<hr>
-<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>我这里用的是 AnZhiYu。</p>
-<p>安装命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu</span><br></pre></td></tr></table></figure>
-
-<p>然后在站点根目录的 <code>_config.yml</code> 里把主题改成：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">anzhiyu</span></span><br></pre></td></tr></table></figure>
-
-<p>主题依赖也要补上：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus</span><br></pre></td></tr></table></figure>
-
-<p>这一步做完之后，主题基本就能跑起来。</p>
-<hr>
-<h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><p>主要会改两个配置文件：</p>
-<ul>
-<li><code>_config.yml</code></li>
-<li><code>_config.anzhiyu.yml</code> 或主题配置文件</li>
-</ul>
-<p>站点级别一般要先把这些配好：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Echo&#x27;s</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">个人学习记录</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Echo</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://yourname.github.io/repo</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/repo/</span></span><br></pre></td></tr></table></figure>
-
-<p>这里最容易出问题的是 <code>url</code> 和 <code>root</code>。</p>
-<p>如果你部署在 GitHub Pages 仓库子路径下，比如：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">https://用户名.github.io/My_Blog/</span><br></pre></td></tr></table></figure>
-
-<p>那 <code>root</code> 就必须是：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">root:</span> <span class="string">/My_Blog/</span></span><br></pre></td></tr></table></figure>
-
-<p>这一项配错，后面很多静态资源和页面跳转都会出问题。</p>
-<hr>
-<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p>我实际装过这些插件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git</span><br><span class="line">npm install hexo-tag-aplayer</span><br><span class="line">npm install hexo-butterfly-envelope</span><br></pre></td></tr></table></figure>
-
-<p>分别对应：</p>
-<ul>
-<li>GitHub 部署</li>
-<li>音乐播放器</li>
-<li>评论区信封样式</li>
-</ul>
-<p>Hexo 项目很容易出现“本地能跑，换电脑就缺依赖”的情况，所以装过的插件最好都记下来。</p>
-<hr>
-<h2 id="部署到-GitHub-Pages"><a href="#部署到-GitHub-Pages" class="headerlink" title="部署到 GitHub Pages"></a>部署到 GitHub Pages</h2><p>生成静态文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>部署：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>如果你在 <code>package.json</code> 里配了脚本，也可以直接用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run deploy</span><br></pre></td></tr></table></figure>
-
-<p>这一步的前提是 <code>_config.yml</code> 里的 <code>deploy</code> 配置正确，比如：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/yourname/repo.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="实际使用里我比较在意的几块"><a href="#实际使用里我比较在意的几块" class="headerlink" title="实际使用里我比较在意的几块"></a>实际使用里我比较在意的几块</h2><p>搭完之后，我主要花时间处理的是这些：</p>
-<ul>
-<li>顶部导航</li>
-<li>侧边栏信息</li>
-<li>评论系统</li>
-<li>音乐播放器</li>
-<li>页面样式细节</li>
-</ul>
-<p>AnZhiYu 的可配项很多，优点是能改的地方多，缺点是出问题时排查范围也更大。所以建议一开始不要一次性改太多，先保证站能稳定运行，再慢慢加功能。</p>
-<hr>
-<h2 id="这套方案的优点和问题"><a href="#这套方案的优点和问题" class="headerlink" title="这套方案的优点和问题"></a>这套方案的优点和问题</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>成本低</li>
-<li>部署快</li>
-<li>静态页面访问速度可以</li>
-<li>主题和插件比较丰富</li>
-</ul>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
-<li>配置项多，容易改乱</li>
-<li>子路径部署时路径问题很多</li>
-<li>主题升级后容易和自定义修改冲突</li>
-</ul>
-<p>如果只是轻量使用，优点大于问题；如果改动很多，后期维护成本会明显上来。</p>
-<hr>
-<h2 id="我后来总结的几个经验"><a href="#我后来总结的几个经验" class="headerlink" title="我后来总结的几个经验"></a>我后来总结的几个经验</h2><h3 id="1-子路径部署一定要先把-root-配对"><a href="#1-子路径部署一定要先把-root-配对" class="headerlink" title="1. 子路径部署一定要先把 root 配对"></a>1. 子路径部署一定要先把 <code>root</code> 配对</h3><p>这件事值得单独说一次。很多“页面 404”“资源丢失”“脚本失效”，根本原因都不是代码本身，而是路径没配对。</p>
-<h3 id="2-主题尽量不要无脑直接改核心文件"><a href="#2-主题尽量不要无脑直接改核心文件" class="headerlink" title="2. 主题尽量不要无脑直接改核心文件"></a>2. 主题尽量不要无脑直接改核心文件</h3><p>如果后面升级主题或者换设备，很容易忘掉自己改过哪些东西。能用额外覆盖文件处理的，就尽量不要直接散改。</p>
-<h3 id="3-每改完一个大功能就先-generate-一次"><a href="#3-每改完一个大功能就先-generate-一次" class="headerlink" title="3. 每改完一个大功能就先 generate 一次"></a>3. 每改完一个大功能就先 <code>generate</code> 一次</h3><p>不要攒一堆修改最后一起看，不然出问题时很难定位到底是哪一步弄坏的。</p>
-<hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次搭博客本身不算复杂，真正麻烦的是后面的配置、路径和自定义细节。</p>
-<p>如果只是想尽快把博客搭起来，Hexo + AnZhiYu + GitHub Pages 是一套可以直接上手的方案。<br>如果后面还要做很多魔改，那最好从一开始就把配置、依赖和修改记录整理好，不然后期维护会比较累。</p>
-]]></content>
-      <categories>
-        <category>技术教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
         <tag>教程</tag>
+        <tag>类与对象</tag>
       </tags>
   </entry>
   <entry>
@@ -1392,325 +1575,142 @@
         <category>考研</category>
       </categories>
       <tags>
-        <tag>东南大学</tag>
         <tag>考研复试</tag>
+        <tag>东南大学</tag>
         <tag>记录</tag>
       </tags>
   </entry>
   <entry>
-    <title>AI 编程工具使用记录（一）：Codex 从登录 OpenAI 到用 ccswitch 调 API</title>
-    <url>/My_Blog/2026/06/12/Codex%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%EF%BC%9A%E4%BB%8E%E7%99%BB%E5%BD%95%20OpenAI%20%E5%88%B0%E7%94%A8%20ccswitch%20%E8%B0%83%20API/</url>
-    <content><![CDATA[<h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><p>这是“AI 编程工具使用记录”系列的第一篇。</p>
-<p>这个系列主要记录我自己折腾 AI 编程工具的过程，不追求写成完整教程，更偏向实际使用后的取舍和总结。</p>
-<p>目前这个系列暂时分成两篇：</p>
+    <title>博客搭建记录：Hexo + AnZhiYu + GitHub Pages</title>
+    <url>/My_Blog/2026/04/04/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%85%A8%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇记录我把博客从零搭起来的过程，主要写技术选型、环境准备、安装步骤和后续配置。内容不追求官方文档式完整，重点是把我实际走过的流程写清楚，方便自己以后重搭，也给后来的人做参考。</p>
+<hr>
+<h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p>我最后用的是这套：</p>
 <ul>
-<li>第一篇：Codex 从登录 OpenAI 到用 <code>ccswitch</code> 调 API</li>
-<li>第二篇：Claude Code 和 Codex 对比，为什么最后选择 Codex</li>
+<li>Hexo 8.1.1</li>
+<li>AnZhiYu 主题</li>
+<li>GitHub Pages 托管</li>
 </ul>
-<p>这一篇先写 Codex 本身的使用方式，下一篇再把它和 Claude Code 放在一起比较。</p>
-<hr>
-<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇记录一下我最近使用 Codex 的过程，主要写两种用法：</p>
+<p>选择这套的原因很实际：</p>
 <ul>
-<li>直接登录 OpenAI 账号使用</li>
-<li>通过 <code>ccswitch</code> 调用 API 使用</li>
+<li>Hexo 是静态博客，部署简单</li>
+<li>主题生态成熟</li>
+<li>GitHub Pages 免费，够用</li>
 </ul>
-<p>一开始我用的是第一种方式，因为上手最简单，基本就是登录账号，然后直接在终端里让 Codex 帮我看项目、改代码、跑命令。后面用了一段时间之后，我慢慢改成了第二种方式，也就是用 <code>ccswitch</code> 管理接口和模型，再让 Codex 走 API。</p>
-<p>这篇不写成官方教程，主要记录我自己的使用体验和取舍。</p>
+<p>如果只是做个人博客、学习记录和技术笔记，这套方案基本够了。</p>
 <hr>
-<h2 id="最开始：直接登录-OpenAI-账号"><a href="#最开始：直接登录-OpenAI-账号" class="headerlink" title="最开始：直接登录 OpenAI 账号"></a>最开始：直接登录 OpenAI 账号</h2><p>刚开始接触 Codex 的时候，我的想法很简单：先跑起来再说。</p>
-<p>这种方式的流程比较直观：</p>
-<ol>
-<li>安装 Codex CLI</li>
-<li>在终端里启动 Codex</li>
-<li>按提示登录 OpenAI 账号</li>
-<li>授权之后开始使用</li>
-</ol>
-<p>优点也很明显：</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>开始之前，本地需要有：</p>
 <ul>
-<li>配置少</li>
-<li>不需要自己管理 API Key</li>
-<li>对新手比较友好</li>
-<li>登录成功后基本可以直接进入工作流</li>
+<li>Node.js</li>
+<li>npm</li>
+<li>Git</li>
 </ul>
-<p>如果只是临时体验，或者只是让 Codex 帮忙解释一段代码、改一个小 bug，这种方式确实很舒服。</p>
-<hr>
-<h2 id="直接登录方式的问题"><a href="#直接登录方式的问题" class="headerlink" title="直接登录方式的问题"></a>直接登录方式的问题</h2><p>但用久一点之后，我发现这种方式也有一些不太适合我的地方。</p>
-<p>首先是可控性不够强。<br>我更希望自己能明确知道当前走的是哪个接口、哪个模型、哪个服务地址，以及后续要不要切换到别的配置。</p>
-<p>其次是环境迁移不够顺手。<br>如果换电脑、换终端环境，或者在不同项目之间切换，我不太想每次都重新处理登录状态。登录账号这种方式适合“单点使用”，但不太适合我这种经常折腾开发环境的人。</p>
-<p>还有一点是心理上的：<br>我更习惯把 AI 工具当成开发链路里的一个组件，而不是一个绑定账号状态的黑盒。既然它最终也是在和模型交互，那我更希望这部分配置能像数据库连接、部署密钥一样被明确管理。</p>
-<hr>
-<h2 id="后来：用-ccswitch-调-API"><a href="#后来：用-ccswitch-调-API" class="headerlink" title="后来：用 ccswitch 调 API"></a>后来：用 ccswitch 调 API</h2><p>后面我开始改成用 <code>ccswitch</code> 来管理 API 调用。</p>
-<p>我这里对它的定位很简单：<br><code>ccswitch</code> 更像是一个“接口切换器”或者“配置中间层”，把模型、接口地址、密钥这些东西统一管起来。Codex 需要调用模型时，就不再完全依赖账号登录状态，而是走我配置好的 API。</p>
-<p>这样做之后，整个使用方式变成了：</p>
-<ol>
-<li>在 <code>ccswitch</code> 里配置 API Key</li>
-<li>配置接口地址和默认模型</li>
-<li>根据需要切换不同的服务或模型</li>
-<li>让 Codex 通过 API 完成代码阅读、修改和命令执行</li>
-</ol>
-<p>这个流程比直接登录稍微麻烦一点，但一旦配置好，后面会更稳定。</p>
-<hr>
-<h2 id="两种方式的对比"><a href="#两种方式的对比" class="headerlink" title="两种方式的对比"></a>两种方式的对比</h2><p>如果简单对比，我会这样理解：</p>
-<table>
-<thead>
-<tr>
-<th>使用方式</th>
-<th>优点</th>
-<th>问题</th>
-<th>适合场景</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>登录 OpenAI 账号</td>
-<td>上手快、配置少、适合体验</td>
-<td>可控性弱、迁移不够顺手</td>
-<td>临时使用、轻量体验</td>
-</tr>
-<tr>
-<td><code>ccswitch</code> 调 API</td>
-<td>可控性强、方便切换、适合长期使用</td>
-<td>初始配置多一点</td>
-<td>长期开发、多环境、多模型切换</td>
-</tr>
-</tbody></table>
-<p>我不是说登录账号不好，而是它更像“开箱即用”的方案。<br><code>ccswitch</code> 调 API 则更像“工程化使用”的方案。</p>
-<p>如果只是偶尔用一下，直接登录就够了。<br>但如果打算把 Codex 放进日常开发流程里，经常让它读项目、改代码、跑测试、整理文档，那我更推荐后者。</p>
-<hr>
-<h2 id="为什么最后选择-ccswitch"><a href="#为什么最后选择-ccswitch" class="headerlink" title="为什么最后选择 ccswitch"></a>为什么最后选择 ccswitch</h2><p>我最后选择 <code>ccswitch</code>，主要是因为这几个原因。</p>
-<h3 id="1-配置更透明"><a href="#1-配置更透明" class="headerlink" title="1. 配置更透明"></a>1. 配置更透明</h3><p>API Key、接口地址、模型名称都能自己看见，也能自己管理。</p>
-<p>这对我很重要，因为我不想在使用工具时完全不知道它背后走的是什么配置。尤其是在不同模型、不同服务之间切换时，透明配置能减少很多不确定性。</p>
-<h3 id="2-切换更方便"><a href="#2-切换更方便" class="headerlink" title="2. 切换更方便"></a>2. 切换更方便</h3><p>有时候我只是想写文章、改 Markdown，不一定需要很强的模型。<br>有时候我要让 Codex 看比较复杂的项目、改一串代码、分析报错，这时候就希望换成更强的模型。</p>
-<p>用 <code>ccswitch</code> 之后，切换这件事会自然很多，不需要每次都重新折腾登录或者环境。</p>
-<h3 id="3-更适合长期使用"><a href="#3-更适合长期使用" class="headerlink" title="3. 更适合长期使用"></a>3. 更适合长期使用</h3><p>直接登录适合“现在马上用一下”。<br>API 配置适合“以后一直用”。</p>
-<p>对我来说，Codex 不是一个偶尔打开的玩具，而是可以放进日常开发流程里的工具。既然要长期用，那我就更希望它的配置方式稳定、可迁移、可维护。</p>
-<h3 id="4-更符合开发习惯"><a href="#4-更符合开发习惯" class="headerlink" title="4. 更符合开发习惯"></a>4. 更符合开发习惯</h3><p>开发里很多东西本来就是配置化的：</p>
-<ul>
-<li>数据库连接</li>
-<li>部署 Token</li>
-<li>GitHub Access Token</li>
-<li>环境变量</li>
-<li>CI&#x2F;CD Secrets</li>
-</ul>
-<p>所以把 Codex 的模型调用也配置化，对我来说更顺手。</p>
-<hr>
-<h2 id="实际使用时我怎么分工"><a href="#实际使用时我怎么分工" class="headerlink" title="实际使用时我怎么分工"></a>实际使用时我怎么分工</h2><p>现在我的使用方式大概是这样：</p>
-<ul>
-<li>小问题：直接让 Codex 看当前文件并解释</li>
-<li>改配置：让 Codex 先检查项目结构，再给出修改方案</li>
-<li>写文章：先给主题和风格，让它参考已有文章生成初稿</li>
-<li>修 bug：先让它复现或定位，再小范围修改</li>
-<li>清理项目：让它找冗余依赖、无用文件和配置残留</li>
-</ul>
-<p>这类任务都很适合 Codex，因为它不是单纯聊天，而是能结合本地项目上下文工作。</p>
-<p>比如这次博客项目清理，我就更喜欢让它先看 <code>package.json</code>、<code>_config.yml</code>、主题配置和文章目录，再决定哪些东西能删，哪些东西不能动。</p>
-<p>这种工作流比单纯复制代码到网页对话框里舒服很多。</p>
-<hr>
-<h2 id="使用-Codex-时的一点经验"><a href="#使用-Codex-时的一点经验" class="headerlink" title="使用 Codex 时的一点经验"></a>使用 Codex 时的一点经验</h2><p>用了一段时间之后，我觉得最重要的不是“让 AI 一次性把所有事做完”，而是要把任务拆清楚。</p>
-<p>比较舒服的提问方式是：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">先检查项目结构，找出可能冗余的地方，不要直接删除。</span><br></pre></td></tr></table></figure>
+<p>可以先检查版本：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
 
-<p>或者：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">参考现有文章风格，帮我新增一篇同风格文章，并运行构建验证。</span><br></pre></td></tr></table></figure>
-
-<p>这样 Codex 会更容易按步骤做事，也更不容易改到不该改的地方。</p>
-<p>如果一上来就说“帮我优化一下项目”，范围太大，它可能会不知道优化到什么程度才算合适。</p>
+<p>如果这三样都正常，后面安装 Hexo 会顺很多。</p>
 <hr>
-<h2 id="我的结论"><a href="#我的结论" class="headerlink" title="我的结论"></a>我的结论</h2><p>如果只想快速体验 Codex，直接登录 OpenAI 账号是最省事的方式。</p>
-<p>但如果是长期开发使用，我更推荐用 <code>ccswitch</code> 调 API。原因不是它更酷，而是它更可控、更稳定，也更符合开发者对工具链的管理习惯。</p>
-<p>简单说就是：</p>
+<h2 id="初始化-Hexo-项目"><a href="#初始化-Hexo-项目" class="headerlink" title="初始化 Hexo 项目"></a>初始化 Hexo 项目</h2><p>先全局安装 Hexo CLI：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>然后初始化博客：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>本地预览：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>这时候访问 <code>http://localhost:4000</code>，默认页面就能起来。</p>
+<hr>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>我这里用的是 AnZhiYu。</p>
+<p>安装命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu</span><br></pre></td></tr></table></figure>
+
+<p>然后在站点根目录的 <code>_config.yml</code> 里把主题改成：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">anzhiyu</span></span><br></pre></td></tr></table></figure>
+
+<p>主题依赖也要补上：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus</span><br></pre></td></tr></table></figure>
+
+<p>这一步做完之后，主题基本就能跑起来。</p>
+<hr>
+<h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><p>主要会改两个配置文件：</p>
 <ul>
-<li>想快速开始：登录 OpenAI 账号</li>
-<li>想长期使用：<code>ccswitch</code> 调 API</li>
+<li><code>_config.yml</code></li>
+<li><code>_config.anzhiyu.yml</code> 或主题配置文件</li>
 </ul>
-<p>我最后选择后者，是因为我希望 Codex 不只是一个临时助手，而是变成自己开发环境里一个可以长期维护的工具。</p>
+<p>站点级别一般要先把这些配好：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Echo&#x27;s</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">个人学习记录</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Echo</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://yourname.github.io/repo</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/repo/</span></span><br></pre></td></tr></table></figure>
+
+<p>这里最容易出问题的是 <code>url</code> 和 <code>root</code>。</p>
+<p>如果你部署在 GitHub Pages 仓库子路径下，比如：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">https://用户名.github.io/My_Blog/</span><br></pre></td></tr></table></figure>
+
+<p>那 <code>root</code> 就必须是：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">root:</span> <span class="string">/My_Blog/</span></span><br></pre></td></tr></table></figure>
+
+<p>这一项配错，后面很多静态资源和页面跳转都会出问题。</p>
+<hr>
+<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p>我实际装过这些插件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git</span><br><span class="line">npm install hexo-tag-aplayer</span><br><span class="line">npm install hexo-butterfly-envelope</span><br></pre></td></tr></table></figure>
+
+<p>分别对应：</p>
+<ul>
+<li>GitHub 部署</li>
+<li>音乐播放器</li>
+<li>评论区信封样式</li>
+</ul>
+<p>Hexo 项目很容易出现“本地能跑，换电脑就缺依赖”的情况，所以装过的插件最好都记下来。</p>
+<hr>
+<h2 id="部署到-GitHub-Pages"><a href="#部署到-GitHub-Pages" class="headerlink" title="部署到 GitHub Pages"></a>部署到 GitHub Pages</h2><p>生成静态文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>部署：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>如果你在 <code>package.json</code> 里配了脚本，也可以直接用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run deploy</span><br></pre></td></tr></table></figure>
+
+<p>这一步的前提是 <code>_config.yml</code> 里的 <code>deploy</code> 配置正确，比如：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/yourname/repo.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="实际使用里我比较在意的几块"><a href="#实际使用里我比较在意的几块" class="headerlink" title="实际使用里我比较在意的几块"></a>实际使用里我比较在意的几块</h2><p>搭完之后，我主要花时间处理的是这些：</p>
+<ul>
+<li>顶部导航</li>
+<li>侧边栏信息</li>
+<li>评论系统</li>
+<li>音乐播放器</li>
+<li>页面样式细节</li>
+</ul>
+<p>AnZhiYu 的可配项很多，优点是能改的地方多，缺点是出问题时排查范围也更大。所以建议一开始不要一次性改太多，先保证站能稳定运行，再慢慢加功能。</p>
+<hr>
+<h2 id="这套方案的优点和问题"><a href="#这套方案的优点和问题" class="headerlink" title="这套方案的优点和问题"></a>这套方案的优点和问题</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>成本低</li>
+<li>部署快</li>
+<li>静态页面访问速度可以</li>
+<li>主题和插件比较丰富</li>
+</ul>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>配置项多，容易改乱</li>
+<li>子路径部署时路径问题很多</li>
+<li>主题升级后容易和自定义修改冲突</li>
+</ul>
+<p>如果只是轻量使用，优点大于问题；如果改动很多，后期维护成本会明显上来。</p>
+<hr>
+<h2 id="我后来总结的几个经验"><a href="#我后来总结的几个经验" class="headerlink" title="我后来总结的几个经验"></a>我后来总结的几个经验</h2><h3 id="1-子路径部署一定要先把-root-配对"><a href="#1-子路径部署一定要先把-root-配对" class="headerlink" title="1. 子路径部署一定要先把 root 配对"></a>1. 子路径部署一定要先把 <code>root</code> 配对</h3><p>这件事值得单独说一次。很多“页面 404”“资源丢失”“脚本失效”，根本原因都不是代码本身，而是路径没配对。</p>
+<h3 id="2-主题尽量不要无脑直接改核心文件"><a href="#2-主题尽量不要无脑直接改核心文件" class="headerlink" title="2. 主题尽量不要无脑直接改核心文件"></a>2. 主题尽量不要无脑直接改核心文件</h3><p>如果后面升级主题或者换设备，很容易忘掉自己改过哪些东西。能用额外覆盖文件处理的，就尽量不要直接散改。</p>
+<h3 id="3-每改完一个大功能就先-generate-一次"><a href="#3-每改完一个大功能就先-generate-一次" class="headerlink" title="3. 每改完一个大功能就先 generate 一次"></a>3. 每改完一个大功能就先 <code>generate</code> 一次</h3><p>不要攒一堆修改最后一起看，不然出问题时很难定位到底是哪一步弄坏的。</p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次搭博客本身不算复杂，真正麻烦的是后面的配置、路径和自定义细节。</p>
+<p>如果只是想尽快把博客搭起来，Hexo + AnZhiYu + GitHub Pages 是一套可以直接上手的方案。<br>如果后面还要做很多魔改，那最好从一开始就把配置、依赖和修改记录整理好，不然后期维护会比较累。</p>
 ]]></content>
       <categories>
         <category>技术教程</category>
       </categories>
       <tags>
-        <tag>Codex</tag>
-        <tag>OpenAI</tag>
-        <tag>AI工具</tag>
-        <tag>开发效率</tag>
-        <tag>AI编程工具使用记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AI 编程工具使用记录（二）：Claude Code 和 Codex 对比，为什么我最后选择 Codex</title>
-    <url>/My_Blog/2026/06/12/Claude%20Code%20%E5%92%8C%20Codex%20%E4%BD%BF%E7%94%A8%E5%AF%B9%E6%AF%94%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E6%9C%80%E5%90%8E%E9%80%89%E6%8B%A9%20Codex/</url>
-    <content><![CDATA[<h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><p>这是“AI 编程工具使用记录”系列的第二篇。</p>
-<p>上一篇主要写 Codex 的使用方式：从直接登录 OpenAI 账号，到后来通过 <code>ccswitch</code> 调 API。<br>这一篇继续往后写，把 Claude Code 和 Codex 放在一起对比，最后说明为什么我还是选择 Codex 作为主力。</p>
-<p>这个系列不是官方教程，更像是我自己的工具迁移记录。</p>
-<hr>
-<h2 id="这篇写什么"><a href="#这篇写什么" class="headerlink" title="这篇写什么"></a>这篇写什么</h2><p>这篇记录一下我对 Claude Code 和 Codex 的使用感受。</p>
-<p>这两个工具的定位都很接近：都是面向开发者的 AI 编程助手，都不是单纯聊天，而是可以结合项目文件、终端命令和代码修改来工作。</p>
-<p>我一开始并没有特别明确地站队，只是都试了一下。用下来之后，我最后更倾向于把 Codex 放进自己的日常开发流程里。</p>
-<p>这篇不做参数表式的硬评测，也不写成“谁吊打谁”。更多是从我自己的使用习惯出发，写清楚为什么最后选择 Codex。</p>
-<hr>
-<h2 id="我对这类工具的期待"><a href="#我对这类工具的期待" class="headerlink" title="我对这类工具的期待"></a>我对这类工具的期待</h2><p>在对比之前，先说一下我对 AI 编程工具的期待。</p>
-<p>我不太需要它只做一个“高级搜索引擎”，也不希望它只是给我贴一段代码。我更希望它能做到：</p>
-<ul>
-<li>看懂当前项目结构</li>
-<li>知道哪些文件该改，哪些文件不该动</li>
-<li>修改之前先说明思路</li>
-<li>修改之后能跑构建或测试验证</li>
-<li>出问题时能继续定位，而不是让我重新描述一遍</li>
-</ul>
-<p>也就是说，我想要的不是一个单次问答工具，而是一个能参与项目维护的终端助手。</p>
-<p>从这个角度看，Claude Code 和 Codex 都比普通网页对话更适合写代码。</p>
-<hr>
-<h2 id="Claude-Code-给我的第一印象"><a href="#Claude-Code-给我的第一印象" class="headerlink" title="Claude Code 给我的第一印象"></a>Claude Code 给我的第一印象</h2><p>Claude Code 的第一印象是比较顺手。</p>
-<p>它很适合做这种事情：</p>
-<ul>
-<li>快速理解一个文件</li>
-<li>根据自然语言改一段代码</li>
-<li>帮忙解释报错</li>
-<li>生成一段比较完整的实现思路</li>
-</ul>
-<p>Claude 系列模型在长文本理解和表达上一直给我感觉比较稳，所以 Claude Code 在阅读代码、总结逻辑、解释项目结构时，体验是不错的。</p>
-<p>如果只是让它看一段代码，然后问“这里为什么报错”“这个函数做了什么”“帮我改成另一种写法”，它完成得很自然。</p>
-<hr>
-<h2 id="Claude-Code-用起来的问题"><a href="#Claude-Code-用起来的问题" class="headerlink" title="Claude Code 用起来的问题"></a>Claude Code 用起来的问题</h2><p>但真正放到我的开发流程里之后，我会遇到几个不太舒服的点。</p>
-<h3 id="1-工作流不够贴合我的习惯"><a href="#1-工作流不够贴合我的习惯" class="headerlink" title="1. 工作流不够贴合我的习惯"></a>1. 工作流不够贴合我的习惯</h3><p>我更习惯先让工具检查项目，再给出计划，然后小范围修改，最后跑命令验证。</p>
-<p>Claude Code 当然也能做这些事，但在我的体验里，它更像是一个很强的代码对话助手，而不是我最终想固定下来的“项目维护工具”。</p>
-<p>它适合快速帮我解决一个点，但我不太想把整个仓库清理、配置调整、文章生成、构建验证这些连续流程都交给它。</p>
-<h3 id="2-配置管理不是我最喜欢的方式"><a href="#2-配置管理不是我最喜欢的方式" class="headerlink" title="2. 配置管理不是我最喜欢的方式"></a>2. 配置管理不是我最喜欢的方式</h3><p>我现在更倾向于把模型调用这件事配置化，比如 API、模型、服务地址都能自己管理。</p>
-<p>如果一个工具更依赖自己的账号体系和默认配置，我会觉得可控性弱一点。不是不能用，而是不太符合我现在对开发工具的管理方式。</p>
-<p>我更希望它像 Git、Node、Hexo 这类工具一样：配置明确，行为透明，换环境时也比较容易迁移。</p>
-<h3 id="3-接口生态反而是-Claude-Code-更灵活"><a href="#3-接口生态反而是-Claude-Code-更灵活" class="headerlink" title="3. 接口生态反而是 Claude Code 更灵活"></a>3. 接口生态反而是 Claude Code 更灵活</h3><p>这里要单独说一下接口生态。</p>
-<p>如果只看模型接入范围，Claude Code 其实更灵活。它不只局限在一种接口形态里，很多第三方模型服务都可以折腾接入，比如 DeepSeek、小米 MiMo 这类模型。</p>
-<p>Codex 这边我目前的使用感受是，走 API 时主要还是围绕 OpenAI 的 Responses 接口来用。这样做的好处是路径更标准，和 OpenAI 自家的模型配合更顺；但问题也很明显：如果想随手切到 DeepSeek、小米 MiMo 这类模型，空间就没有 Claude Code 那么大。</p>
-<p>所以如果一个人的核心需求是“尽可能多地接不同模型”，那 Claude Code 在这一点上确实更有优势。</p>
-<p>但对我来说，模型接入范围不是唯一标准。<br>我更看重的是它放进真实项目之后，能不能稳定地读项目、改文件、跑验证、收尾。</p>
-<p>这也是为什么即使 Claude Code 的接口生态更开放，我最后还是更偏向 Codex。</p>
-<h3 id="4-我更在意“可维护性”"><a href="#4-我更在意“可维护性”" class="headerlink" title="4. 我更在意“可维护性”"></a>4. 我更在意“可维护性”</h3><p>很多时候我不是让 AI 写一个 demo，而是在维护一个真实项目。</p>
-<p>真实项目里最怕的不是“写不出来”，而是：</p>
-<ul>
-<li>改多了</li>
-<li>改偏了</li>
-<li>顺手修了不该修的东西</li>
-<li>没有验证就告诉我完成了</li>
-</ul>
-<p>所以我会更看重工具在修改边界、计划执行和验证反馈上的稳定感。</p>
-<hr>
-<h2 id="Codex-给我的第一印象"><a href="#Codex-给我的第一印象" class="headerlink" title="Codex 给我的第一印象"></a>Codex 给我的第一印象</h2><p>Codex 给我的第一印象更像一个“终端里的协作者”。</p>
-<p>它的使用方式天然围绕项目展开：</p>
-<ul>
-<li>先看文件结构</li>
-<li>再读关键配置</li>
-<li>然后给出修改计划</li>
-<li>接着改文件</li>
-<li>最后跑构建或测试</li>
-</ul>
-<p>这套流程和我平时自己维护项目的节奏很接近。</p>
-<p>比如这个博客项目里，我让 Codex 检查有没有冗余的地方，它不是一上来就乱删，而是先看 <code>package.json</code>、<code>.gitignore</code>、<code>_config.yml</code>、主题配置和文章目录，再判断哪些东西可以清理。</p>
-<p>这种感觉比单纯“回答我怎么做”更像是在一起处理一个项目。</p>
-<hr>
-<h2 id="我更喜欢-Codex-的地方"><a href="#我更喜欢-Codex-的地方" class="headerlink" title="我更喜欢 Codex 的地方"></a>我更喜欢 Codex 的地方</h2><h3 id="1-过程更透明"><a href="#1-过程更透明" class="headerlink" title="1. 过程更透明"></a>1. 过程更透明</h3><p>Codex 在做事时，我能看到它准备做什么、正在看什么文件、为什么要改某个地方。</p>
-<p>这点对我很重要。</p>
-<p>因为我不希望 AI 工具像黑盒一样直接告诉我“我改好了”。我更希望它每一步都有理由，尤其是在涉及删除文件、改依赖、跑命令的时候。</p>
-<p>透明不只是为了放心，也是为了后面出问题时能回溯。</p>
-<hr>
-<h3 id="2-更适合仓库级任务"><a href="#2-更适合仓库级任务" class="headerlink" title="2. 更适合仓库级任务"></a>2. 更适合仓库级任务</h3><p>Codex 很适合处理这种跨文件任务：</p>
-<ul>
-<li>清理冗余依赖</li>
-<li>修改配置并同步文档</li>
-<li>新增文章并运行构建</li>
-<li>根据报错定位项目问题</li>
-<li>检查哪些文件是生成产物，哪些文件应该进版本控制</li>
-</ul>
-<p>这些任务不是单点代码补全，而是需要理解整个项目状态。</p>
-<p>在这类场景里，我更愿意用 Codex。</p>
-<hr>
-<h3 id="3-和终端工作流更贴合"><a href="#3-和终端工作流更贴合" class="headerlink" title="3. 和终端工作流更贴合"></a>3. 和终端工作流更贴合</h3><p>我平时维护博客基本就是终端工作流：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run build</span><br><span class="line">git status</span><br><span class="line">npm audit --omit=dev</span><br></pre></td></tr></table></figure>
-
-<p>Codex 正好可以接在这个流程里。</p>
-<p>它不只是告诉我“你应该运行构建”，而是可以实际运行，然后根据输出继续判断下一步。</p>
-<p>比如构建失败，它可以继续看报错；审计有漏洞，它可以判断是依赖问题还是插件残留；文章 front matter 有问题，它也能直接定位。</p>
-<p>这种连续性是我最后选择它的重要原因。</p>
-<hr>
-<h3 id="4-配合-API-使用更灵活"><a href="#4-配合-API-使用更灵活" class="headerlink" title="4. 配合 API 使用更灵活"></a>4. 配合 API 使用更灵活</h3><p>上一篇我写过，我最后更倾向于通过 <code>ccswitch</code> 调 API 来使用 Codex。</p>
-<p>这样做之后，模型、接口、密钥这些配置都更明确。对我来说，这比单纯登录某个账号更符合开发习惯。</p>
-<p>我可以把它当成开发环境的一部分，而不是一个临时打开的工具。</p>
-<p>这点也是我选择 Codex 的原因之一：它更容易被纳入我自己的工具链。</p>
-<hr>
-<h2 id="两者简单对比"><a href="#两者简单对比" class="headerlink" title="两者简单对比"></a>两者简单对比</h2><p>如果按我的使用感受来总结，大概是这样：</p>
-<table>
-<thead>
-<tr>
-<th>对比点</th>
-<th>Claude Code</th>
-<th>Codex</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>第一印象</td>
-<td>对话和解释能力强</td>
-<td>更像终端协作者</td>
-</tr>
-<tr>
-<td>适合任务</td>
-<td>单点代码理解、解释、改写</td>
-<td>仓库级修改、配置清理、验证流程</td>
-</tr>
-<tr>
-<td>工作方式</td>
-<td>更偏代码助手</td>
-<td>更偏项目维护助手</td>
-</tr>
-<tr>
-<td>接口生态</td>
-<td>更灵活，可接 DeepSeek、小米 MiMo 等模型</td>
-<td>目前更偏 OpenAI Responses 接口</td>
-</tr>
-<tr>
-<td>我在意的优势</td>
-<td>阅读和表达顺滑</td>
-<td>过程透明、执行闭环更强</td>
-</tr>
-<tr>
-<td>最终定位</td>
-<td>偶尔辅助</td>
-<td>日常主力</td>
-</tr>
-</tbody></table>
-<p>当然，这个表不是客观排名，只是我自己的使用取舍。</p>
-<p>如果一个人主要需求是解释代码、生成函数、写局部逻辑，Claude Code 可能已经很好用了。<br>但如果像我这样，经常围绕一个真实项目做连续修改，我会更偏向 Codex。</p>
-<hr>
-<h2 id="为什么最终选择-Codex"><a href="#为什么最终选择-Codex" class="headerlink" title="为什么最终选择 Codex"></a>为什么最终选择 Codex</h2><p>最后选择 Codex，其实不是因为 Claude Code 不好，而是 Codex 更符合我的工作方式。</p>
-<p>我最看重的是这几点：</p>
-<ul>
-<li>能围绕本地项目持续工作</li>
-<li>修改前后有清晰过程</li>
-<li>能把命令执行和结果验证串起来</li>
-<li>更适合处理配置、依赖、文档、文章这类综合任务</li>
-<li>配合 API 使用时更容易纳入自己的工具链</li>
-</ul>
-<p>对我来说，一个 AI 编程工具要成为主力，不能只会“写代码”。</p>
-<p>它还要能理解项目、控制修改范围、验证结果，并且在出错时继续排查。</p>
-<p>Codex 在这些方面给我的感觉更稳。</p>
-<hr>
-<h2 id="我的结论"><a href="#我的结论" class="headerlink" title="我的结论"></a>我的结论</h2><p>Claude Code 和 Codex 都值得试。</p>
-<p>如果只是轻量使用，Claude Code 的体验并不差，尤其是解释代码和整理思路时很顺手。</p>
-<p>但如果要在真实项目里长期使用，我最后还是会选 Codex。</p>
-<p>原因很简单：<br>它更像一个能参与完整开发流程的助手，而不是只在旁边回答问题的助手。</p>
-<p>所以我现在的选择是：</p>
-<ul>
-<li>Claude Code：作为备用工具，适合偶尔对比思路</li>
-<li>Codex：作为主力工具，负责日常项目维护和内容生产</li>
-</ul>
-<p>对我来说，这个分工比较自然，也更符合现在的使用习惯。</p>
-]]></content>
-      <categories>
-        <category>技术教程</category>
-      </categories>
-      <tags>
-        <tag>Codex</tag>
-        <tag>AI工具</tag>
-        <tag>开发效率</tag>
-        <tag>Claude Code</tag>
-        <tag>AI编程工具使用记录</tag>
+        <tag>教程</tag>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
 </search>

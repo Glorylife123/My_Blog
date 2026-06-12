@@ -271,6 +271,7 @@ window.addEventListener("load", () => {
     const input = $(selectors.input);
     if (!mask || !dialog || !input) return;
 
+    document.getElementById("local-search")?.classList.add("is-open");
     document.body.style.width = "100%";
     document.body.style.overflow = "hidden";
     anzhiyu.animateIn(mask, "to_show 0.5s");
@@ -290,6 +291,9 @@ window.addEventListener("load", () => {
     document.body.style.overflow = "";
     anzhiyu.animateOut(dialog, "search_close .5s");
     anzhiyu.animateOut(mask, "to_hide 0.5s");
+    setTimeout(() => {
+      if (!isOpen) document.getElementById("local-search")?.classList.remove("is-open");
+    }, 500);
     isOpen = false;
   };
 

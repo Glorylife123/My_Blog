@@ -513,12 +513,19 @@ body[data-type="tags"] .article-sort-title {
     transform: translateX(-50%);
     z-index: 1001 !important;
     margin-left: 0 !important;
+    display: none;
 }
 
 #local-search #search-mask {
     position: fixed !important;
     inset: 0 !important;
     z-index: 1000 !important;
+    display: none;
+}
+
+#local-search.is-open .search-dialog,
+#local-search.is-open #search-mask {
+    display: block;
 }
 
 @media screen and (max-width: 768px), screen and (max-height: 580px) {
